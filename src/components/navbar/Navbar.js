@@ -1,33 +1,34 @@
-import { memo, useContext } from 'react';
+import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
+import styles from './Navbar.module.scss';
 
 const Navbar = memo(function Navbar(props) {
 
   const loginStatus = false;
 
   return (
-    <nav className="nav-bar">
+    <nav className={styles.navbar} >
       <ul>
         <NavLink
           exact to={'/'}
-          className="nav-bar__link link"
-          activeClassName="nav-bar__link_active"
+          className={`${styles.navItem} ${styles.navLink}`}
+          activeClassName={`${styles.navItem} ${styles.navLink}`}
         // onClick={props.toggleMobileMenuOpen}
         >
           Главная
       </NavLink>
         <NavLink
           exact to={'/'}
-          className="nav-bar__link link"
-          activeClassName="nav-bar__link_active"
+          className={`${styles.navItem} ${styles.navLink}`}
+          activeClassName={`${styles.navItem} ${styles.navLink}`}
         // onClick={props.toggleMobileMenuOpen}
         >
           Услуги
       </NavLink>
         <NavLink
-          exact to={'/'}
-          className="nav-bar__link link"
-          activeClassName="nav-bar__link_active"
+          exact to={'/counter'}
+          className={`${styles.navItem} ${styles.navLink}`}
+          activeClassName={`${styles.navItem} ${styles.navLink}`}
         // onClick={props.toggleMobileMenuOpen}
         >
           Блог
@@ -35,8 +36,8 @@ const Navbar = memo(function Navbar(props) {
         {loginStatus === 'loggedIn' &&
           <NavLink
             to={'/user-profile'}
-            className="nav-bar__link link"
-            activeClassName="nav-bar__link_active"
+            className={`${styles.navItem} ${styles.navLink}`}
+            activeClassName={`${styles.navItem} ${styles.navLink}`}
           // onClick={props.toggleMobileMenuOpen}
           >
             Личный кабинет
@@ -44,23 +45,15 @@ const Navbar = memo(function Navbar(props) {
         {loginStatus === 'loggedIn' &&
           <NavLink
             to={'/user-profile'}
-            className="nav-bar__link link"
-            activeClassName="nav-bar__link_active"
+            className={`${styles.navItem} ${styles.navLink}`}
+            activeClassName={`${styles.navItem} ${styles.navLink}`}
           // onClick={props.toggleMobileMenuOpen}
           >
             Панель админа
         </NavLink>}
-        <NavLink
-          to={'/counter'}
-          className="nav-bar__link link"
-          activeClassName="nav-bar__link_active"
-        // onClick={props.toggleMobileMenuOpen}
-        >
-          Counter
-        </NavLink>
         <button
           type="button"
-          className="button button__square_black-outline-white header__auth-button"
+          className={`${styles.navItem}`}
         // onClick={handleAuthButtonClick}
         >
           {loginStatus === 'loggedIn' ? 'Выйти' : 'Войти'}

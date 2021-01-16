@@ -1,0 +1,18 @@
+@import '../../css-variables.module.scss';
+
+.navbar {
+  font-size: calc(10px + 2vmin);
+}
+
+.navItem {
+  margin-right: calc(3px + 1vw);
+}
+
+.navItem:last-of-type {
+  margin-right: 0;
+}
+
+.navLink {
+  // composes: link from '../../index.scss';
+  composes: link from global;
+}
