@@ -7,17 +7,18 @@ import {
   incrementAsync,
   selectCount,
 } from './counterSlice';
+import appStyles from '../../App.module.scss';
 import styles from './Counter.module.scss';
 import logo from './logo.svg';
 
-export function Counter() {
+export default function Counter() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
 
   return (
     <>
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={logo} className={appStyles.AppLogo} alt="logo" />
       <div>
         <div className={styles.row}>
           <button
@@ -65,7 +66,7 @@ export function Counter() {
       <span>
         <span>Learn </span>
         <a
-          className="App-link"
+          className={appStyles.AppLink}
           href="https://reactjs.org/"
           target="_blank"
           rel="noopener noreferrer"
@@ -74,7 +75,7 @@ export function Counter() {
         </a>
         <span>, </span>
         <a
-          className="App-link"
+          className={appStyles.AppLink}
           href="https://redux.js.org/"
           target="_blank"
           rel="noopener noreferrer"
@@ -83,7 +84,7 @@ export function Counter() {
         </a>
         <span>, </span>
         <a
-          className="App-link"
+          className={appStyles.AppLink}
           href="https://redux-toolkit.js.org/"
           target="_blank"
           rel="noopener noreferrer"
@@ -92,7 +93,7 @@ export function Counter() {
         </a>
         ,<span> and </span>
         <a
-          className="App-link"
+          className={appStyles.AppLink}
           href="https://react-redux.js.org/"
           target="_blank"
           rel="noopener noreferrer"
