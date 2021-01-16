@@ -8,11 +8,16 @@
   margin-right: calc(3px + 1vw);
 }
 
-.navItem:last-of-type {
+.navItem:last-child {
   margin-right: 0;
 }
 
 .navLink {
   // composes: link from '../../index.scss';
   composes: link from global;
+}
+
+.navList {
+  margin: auto 0;
+  padding: 0;
 }

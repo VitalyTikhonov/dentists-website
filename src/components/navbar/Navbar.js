@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
+import getCN from 'classnames';
 import styles from './Navbar.module.scss';
 
 const Navbar = memo(function Navbar(props) {
@@ -8,27 +9,19 @@ const Navbar = memo(function Navbar(props) {
 
   return (
     <nav className={styles.navbar} >
-      <ul>
+      <ul className={styles.navList} >
         <NavLink
           exact to={'/'}
-          className={`${styles.navItem} ${styles.navLink}`}
-          activeClassName={`${styles.navItem} ${styles.navLink}`}
-        // onClick={props.toggleMobileMenuOpen}
-        >
-          Главная
-      </NavLink>
-        <NavLink
-          exact to={'/'}
-          className={`${styles.navItem} ${styles.navLink}`}
-          activeClassName={`${styles.navItem} ${styles.navLink}`}
+          className={getCN(styles.navItem, styles.navLink)}
+          activeClassName={getCN(styles.navItem, styles.navLink)}
         // onClick={props.toggleMobileMenuOpen}
         >
           Услуги
       </NavLink>
         <NavLink
           exact to={'/counter'}
-          className={`${styles.navItem} ${styles.navLink}`}
-          activeClassName={`${styles.navItem} ${styles.navLink}`}
+          className={getCN(styles.navItem, styles.navLink)}
+          activeClassName={getCN(styles.navItem, styles.navLink)}
         // onClick={props.toggleMobileMenuOpen}
         >
           Блог
@@ -36,8 +29,8 @@ const Navbar = memo(function Navbar(props) {
         {loginStatus === 'loggedIn' &&
           <NavLink
             to={'/user-profile'}
-            className={`${styles.navItem} ${styles.navLink}`}
-            activeClassName={`${styles.navItem} ${styles.navLink}`}
+            className={getCN(styles.navItem, styles.navLink)}
+            activeClassName={getCN(styles.navItem, styles.navLink)}
           // onClick={props.toggleMobileMenuOpen}
           >
             Личный кабинет
@@ -45,15 +38,15 @@ const Navbar = memo(function Navbar(props) {
         {loginStatus === 'loggedIn' &&
           <NavLink
             to={'/user-profile'}
-            className={`${styles.navItem} ${styles.navLink}`}
-            activeClassName={`${styles.navItem} ${styles.navLink}`}
+            className={getCN(styles.navItem, styles.navLink)}
+            activeClassName={getCN(styles.navItem, styles.navLink)}
           // onClick={props.toggleMobileMenuOpen}
           >
             Панель админа
         </NavLink>}
         <button
           type="button"
-          className={`${styles.navItem}`}
+          className={styles.navItem}
         // onClick={handleAuthButtonClick}
         >
           {loginStatus === 'loggedIn' ? 'Выйти' : 'Войти'}
