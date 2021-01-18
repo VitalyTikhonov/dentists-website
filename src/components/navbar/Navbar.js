@@ -16,6 +16,14 @@ const Navbar = memo(function Navbar(props) {
           activeClassName={getCN(styles.navItem, styles.navLink)}
         // onClick={props.toggleMobileMenuOpen}
         >
+          Главная
+      </NavLink>
+        <NavLink
+          exact to={'/'}
+          className={getCN(styles.navItem, styles.navLink)}
+          activeClassName={getCN(styles.navItem, styles.navLink)}
+        // onClick={props.toggleMobileMenuOpen}
+        >
           Услуги
       </NavLink>
         <NavLink

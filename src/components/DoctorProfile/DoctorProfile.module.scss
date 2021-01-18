@@ -1,0 +1,11 @@
+@import '../../css-variables.scss';
+
+.section {
+  padding-left: $paddingBasic;
+  padding-right: $paddingBasic;
+  color: #008B8B;
+}
+
+.docPhoto {
+  max-width: 100%;
+}

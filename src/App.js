@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import styles from './App.module.scss';
 import Counter from './components/counter/Counter';
 import Navbar from './components/navbar/Navbar';
-import DoctorProfile from './components/page-section/PageSection';
+import DoctorProfile from './components/DoctorProfile/DoctorProfile';
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
       <header className={styles.header}>
         <div className={styles.headerBar}>
           <a href="/" className={styles.headerBarLogo}>
-            <span className={styles.headerBarName} >Наталья&nbsp;Натфуллина</span>
+            <span className={styles.headerBarName} >Наталья Натфуллина</span>
             Стоматолог
-            </a>
+          </a>
           <Navbar />
         </div>
       </header>

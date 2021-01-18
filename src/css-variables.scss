@@ -1,0 +1,18 @@
+// SIZE
+$paddingBasic: 3vw;
+// COLOUR
+// FONT STYLES
+
+// composes: cormorantInfantBoldItalic from './vendor/fonts/fonts.scss';
+.cormorantInfantBoldItalic {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+// composes: robotoItalic from './vendor/fonts/fonts.scss';
+.robotoItalic {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: italic;
+}
