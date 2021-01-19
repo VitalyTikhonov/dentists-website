@@ -46,6 +46,7 @@
 
 .headerBarName{
   font-weight: 700;
+  font-size: calc(10px + 4.5vmin);
 }
 
 // TEMPLATE STYLES:
@@ -55,7 +56,15 @@
   font-family: 'Roboto', serif;
   font-weight: 300;
   font-style: italic;
-  font-size: calc(10px + 1.2vmin);
+  font-size: calc(15px + 1vmin);
+}
+
+.main {
+  // background-image: url(./images/seamless-pattern_02.jpg);
+  // background-image: url(./images/wallpaper_background.png);
+  background-image: url(./images/seamless-pattern_03.jpg);
+  background-size: 300px;
+  background-repeat: repeat;
 }
 
 .AppLogo {

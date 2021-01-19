@@ -1,21 +1,40 @@
-.row {
-  display: flex;
-  flex-direction: row;
-}
+@import "../../css-variables.scss";
 
-.column{
+.textBlock {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-}
-
-.sidePane {
-  width: 35vw;
+  // padding-top: $paddingBasic;
+  // padding-bottom: $paddingBasic;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
 }
 
 .headline {
   font-size: calc(10px + 1.2vmin);
+  margin: 0 0 calc(#{$paddingBasic} * 0.7);
+}
+
+.clause {
+  box-sizing: border-box;
+  margin: 0 0 calc(#{$paddingBasic} * 1.5);
+}
+
+.clause:last-child {
+  margin: 0;
 }
 
 .paragraph {
+  margin: 0 0 calc(#{$paddingBasic} * 0.4);
   text-align: justify;
 }
+
+.paragraph:last-child {
+  margin: 0;
+  text-align: justify;
+}
+
+// .textBackgroundOnWallpaper {
+//   background-color: rgba(255, 255, 255, .9);
+//   box-shadow: 0 0 10px 10px rgba(255, 255, 255, .9);
+// }

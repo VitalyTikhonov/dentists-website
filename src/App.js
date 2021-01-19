@@ -1,9 +1,9 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import styles from './App.module.scss';
-import Counter from './components/counter/Counter';
-import Navbar from './components/navbar/Navbar';
-import DoctorProfile from './components/DoctorProfile/DoctorProfile';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import styles from "./App.module.scss";
+import Counter from "./components/counter/Counter";
+import Navbar from "./components/navbar/Navbar";
+import DoctorProfile from "./components/DoctorProfile/DoctorProfile";
 
 function App() {
   return (
@@ -11,30 +11,31 @@ function App() {
       <header className={styles.header}>
         <div className={styles.headerBar}>
           <a href="/" className={styles.headerBarLogo}>
-            <span className={styles.headerBarName} >Наталья Натфуллина</span>
+            <span className={styles.headerBarName}>Наталья Натфуллина</span>
             Стоматолог
           </a>
           <Navbar />
         </div>
       </header>
-      <Switch >
-        <Route exact path="/">
-          <DoctorProfile />
-        </Route>
+      <main className={styles.main} >
+        <Switch>
+          <Route exact path="/">
+            <DoctorProfile />
+          </Route>
 
-        {/* <Route path="/signup">
+          {/* <Route path="/signup">
           <Signup />
         </Route> */}
 
-        {/* <Route path="/login">
+          {/* <Route path="/login">
         <Login />
       </Route> */}
 
-        <Route path="/counter">
-          <Counter />
-        </Route>
-      </Switch>
-
+          <Route path="/counter">
+            <Counter />
+          </Route>
+        </Switch>
+      </main>
     </div>
   );
 }

@@ -54,10 +54,10 @@ const Navbar = memo(function Navbar(props) {
         </NavLink>}
         <button
           type="button"
-          className={styles.navItem}
+          className={getCN(styles.navItem, styles.authButton)}
         // onClick={handleAuthButtonClick}
         >
-          {loginStatus === 'loggedIn' ? 'Выйти' : 'Войти'}
+          <span className={styles.authButton__label} >{loginStatus === 'loggedIn' ? 'Выйти' : 'Войти'}</span>
         </button>
       </ul>
     </nav>

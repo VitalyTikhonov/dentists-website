@@ -17,6 +17,20 @@
   composes: link from global;
 }
 
+.authButton {
+  background-color: transparent;
+  transform: skew(-9deg);
+  border: 1.5px solid #008B8B;
+  border-radius: 7px;
+  font: inherit;
+  color: #008B8B;
+}
+
+.authButton__label {
+  display: inline-block;
+  transform: skew(9deg);
+}
+
 .navList {
   margin: auto 0;
   padding: 0;

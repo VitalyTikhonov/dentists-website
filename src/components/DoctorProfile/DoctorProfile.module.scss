@@ -1,11 +1,36 @@
-@import '../../css-variables.scss';
+@import "../../css-variables.scss";
 
 .section {
-  padding-left: $paddingBasic;
-  padding-right: $paddingBasic;
-  color: #008B8B;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  // padding-left: $paddingBasic;
+  // padding-right: $paddingBasic;
+  padding: $paddingBasic;
+  color: #008b8b;
 }
 
 .docPhoto {
-  max-width: 100%;
+  width: 25vw;
+  margin-left: $paddingBasic;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 350px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .docPhoto {
+    order: -1;
+    align-self: center;
+    margin: $paddingBasic 0 $paddingBasic;
+    width: 80vw;
+    height: 80vw;
+    object-fit: cover;
+    // object-position: top;
+    border-radius: 50%;
+  }
 }

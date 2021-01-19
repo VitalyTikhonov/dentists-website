@@ -1,29 +1,31 @@
 import { memo } from "react";
 import styles from "./TextBlock.module.scss";
-import getCN from 'classnames';
+import getCN from "classnames";
 
 const TextBlock = memo(function TextBlock(props) {
   // console.log('props.contents', props.contents);
   const {
-    doctorDecsription: { headline, paragraphs },
-    doctorPhoto,
+    doctorDecsription: { headline, clauses },
   } = props.contents;
 
   return (
-    <div className={getCN(styles.row)}>
-      <div className={getCN(styles.column)}>
-        <h2 className={getCN(styles.headline)}>{headline}</h2>
+    <div className={getCN(styles.textBlock)}>
+      <div className={getCN(styles.textBlock__text)}>
+        <h2 className={getCN(styles.headline, styles.textBackgroundOnWallpaper)}>{headline}</h2>
 
-        {paragraphs.map((paragraph, i) => {
+        {clauses.map((clause, a) => {
           return (
-            <p className={getCN(styles.paragraph)} key={i}>
-              {paragraph}
-            </p>
+            <div className={styles.clause} key={a}>
+              {clause.map((paragraph, b) => {
+                return (
+                  <p className={getCN(styles.paragraph)} key={b}>{paragraph}</p>
+                  // <p className={getCN(styles.paragraph, styles.textBackgroundOnWallpaper)} key={b}>{paragraph}</p>
+                );
+              })}
+            </div>
           );
         })}
       </div>
-
-      <div className={getCN(styles.column, styles.sidePane)}>{doctorPhoto}</div>
     </div>
   );
 });
