@@ -6,13 +6,16 @@
   flex-direction: column;
   // padding-top: $paddingBasic;
   // padding-bottom: $paddingBasic;
+  padding: calc(#{$paddingBasic} * .4);
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
+  border-radius: 20px 20px 20px 20px;
+  // box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
+  font-size: $bodyFontSize;
 }
 
 .headline {
-  font-size: calc(10px + 1.2vmin);
   margin: 0 0 calc(#{$paddingBasic} * 0.7);
+  font-size: $bodyFontSize;
 }
 
 .clause {

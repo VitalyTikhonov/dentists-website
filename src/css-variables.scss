@@ -1,5 +1,10 @@
 // SIZE
 $paddingBasic: calc(5px + 3vw);
+$basicFontSize: 17px;
+$logoFontSize: calc(#{$basicFontSize} + 3.67vw);
+$logoNameFontSize: calc(#{$basicFontSize} + 2.58vw);
+$menuFontSize: calc(#{$basicFontSize} + .83vw);
+$bodyFontSize: calc(#{$basicFontSize} + .5vw);
 // $profilePhotoOriginalWidth: 384px;
 // $profilePhotoOriginalHeight: 846px;
 // $docProfilePageWidth: calc((#{$paddingBasic} + #{$docProfilePhotoWidth}) * 2);

@@ -1,37 +1,29 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import styles from "./App.module.scss";
-import Counter from "./components/counter/Counter";
-import Navbar from "./components/navbar/Navbar";
-import DoctorProfile from "./components/DoctorProfile/DoctorProfile";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import styles from './App.module.scss';
+import Header from './components/Header/Header';
+import DoctorProfile from './components/DoctorProfile/DoctorProfile';
+import Counter from './components/counter/Counter';
 
 function App() {
   return (
     <div className={styles.App}>
-      <header className={styles.header}>
-        <div className={styles.headerBar}>
-          <a href="/" className={styles.headerBarLogo}>
-            <span className={styles.headerBarName}>Наталья Натфуллина</span>
-            Стоматолог
-          </a>
-          <Navbar />
-        </div>
-      </header>
+      <Header />
       <main className={styles.main} >
         <Switch>
-          <Route exact path="/">
+          <Route exact path='/'>
             <DoctorProfile />
           </Route>
 
-          {/* <Route path="/signup">
+          {/* <Route path='/signup'>
           <Signup />
         </Route> */}
 
-          {/* <Route path="/login">
+          {/* <Route path='/login'>
         <Login />
       </Route> */}
 
-          <Route path="/counter">
+          <Route path='/counter'>
             <Counter />
           </Route>
         </Switch>

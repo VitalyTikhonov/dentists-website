@@ -12,13 +12,13 @@
 }
 
 .docPhoto {
-  width: 25vw;
-  margin-left: $paddingBasic;
+  width: 32vw;
+  margin-left: calc(#{$paddingBasic} * 2);
   border-radius: 20px 20px 20px 20px;
-  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
+  // box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width: 350px) {
+@media (max-width: 700px) {
   .section {
     flex-direction: column;
   }
@@ -26,11 +26,24 @@
   .docPhoto {
     order: -1;
     align-self: center;
-    margin: $paddingBasic 0 $paddingBasic;
-    width: 80vw;
-    height: 80vw;
+    margin-left: 0;
+    margin-bottom: $paddingBasic;
     object-fit: cover;
     // object-position: top;
     border-radius: 50%;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 340px) {
+  .docPhoto {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+@media (max-width: 340px) {
+  .docPhoto {
+    width: 80vw;
+    height: 80vw;
   }
 }
