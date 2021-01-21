@@ -1,0 +1,1 @@
+export const TOOGLE_MOB_VIEW = 'TOOGLE_MOB_VIEW';

@@ -1,6 +1,6 @@
 import { memo, useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { allowMobileView, disallowMobileView, selectMobileView } from './headerSlice';
+import { toggleMobileView, selectMobileView } from './headerSlice';
 import styles from './Header.module.scss';
 import Navbar from '../Navbar/Navbar';
 import PageDimmer from '../PageDimmer/PageDimmer';
@@ -33,10 +33,10 @@ const Header = memo(function Header(props) {
 
   useEffect(() => {
     function setResponsiveness() {
-      console.log('window.innerWidth', window.innerWidth);
+      // console.log('window.innerWidth', window.innerWidth);
       return window.innerWidth < 421
-        ? dispatch(allowMobileView())
-        : dispatch(disallowMobileView());
+        ? dispatch(toggleMobileView(true))
+        : dispatch(toggleMobileView(false));
     };
     setResponsiveness();
 
