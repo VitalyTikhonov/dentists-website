@@ -2,13 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
-// import './vendor/fonts/fonts.scss';
 import App from './App';
 import store from './app/store';
-// import store from './store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-// console.log('store', store.getState());
 
 ReactDOM.render(
   <React.StrictMode>

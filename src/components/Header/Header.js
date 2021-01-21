@@ -14,7 +14,6 @@ const Header = memo(function Header(props) {
     setLoginPopupOpen,
   } = props;
 
-  // const [mobileView, setMobileView] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   function handleAuthButtonClick() {
