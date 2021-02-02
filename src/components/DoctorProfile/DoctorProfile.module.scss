@@ -48,7 +48,12 @@
     flex-direction: column;
   }
 
+  .sectionBody{
+    width: 100%;
+  }
+
   .sectionSidebar {
+    position: static;
     order: -1;
     align-self: center;
     width: 100vw;
