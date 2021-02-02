@@ -2,12 +2,9 @@ export const doctorDecsription = {
   id: "doctor_profile",
   headline: "Приветствую Вас на своем сайте!",
   subsections: [
-    // {
-    //   headline: "Приветствую Вас на своем сайте!",
-    //   clauses: [],
-    // },
     {
       id: "who_I_am",
+      sectionMenuLabel: "Кто я",
       headline: "Кто я",
       clauses: [
         [
@@ -17,6 +14,7 @@ export const doctorDecsription = {
     },
     {
       id: "my_philosophy",
+      sectionMenuLabel: "Моя философия",
       headline: "Моя философия",
       clauses: [
         [
@@ -35,17 +33,44 @@ export const doctorDecsription = {
     },
     {
       id: "education_and_certificates",
+      sectionMenuLabel: "Образование и сертификаты",
       headline: "Образование и сертификаты",
       clauses: [],
     },
     {
       id: "book_an_appointment",
+      sectionMenuLabel: "Как попасть на прием",
       headline: "Как попасть на прием",
       clauses: [],
     },
     {
       id: "services",
+      sectionMenuLabel: "Услуги",
       headline: "Услуги",
+      clauses: [],
+    },
+    {
+      id: "sdfsd",
+      sectionMenuLabel: "xcvbxcvb",
+      headline: "bcvbxcvb",
+      clauses: [],
+    },
+    {
+      id: "cvbxcvb",
+      sectionMenuLabel: "cvbcvb",
+      headline: "cvbcvb",
+      clauses: [],
+    },
+    {
+      id: "zcvbcvb",
+      sectionMenuLabel: "zcvbzcvb",
+      headline: "zcvbzcvb",
+      clauses: [],
+    },
+    {
+      id: "zcvbzcvb",
+      sectionMenuLabel: "zcvbzcvb",
+      headline: "zcvbzcvb",
       clauses: [],
     },
   ],

@@ -16,13 +16,20 @@
   flex-direction: column;
 }
 
+.sectionBody {
+  width: $desktopSectionBodyWidth;
+}
+
 .sectionSidebar {
-  width: 32vw;
-  margin-left: calc(#{$paddingBasic} * 2);
+  position: sticky;
+  top: $sectionSidebarSpacing;
+  right: 0;
+  width: $desktopSidebarWidth;
+  margin-left: auto;
 }
 
 .sectionSidebarItem {
-  margin-bottom: $paddingBasic;
+  margin-bottom: $sectionSidebarSpacing;
 }
 
 .sectionSidebarItem:last-child {

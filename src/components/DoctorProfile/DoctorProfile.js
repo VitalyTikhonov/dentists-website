@@ -11,7 +11,7 @@ import doctorPhotoPath from "../../images/Natasha_WhatsApp_02.jpeg";
 const DoctorProfile = memo(function DoctorProfile(props) {
   return (
     <section className={getCN(styles.section)} id={doctorDecsription.id} >
-      <div className={getCN(styles.sectionColumn)}>
+      <div className={getCN(styles.sectionColumn, styles.sectionBody)}>
         <SectionHeadline text={doctorDecsription.headline} />
 
         {doctorDecsription.subsections.map((subsection, index) => (
@@ -26,7 +26,7 @@ const DoctorProfile = memo(function DoctorProfile(props) {
           alt="Фото доктора Натфуллиной"
         />
 
-        <SideNavbar />
+        <SideNavbar contentsMap={doctorDecsription.subsections} />
       </div>
     </section>
   );
