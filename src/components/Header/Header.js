@@ -1,23 +1,19 @@
-import { memo, useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleMobileView, selectMobileView } from './headerSlice';
-import styles from './Header.module.scss';
-import Navbar from '../Navbar/Navbar';
-import PageDimmer from '../PageDimmer/PageDimmer';
+import { memo, useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleMobileView, selectMobileView } from "./headerSlice";
+import styles from "./Header.module.scss";
+import Navbar from "../Navbar/Navbar";
+import PageDimmer from "../PageDimmer/PageDimmer";
 
 const Header = memo(function Header(props) {
   const mobileView = useSelector(selectMobileView);
   const dispatch = useDispatch();
-  const {
-    loginStatus,
-    logout,
-    setLoginPopupOpen,
-  } = props;
+  const { loginStatus, logout, setLoginPopupOpen } = props;
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   function handleAuthButtonClick() {
-    if (loginStatus === 'loggedIn') {
+    if (loginStatus === "loggedIn") {
       logout();
     } else {
       setLoginPopupOpen(true);
@@ -36,7 +32,7 @@ const Header = memo(function Header(props) {
       return window.innerWidth < 421
         ? dispatch(toggleMobileView(true))
         : dispatch(toggleMobileView(false));
-    };
+    }
     setResponsiveness();
 
     window.addEventListener("resize", setResponsiveness);
@@ -50,10 +46,14 @@ const Header = memo(function Header(props) {
           Стоматолог
         </a>
 
-       {(!mobileView || mobileMenuOpen) &&
-        <Navbar />
-       }
+        {(!mobileView || mobileMenuOpen) && <Navbar />}
 
+        {mobileView && (
+          <button
+            className={styles.mobileMenuButton}
+            onClick={toggleMobileMenuOpen}
+          />
+        )}
       </div>
     </header>
 
@@ -75,7 +75,7 @@ const Header = memo(function Header(props) {
     //     <div className="header__menu-page-dimmer" onClick={toggleMobileMenuOpen} />
     //   } */}
     // </header>
-  )
+  );
 });
 
 export default Header;

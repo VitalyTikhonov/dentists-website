@@ -1,0 +1,63 @@
+@import "../../css-variables.scss";
+
+.sideNavbar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: calc(#{$paddingBasic} * .4);
+  font-size: $bodyFontSize;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #008B8B;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.navItem {
+  margin-bottom: calc(3px + 1vw);
+}
+
+.navItem:last-child {
+  margin-bottom: 0;
+}
+
+.navLink {
+  // composes: link from '../../index.scss';
+  composes: link from global;
+}
+
+.navLinkActive {
+  font-weight: 900;
+  // text-shadow: 4px 4px 3px rgba(0,139,139,0.3);
+}
+
+.navList {
+  margin: auto 0;
+  display: flex;
+  // flex-wrap: wrap;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  // .navList {
+  //   flex-direction: column;
+  //   align-items: flex-end;
+  // }
+
+  // .navItem {
+  //   margin: 0 0 calc(3px + 1vw);
+  // }
+
+  // .navItem:last-child {
+  //   margin: 0;
+  // }
+
+  .sideNavbar {
+    display: none;
+  }
+}
+
+// @media (max-width: 420px) {
+// }
+
+.ariaLabelledTitle {
+  composes: ariaLabelledTitle from global;
+}
