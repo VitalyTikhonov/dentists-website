@@ -1,4 +1,4 @@
-@import "../../css-variables.module.scss";
+@import "../../css-variables.scss";
 @import "../../vendor/fonts/fonts.scss";
 
 .header {
@@ -15,8 +15,8 @@
   box-shadow: 0px 0px 20px 8px rgba(154, 180, 228, 0.8);
   box-sizing: border-box;
   width: 100%;
-  padding-left: $paddingBasicMath;
-  padding-right: $paddingBasicMath;
+  padding-left: $paddingBasic;
+  padding-right: $paddingBasic;
   padding-top: 2vw;
   padding-bottom: 2vw;
   display: flex;

@@ -21,7 +21,7 @@ const DoctorProfile = memo(function DoctorProfile(props) {
 
       <div className={getCN(styles.sectionColumn, styles.sectionSidebar)} >
         <img
-          className={getCN(styles.docPhoto)}
+          className={getCN(styles.docPhoto, styles.sectionSidebarItem)}
           src={doctorPhotoPath}
           alt="Фото доктора Натфуллиной"
         />
