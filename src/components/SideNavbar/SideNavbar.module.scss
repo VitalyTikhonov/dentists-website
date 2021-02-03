@@ -1,6 +1,9 @@
 @import "../../css-variables.scss";
 
 .sideNavbar {
+  // position: sticky;
+  // top: $paddingBasic;
+  // right: $paddingBasic;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

@@ -21,18 +21,19 @@
 }
 
 .sectionSidebar {
-  position: sticky;
-  top: $sectionSidebarSpacing;
-  right: 0;
+  // top: $sectionSidebarSpacing;
+  // right: 0;
   width: $desktopSidebarWidth;
   margin-left: auto;
+  // height: 100%;
+  // justify-content: flex-start;
 }
 
-.sectionSidebarItem {
+.sectionSidebar > * {
   margin-bottom: $sectionSidebarSpacing;
 }
 
-.sectionSidebarItem:last-child {
+.sectionSidebar > *:last-child {
   margin-bottom: 0;
 }
 

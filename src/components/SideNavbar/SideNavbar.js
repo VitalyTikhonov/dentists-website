@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import getCN from "classnames";
 import styles from "./SideNavbar.module.scss";
 
@@ -8,7 +8,7 @@ const SideNavbar = memo(function SideNavbar(props) {
 
   return (
     <nav
-      className={getCN(styles.sideNavbar, styles.sectionSidebarItem)}
+      className={getCN(styles.sideNavbar)}
       aria-labelledby="header-navigation"
     >
       <h2 className={getCN(styles.ariaLabelledTitle)} id="header-navigation">
