@@ -1,12 +1,12 @@
-@import "../../css-variables.scss";
+@import "../../css-variables.module.scss";
 
 .textBlock {
   box-sizing: border-box;
-  margin: 0 0 calc(#{$paddingBasic} * 0.3);
+  margin: 0 0 calc(#{$paddingBasicMath} * 0.3);
   font-size: $bodyFontSize;
   display: flex;
   flex-direction: column;
-  padding: calc(#{$paddingBasic} * .4);
+  padding: calc(#{$paddingBasicMath} * .4);
   background-color: #FFFFFF;
   border-radius: 20px 20px 20px 20px;
   box-shadow: 0px 0px 20px 2px rgba(154, 180, 228, 0.63);
@@ -23,13 +23,13 @@
 }
 
 .headline {
-  margin: 0 0 calc(#{$paddingBasic} * 0.7);
+  margin: 0 0 calc(#{$paddingBasicMath} * 0.7);
   font-size: $bodyFontSize;
 }
 
 .clause {
   box-sizing: border-box;
-  margin: 0 0 calc(#{$paddingBasic} * 1.5);
+  margin: 0 0 calc(#{$paddingBasicMath} * 1.5);
 }
 
 .clause:last-child {
@@ -37,7 +37,7 @@
 }
 
 .paragraph {
-  margin: 0 0 calc(#{$paddingBasic} * 0.4);
+  margin: 0 0 calc(#{$paddingBasicMath} * 0.4);
   text-align: justify;
 }
 
@@ -53,6 +53,6 @@
 
 @media (max-width: 900px) {
   .textBlock {
-    padding: calc(#{$paddingBasic} * .4 + 5px);
+    padding: calc(#{$paddingBasicMath} * .4 + 5px);
   }
 }

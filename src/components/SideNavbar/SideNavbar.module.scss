@@ -1,14 +1,21 @@
-@import "../../css-variables.scss";
+@import "../../css-variables.module.scss";
 
 .sideNavbar {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: calc(#{$paddingBasic} * .4);
+  padding: calc(#{$paddingBasicMath} * .4);
   font-size: calc(#{$bodyFontSize} * .8);
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #008B8B;
   border-radius: 20px 20px 20px 20px;
+}
+
+.sideNavbarFixed {
+  position: fixed;
+  top: $paddingBasicMath;
+  right: $paddingBasicMath;
+  width: $desktopSidebarWidth;
 }
 
 .navItem {

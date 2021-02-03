@@ -1,13 +1,13 @@
-@import "../../css-variables.scss";
+@import "../../css-variables.module.scss";
 
 .section {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  // padding-left: $paddingBasic;
-  // padding-right: $paddingBasic;
-  padding: $paddingBasic;
+  // padding-left: $paddingBasicMath;
+  // padding-right: $paddingBasicMath;
+  padding: $paddingBasicMath;
   color: #008b8b;
 }
 
@@ -21,24 +21,23 @@
 }
 
 .sectionSidebar {
-  position: sticky;
   top: $sectionSidebarSpacing;
   right: 0;
   width: $desktopSidebarWidth;
   margin-left: auto;
 }
 
-.sectionSidebarItem {
+.sectionSidebar > * {
   margin-bottom: $sectionSidebarSpacing;
 }
 
-.sectionSidebarItem:last-child {
+.sectionSidebar > *:last-child {
   margin-bottom: 0;
 }
 
 .docPhoto {
   // width: 32vw;
-  // margin-left: calc(#{$paddingBasic} * 2);
+  // margin-left: calc(#{$paddingBasicMath} * 2);
   border-radius: 20px 20px 20px 20px;
   // box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
 }
@@ -61,7 +60,7 @@
   }
 
   .docPhoto {
-    margin-bottom: $paddingBasic;
+    margin-bottom: $paddingBasicMath;
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;

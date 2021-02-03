@@ -1,18 +1,20 @@
 // SIZE
-$paddingBasic: calc(5px + 3vw);
+$paddingBasicPx: 5px;
+$paddingBasicVw: 3vw;
+$paddingBasicMath: calc(#{$paddingBasicPx} + #{$paddingBasicVw});
 $basicFontSize: 17px;
 $logoFontSize: calc(#{$basicFontSize} + 3.67vw);
 $logoNameFontSize: calc(#{$basicFontSize} + 2.58vw);
 $menuFontSize: calc(#{$basicFontSize} + .83vw);
 $bodyFontSize: calc(#{$basicFontSize} + .5vw);
 $sectionHeadlineFontSize: calc(#{$basicFontSize} * 1.6 + .5vw);
-$sectionSidebarSpacing: calc(#{$paddingBasic} * .5);
+$sectionSidebarSpacing: calc(#{$paddingBasicMath} * .5);
 $desktopSidebarWidth: 23vw;
-$desktopSectionBodyWidth: calc(100vw - #{$desktopSidebarWidth} - #{$paddingBasic} * 3);
+$desktopSectionBodyWidth: calc(100vw - #{$desktopSidebarWidth} - #{$paddingBasicMath} * 3);
 // $desktopSidebarWidth: calc(100vw - #{$desktopSectionBodyWidth});
 // $profilePhotoOriginalWidth: 384px;
 // $profilePhotoOriginalHeight: 846px;
-// $docProfilePageWidth: calc((#{$paddingBasic} + #{$docProfilePhotoWidth}) * 2);
+// $docProfilePageWidth: calc((#{$paddingBasicMath} + #{$docProfilePhotoWidth}) * 2);
 // COLOUR
 // FONT STYLES
 
@@ -29,3 +31,7 @@ $desktopSectionBodyWidth: calc(100vw - #{$desktopSidebarWidth} - #{$paddingBasic
 //   font-weight: 300;
 //   font-style: italic;
 // }
+:export {
+  paddingBasicPx: $paddingBasicPx;
+  paddingBasicVw: $paddingBasicVw;
+}
