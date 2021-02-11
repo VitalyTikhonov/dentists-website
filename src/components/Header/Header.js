@@ -3,23 +3,23 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleMobileView, selectMobileView } from "./headerSlice";
 import styles from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
-import PageDimmer from "../PageDimmer/PageDimmer";
+// import PageDimmer from "../PageDimmer/PageDimmer";
 
 const Header = memo(function Header(props) {
   const mobileView = useSelector(selectMobileView);
   const dispatch = useDispatch();
-  const { loginStatus, logout, setLoginPopupOpen } = props;
+  // const { loginStatus, logout, setLoginPopupOpen } = props;
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  function handleAuthButtonClick() {
-    if (loginStatus === "loggedIn") {
-      logout();
-    } else {
-      setLoginPopupOpen(true);
-    }
-    toggleMobileMenuOpen();
-  }
+  // function handleAuthButtonClick() {
+  //   if (loginStatus === "loggedIn") {
+  //     logout();
+  //   } else {
+  //     setLoginPopupOpen(true);
+  //   }
+  //   toggleMobileMenuOpen();
+  // }
 
   function toggleMobileMenuOpen() {
     setMobileMenuOpen(!mobileMenuOpen);

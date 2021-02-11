@@ -13,22 +13,15 @@
 // }
 
 @font-face {
-  font-family: 'Cormorant Infant';
-  font-weight: 500;
-  font-style: italic;
-  src: url(./CormorantInfant-MediumItalic.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Cormorant Infant';
-  font-weight: 700;
-  font-style: italic;
-  src: url(./CormorantInfant-BoldItalic.ttf) format('truetype');
-}
-
-@font-face {
   font-family: 'Roboto';
   font-weight: 300;
   font-style: italic;
   src: url('./Roboto-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: italic;
+  src: url('./Roboto-Regular.ttf') format('truetype');
 }

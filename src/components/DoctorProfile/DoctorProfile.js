@@ -4,7 +4,7 @@ import SideNavbar from "../SideNavbar/SideNavbar";
 import { memo } from "react";
 import styles from "./DoctorProfile.module.scss";
 import getCN from "classnames";
-import { doctorDecsription } from "../../data";
+import { doctorDecsription } from "../../data/data";
 import doctorPhotoPath from "../../images/Natasha_WhatsApp_02.jpeg";
 // import doctorPhotoPath from "../../images/Natasha_WhatsApp_01.png";
 

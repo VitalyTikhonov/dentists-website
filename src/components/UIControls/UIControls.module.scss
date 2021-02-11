@@ -1,0 +1,147 @@
+$pageWidthSectionHeight: 200px;
+
+.UIDevContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vw;
+  background-color: #1a1b22;
+}
+
+.UIDevContainer__pageWidthSection {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: $pageWidthSectionHeight;
+  border: 1px solid white;
+}
+
+.UIDevContainer__columnContainer {
+  display: flex;
+  flex-direction: row;
+  // min-height: 100px;
+}
+
+.UIDevContainer__column {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw / 3);
+  min-height: calc(100vw - #{$pageWidthSectionHeight});
+  border: 1px solid white;
+}
+
+.UIDevContainer__sectionWithPhotoBg {
+  // height: 400px;
+  background-image: url(../../images/Natasha_WhatsApp_04_v_kabinete.jpeg);
+}
+
+.UIDevContainer__column_bgBlue {
+  background: linear-gradient(360deg, #97c8eb -51.59%, #176087 112.4%);
+}
+
+.UIDevContainer__column_bgLightBlue {
+  background: linear-gradient(
+    360deg,
+    rgba(58, 147, 185, 0.8) -192.1%,
+    #97c8eb 170.08%
+  );
+}
+
+.UIDevContainer__column_bgWallpaper {
+  background-image: url(../../images/styling-images/wallpaper_background_grey.png);
+  background-repeat: repeat;
+  // background-size: 11%;
+  background-size: 450.56px;
+}
+
+.UIDevContainer__controlsOnTheRight {
+  position: fixed;
+  top: 11.06px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover__topControlOverlay {
+}
+
+.btn__inCover {
+  justify-content: flex-start;
+  width: 249px;
+  height: 69.55px;
+  padding: 16px 11px;
+  background: linear-gradient(
+    270deg,
+    #ffffff 0%,
+    rgba(225, 226, 230, 0.8) 100%
+  );
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 22px;
+  line-height: 26px;
+  color: #176087;
+}
+
+.btn__inCover_principal {
+  display: flex;
+}
+
+.btn__inCover_secondary {
+  display: none;
+}
+
+.btn__inCover_principal:hover + .btn__inCover_secondary {
+  display: flex;
+}
+
+.btn__inCover_secondary:hover {
+  display: flex;
+}
+
+.btn__inCover:hover {
+  background: linear-gradient(269.96deg, #eceff1 0.04%, #c4c4c4 99.96%);
+}
+
+.btn__inCover:active {
+  background: linear-gradient(
+    269.96deg,
+    #97c8eb 0.04%,
+    rgba(151, 200, 235, 0.5) 99.96%
+  );
+}
+
+.btn__withIcon {
+  box-sizing: border-box;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.btn__iconInBtn {
+  width: 38px;
+  height: 38px;
+  margin: auto 16px auto 0;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn__iconInBtn_accountIcon {
+  background-image: url(../../images/UI-control-elements/mock-avatar-blue.png);
+}
+
+.btn__iconInBtn_logoutIcon {
+  background-image: url(../../images/UI-control-elements/logout-blue.png);
+  margin-left: 5px;
+}
+
+.btn__iconInBtn_loginIcon {
+  background-image: url(../../images/UI-control-elements/login-blue.png);
+  margin-left: 5px;
+}
+
+.btn__iconInBtn_signupIcon {
+  background-image: url(../../images/UI-control-elements/add-user-blue.png);
+  margin-left: 5px;
+}
