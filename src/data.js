@@ -49,29 +49,5 @@ export const doctorDecsription = {
       headline: "Услуги",
       clauses: [],
     },
-    {
-      id: "sdfsd",
-      sectionMenuLabel: "xcvbxcvb",
-      headline: "bcvbxcvb",
-      clauses: [],
-    },
-    {
-      id: "cvbxcvb",
-      sectionMenuLabel: "cvbcvb",
-      headline: "cvbcvb",
-      clauses: [],
-    },
-    {
-      id: "zcvbcvb",
-      sectionMenuLabel: "zcvbzcvb",
-      headline: "zcvbzcvb",
-      clauses: [],
-    },
-    {
-      id: "zcvbzcvb",
-      sectionMenuLabel: "zcvbzcvb",
-      headline: "zcvbzcvb",
-      clauses: [],
-    },
   ],
 };
