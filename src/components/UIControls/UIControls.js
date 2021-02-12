@@ -1,7 +1,11 @@
-import styles from "./UIDevContainer.module.scss";
+import { useState } from "react";
+import styles from "./UIControls.module.scss";
 import cn from "classnames";
+import AccountButtonGroup from "./AccountButtonGroup/AccountButtonGroup";
 
 const UIControls = function (props) {
+  const [loggedIn] = useState(false);
+
   return (
     <div className={cn(styles.UIDevContainer)}>
       <div
@@ -12,25 +16,7 @@ const UIControls = function (props) {
       >
         <div className={cn(styles.UIDevContainer__controlsOnTheRight)}>
           <div className={cn(styles.cover__topControlOverlay)}>
-            <button className={cn(styles.button, styles.inCover, styles.inCover_principal)}>
-              <span className={cn(styles.iconInBtn_accountIcon)} />
-              Личный кабинет
-            </button>
-            <button className={cn(styles.button, styles.inCover, styles.inCover_secondary)}>
-              <span className={cn(styles.iconInBtn_logoutIcon)} />
-              Выйти
-            </button>
-          </div>
-
-          <div className={cn(styles.cover__topControlOverlay)}>
-            <button className={cn(styles.button, styles.inCover, styles.inCover_principal)}>
-              <span className={cn(styles.iconInBtn_loginIcon)} />
-              Войти
-            </button>
-            <button className={cn(styles.button, styles.inCover, styles.inCover_secondary)}>
-              <span className={cn(styles.iconInBtn_signupIcon)} />
-              Регистрация
-            </button>
+            <AccountButtonGroup loggedIn={loggedIn} />
           </div>
         </div>
       </div>

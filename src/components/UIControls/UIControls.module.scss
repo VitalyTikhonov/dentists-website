@@ -1,9 +1,66 @@
-@import 'button__inCover';
+$pageWidthSectionHeight: 200px;
 
-.button {
-  align-items: center;
-  box-sizing: border-box;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
+.UIDevContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vw;
+  background-color: #1a1b22;
 }
+
+.UIDevContainer__pageWidthSection {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: $pageWidthSectionHeight;
+  border: 1px solid white;
+}
+
+.UIDevContainer__columnContainer {
+  display: flex;
+  flex-direction: row;
+  // min-height: 100px;
+}
+
+.UIDevContainer__column {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw / 3);
+  min-height: calc(100vw - #{$pageWidthSectionHeight});
+  border: 1px solid white;
+}
+
+.UIDevContainer__sectionWithPhotoBg {
+  // height: 400px;
+  background-image: url(../../images/Natasha_WhatsApp_04_v_kabinete.jpeg);
+}
+
+.UIDevContainer__column_bgBlue {
+  background: linear-gradient(360deg, #97c8eb -51.59%, #176087 112.4%);
+}
+
+.UIDevContainer__column_bgLightBlue {
+  background: linear-gradient(
+    360deg,
+    rgba(58, 147, 185, 0.8) -192.1%,
+    #97c8eb 170.08%
+  );
+}
+
+.UIDevContainer__column_bgWallpaper {
+  background-image: url(../../images/styling-images/wallpaper_background_grey.png);
+  background-repeat: repeat;
+  // background-size: 11%;
+  background-size: 450.56px;
+}
+
+.UIDevContainer__controlsOnTheRight {
+  position: fixed;
+  top: 11.06px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+// .cover__topControlOverlay {
+// }
