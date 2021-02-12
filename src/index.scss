@@ -1,5 +1,6 @@
 // @import './vendor/fonts/fonts.scss';
-@import url(./vendor/normalize.css);
+// @import url(./vendor/normalize.css);
+@import-normalize; // https://create-react-app.dev/docs/adding-css-reset
 
 body {
   margin: 0;
