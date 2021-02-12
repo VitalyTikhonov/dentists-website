@@ -14,11 +14,7 @@ const UIControls = function (props) {
           styles.UIDevContainer__sectionWithPhotoBg
         )}
       >
-        <div className={cn(styles.UIDevContainer__controlsOnTheRight)}>
-          <div className={cn(styles.cover__topControlOverlay)}>
-            <AccountButtonGroup loggedIn={loggedIn} />
-          </div>
-        </div>
+        <AccountButtonGroup loggedIn={loggedIn} />
       </div>
       <div className={cn(styles.UIDevContainer__columnContainer)}>
         <div
