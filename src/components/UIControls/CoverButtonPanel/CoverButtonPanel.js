@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { HashRouter, Link } from "react-router-dom";
+import { HashRouter, NavLink } from "react-router-dom";
 import "./CoverButtonPanel.scss";
 import ServicesIcon from "../../../images/UI-control-elements/svg/SvgComponents/ServicesIcon.js";
 import AppointmentIcon from "../../../images/UI-control-elements/svg/SvgComponents/AppointmentIcon.js";
@@ -20,44 +20,58 @@ const CoverButtonPanel = memo(function (props) {
           hashType="noslash"
         >
           <li className="cover__menu-major-item button list-item-unstyling">
-            <Link to="services" className="cover__menu-major-link link-unstyling">
+            <NavLink
+              to="services"
+              className="cover__menu-major-link link-unstyling"
+              activeClassName="cover__menu-major-link_active"
+            >
               <ServicesIcon className="cover__menu-icon" />
               Услуги
-            </Link>
+            </NavLink>
           </li>
           <li className="cover__menu-major-item button list-item-unstyling">
-            <Link
+            <NavLink
               to="book_appointment"
               className="cover__menu-major-link link-unstyling"
+              activeClassName="cover__menu-major-link_active"
             >
               <AppointmentIcon className="cover__menu-icon" />
               Запись на приём
-            </Link>
+            </NavLink>
           </li>
           <li className="cover__menu-major-item button list-item-unstyling">
-            <Link to="about_doctor" className="cover__menu-major-link link-unstyling">
+            <NavLink
+              to="/about_doctor"
+              className="cover__menu-major-link link-unstyling"
+              activeClassName="cover__menu-major-link_active"
+            >
               <FemaleDentistIcon className="cover__menu-icon cover__menu-icon_larger" />
               Обо мне
-            </Link>
+            </NavLink>
           </li>
         </HashRouter>
         {true && (
           <li className="cover__menu-major-item button list-item-unstyling">
-            <Link to="blog" className="cover__menu-major-link link-unstyling">
+            <NavLink
+              to="blog"
+              className="cover__menu-major-link link-unstyling"
+              activeClassName="cover__menu-major-link_active"
+            >
               <FeatherPen className="cover__menu-icon" />
               Мой блог
-            </Link>
+            </NavLink>
           </li>
         )}
         {true && (
           <li className="cover__menu-major-item button list-item-unstyling">
-            <Link
+            <NavLink
               to="blog/for_colleagues"
               className="cover__menu-major-link link-unstyling"
+              activeClassName="cover__menu-major-link_active"
             >
               <Doctors className="cover__menu-icon" />
               Коллегам
-            </Link>
+            </NavLink>
           </li>
         )}
       </ul>

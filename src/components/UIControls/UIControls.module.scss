@@ -3,8 +3,10 @@ $pageWidthSectionHeight: 200px;
 .UIDevContainer {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vw;
+  box-sizing: border-box;
+  max-width: 1240px;
+  height: 100%;
+  margin: 0 auto;
   background-color: #1a1b22;
 }
 
@@ -12,7 +14,8 @@ $pageWidthSectionHeight: 200px;
   display: flex;
   flex-direction: column;
   // justify-content: flex-end;
-  width: 100vw;
+  box-sizing: border-box; // !!!!!!!!!!!!!!!
+  width: 100%;
   min-height: $pageWidthSectionHeight;
   border: 1px solid white;
 }

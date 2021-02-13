@@ -49,11 +49,24 @@
 
   color: #97c8eb;
 
+  &_active {
+    background: linear-gradient(360deg, #97C8EB -108%, #176087 34.38%);
+    border: none;
+    color: #003B5A;
+  }
+
+  // &_active {
+  //   color: #ffffff;
+  // }
+
   &:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #64E9EE;
-    border: 1px solid #64E9EE;
-    transition: all .3s ease-in-out;
+    color: #ffffff;
+    // border: 1px solid #64E9EE;
+    // background: rgba(255, 255, 255, 0.2);
+    // color: #64E9EE;
+    // border: 1px solid #64E9EE;
+    // background: rgba(255, 255, 255, 0.2);
+    transition: all .15s ease-in-out;
   }
   &:active {
     background: linear-gradient(360deg, #97C8EB -108%, #176087 34.38%);
@@ -81,12 +94,27 @@ $iconMargin: auto 11px auto 0;
   height: 70px;
 }
 
+/* Важен порядок НАЧАЛО */
 .cover__menu-major-link:hover .cover__menu-icon {
-  fill: #64E9EE;
-  transition: fill .3s ease-in-out;
+  fill: #ffffff;
+  // fill: #64E9EE;
+  transition: fill .15s ease-in;
+}
+
+.cover__menu-major-link_active:hover {
+  color: #003B5A;
+}
+
+.cover__menu-major-link_active .cover__menu-icon {
+  fill: #003B5A;
+}
+
+.cover__menu-major-link_active:hover .cover__menu-icon {
+  fill: #003B5A;
 }
 
 .cover__menu-major-link:active .cover__menu-icon {
   fill: #003B5A;
   transition: none;
 }
+/* Важен порядок КОНЕЦ */

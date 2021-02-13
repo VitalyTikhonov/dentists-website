@@ -8,7 +8,7 @@ const AccountButtonGroup = memo(function (props) {
       <h2 className="ariaLabelledTitle" id="header-navigation">
         Дополнительное меню на обложке сайта – авторизация и аккаунт
       </h2>
-      <ul>
+      <ul className="list-unstyling">
         {props.loggedIn ? (
           <>
             <li className="cover__menu-item cover__menu-item_principal list-item-unstyling" >
