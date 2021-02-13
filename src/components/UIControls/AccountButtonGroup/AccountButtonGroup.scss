@@ -1,38 +1,8 @@
 @import "../UIControlsGlobals";
 
-%iconInBtn {
-  width: 38px;
-  height: 38px;
-  margin: auto 11px auto 0;
-  background-repeat: no-repeat;
-}
-
-@mixin icon($iconType, $filepath) {
-  &_type_#{$iconType}::before {
-    @extend %iconInBtn;
-    content: "";
-    background-image: $filepath;
-  }
-}
-
-.button__ic-lab {
-  @include icon(
-    account,
-    url(../../../images/UI-control-elements/mock-avatar-blue.png)
-  ); // button__ic-lab_type_account
-  @include icon(
-    logout,
-    url(../../../images/UI-control-elements/logout-blue.png)
-  ); // button__ic-lab_type_logout
-  @include icon(
-    login,
-    url(../../../images/UI-control-elements/login-blue.png)
-  ); // button__ic-lab_type_login
-  @include icon(
-    ignup,
-    url(../../../images/UI-control-elements/add-user-blue.png)
-  ); // button__ic-lab_type_ignup
-}
+$iconWidth: 38px;
+$iconHeight: 38px;
+$iconMargin: auto 11px auto 0;
 
 %showProperties {
   visibility: visible;
@@ -41,6 +11,37 @@
 
 %showTransition {
   transition: all .3s ease-in-out;
+}
+
+.button__ic-lab {
+  @include icon(
+    account,
+    url(../../images/UI-control-elements/mock-avatar-blue.png),
+    $iconWidth,
+    $iconHeight,
+    $iconMargin
+  ); // button__ic-lab_type_account
+  @include icon(
+    logout,
+    url(../../images/UI-control-elements/logout-blue.png),
+    $iconWidth,
+    $iconHeight,
+    $iconMargin
+  ); // button__ic-lab_type_logout
+  @include icon(
+    login,
+    url(../../images/UI-control-elements/login-blue.png),
+    $iconWidth,
+    $iconHeight,
+    $iconMargin
+  ); // button__ic-lab_type_login
+  @include icon(
+    signup,
+    url(../../images/UI-control-elements/add-user-blue.png),
+    $iconWidth,
+    $iconHeight,
+    $iconMargin
+  ); // button__ic-lab_type_signup
 }
 
 .button__overCover {
@@ -72,6 +73,14 @@
   }
 }
 
+.cover__menu-overlay-right {
+  position: fixed;
+  top: 11.06px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .cover__menu-item {
   &_secondary {
     visibility: hidden;
@@ -86,71 +95,3 @@
     @extend %showProperties;
   }
 }
-
-// .button__ic-lab {
-//   justify-content: flex-start;
-//   width: 249px;
-//   height: 69.55px;
-//   padding: 16px 11px 16px 16px;
-//   background: linear-gradient(
-//     270deg,
-//     #ffffff 0%,
-//     rgba(225, 226, 230, 0.8) 100%
-//   );
-//   border: none;
-//   border-radius: 5px 0px 0px 5px;
-//   font-size: 22px;
-//   line-height: 26px;
-//   color: #176087;
-//   @include icon(account, url(../../../images/UI-control-elements/mock-avatar-blue.png)); // button__ic-lab_type_account
-//   @include icon(logout, url(../../../images/UI-control-elements/logout-blue.png)); // button__ic-lab_type_logout
-//   @include icon(login, url(../../../images/UI-control-elements/login-blue.png)); // button__ic-lab_type_login
-//   @include icon(ignup, url(../../../images/UI-control-elements/add-user-blue.png)); // button__ic-lab_type_ignup
-//   &:hover {
-//     background: linear-gradient(269.96deg, #eceff1 0.04%, #c4c4c4 99.96%);
-//   }
-//   &:active {
-//     background: linear-gradient(
-//       269.96deg,
-//       #97c8eb 0.04%,
-//       rgba(151, 200, 235, 0.5) 99.96%
-//     );
-//   }
-//   &_principal {
-//     display: flex;
-//   }
-//   &_secondary {
-//     display: none;
-//   }
-//   &_principal:hover + &_secondary {
-//     display: flex;
-//   }
-//   &_secondary:hover {
-//     display: flex;
-//   }
-// }
-
-
-  // &_secondary {
-  //   visibility: hidden;
-  //   opacity: 0;
-  //   transition: all .3s ease-in-out;
-  // }
-  // &_principal:hover + &_secondary {
-  //   visibility: visible;
-  //   opacity: 1;
-  //   transition: all .3s ease-in-out;
-  // }
-  // &_secondary:hover {
-  //   visibility: visible;
-  //   opacity: 1;
-  //   // transition: visibility 1.5s ease-in-out;
-  // }
-
-  .cover__menu {
-    position: fixed;
-    top: 11.06px;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-  }

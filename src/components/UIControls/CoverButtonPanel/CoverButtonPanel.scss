@@ -1,2 +1,108 @@
 @import "../UIControlsGlobals";
 
+.cover__menu-major {
+  // nav
+  box-sizing: border-box;
+  margin-top: auto;
+  background: linear-gradient(360deg, #97c8eb -51.59%, #176087 112.4%);
+}
+
+.cover__menu-major-list {
+  // ul
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 96.77px;
+}
+
+.cover__menu-major-item {
+  // li
+  box-sizing: border-box;
+  width: auto;
+  height: 100%;
+  border-right: 1px solid #30749a;
+}
+
+.cover__menu-major-item:last-of-type {
+  // li
+  border-right: none;
+}
+
+.cover__menu-major-link {
+  // a
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 21px;
+  padding-right: 21px;
+
+  // padding: 16px 11px 16px 16px;
+  font-size: 22px;
+  line-height: 26px;
+  // text-align: center;
+
+  color: #97c8eb;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #64E9EE;
+    transition: display 1s ease-in-out 0;
+  }
+  &:active {
+    background: linear-gradient(
+      269.96deg,
+      #97c8eb 0.04%,
+      rgba(151, 200, 235, 0.5) 99.96%
+    );
+  }
+}
+
+$iconWidth: 60px;
+$iconHeight: 60px;
+// $iconMargin: auto;
+$iconMargin: auto 11px auto 0;
+
+.button__ic-lab {
+  @include icon(
+    services,
+    url(../../images/UI-control-elements/services_icon.svg),
+    // url(../../images/UI-control-elements/services_icon-pale-cerulean.png),
+    $iconWidth,
+    $iconHeight,
+    $iconMargin
+  ); // button__ic-lab_type_services
+  @include icon(
+    book_appointment,
+    url(../../images/UI-control-elements/appointment_icon-pale-cerulean.png),
+    $iconWidth,
+    $iconHeight,
+    $iconMargin
+  ); // button__ic-lab_type_book_appointment
+  @include icon(
+    about_doctor,
+    url(../../images/UI-control-elements/female_dentist_icon-pale-cerulean.png),
+    $iconWidth,
+    $iconHeight,
+    $iconMargin
+  ); // button__ic-lab_type_about_doctor
+  @include icon(
+    blog,
+    url(../../images/UI-control-elements/icon_feather-pen-pale-cerulean.png),
+    $iconWidth,
+    $iconHeight,
+    $iconMargin
+  ); // button__ic-lab_type_blog
+  @include icon(
+    for_colleagues,
+    url(../../images/UI-control-elements/doctors-pale-cerulean.png),
+    $iconWidth,
+    $iconHeight,
+    $iconMargin
+  ); // button__ic-lab_type_for_colleagues
+}

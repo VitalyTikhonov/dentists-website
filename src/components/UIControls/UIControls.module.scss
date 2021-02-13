@@ -11,6 +11,7 @@ $pageWidthSectionHeight: 200px;
 .UIDevContainer__pageWidthSection {
   display: flex;
   flex-direction: column;
+  // justify-content: flex-end;
   width: 100vw;
   min-height: $pageWidthSectionHeight;
   border: 1px solid white;

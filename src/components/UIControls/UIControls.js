@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./UIControls.module.scss";
 import cn from "classnames";
 import AccountButtonGroup from "./AccountButtonGroup/AccountButtonGroup";
+import CoverButtonPanel from "./CoverButtonPanel/CoverButtonPanel";
 
 const UIControls = function (props) {
   const [loggedIn] = useState(false);
@@ -15,6 +16,7 @@ const UIControls = function (props) {
         )}
       >
         <AccountButtonGroup loggedIn={loggedIn} />
+        <CoverButtonPanel loggedIn={loggedIn} />
       </div>
       <div className={cn(styles.UIDevContainer__columnContainer)}>
         <div

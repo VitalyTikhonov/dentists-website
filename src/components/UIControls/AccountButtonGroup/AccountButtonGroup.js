@@ -4,9 +4,9 @@ import "./AccountButtonGroup.scss";
 
 const AccountButtonGroup = memo(function (props) {
   return (
-    <nav className="cover__menu" aria-labelledby="header-navigation">
+    <nav className="cover__menu-overlay-right" aria-labelledby="header-navigation">
       <h2 className="ariaLabelledTitle" id="header-navigation">
-        Дополнительное меню на обложке сайта
+        Дополнительное меню на обложке сайта – авторизация и аккаунт
       </h2>
       <ul>
         {props.loggedIn ? (
@@ -14,7 +14,7 @@ const AccountButtonGroup = memo(function (props) {
             <li className="cover__menu-item cover__menu-item_principal list-item-unstyling" >
               <Link
                 to="account"
-                className="link button button__overCover button__ic-lab_type_account"
+                className="button button__overCover button__ic-lab_type_account link-unstyling"
               >
                 Личный кабинет
               </Link>
@@ -33,7 +33,7 @@ const AccountButtonGroup = memo(function (props) {
             <li className="cover__menu-item cover__menu-item_principal list-item-unstyling" >
               <Link
                 to="login"
-                className="link button button__overCover button__ic-lab_type_login"
+                className="button button__overCover button__ic-lab_type_login link-unstyling"
               >
                 Войти
               </Link>
@@ -41,7 +41,7 @@ const AccountButtonGroup = memo(function (props) {
             <li className="cover__menu-item cover__menu-item_secondary list-item-unstyling" >
               <Link
                 to="signup"
-                className="button button__overCover button__ic-lab_type_ignup"
+                className="button button__overCover button__ic-lab_type_signup link-unstyling"
               >
                 Регистрация
               </Link>
