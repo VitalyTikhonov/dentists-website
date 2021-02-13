@@ -52,14 +52,14 @@
   &:hover {
     background: rgba(255, 255, 255, 0.2);
     color: #64E9EE;
-    transition: display 1s ease-in-out 0;
+    border: 1px solid #64E9EE;
+    transition: all .3s ease-in-out;
   }
   &:active {
-    background: linear-gradient(
-      269.96deg,
-      #97c8eb 0.04%,
-      rgba(151, 200, 235, 0.5) 99.96%
-    );
+    background: linear-gradient(360deg, #97C8EB -108%, #176087 34.38%);
+    border: none;
+    color: #003B5A;
+    transition: none;
   }
 }
 
@@ -68,41 +68,25 @@ $iconHeight: 60px;
 // $iconMargin: auto;
 $iconMargin: auto 11px auto 0;
 
-.button__ic-lab {
-  @include icon(
-    services,
-    url(../../images/UI-control-elements/services_icon.svg),
-    // url(../../images/UI-control-elements/services_icon-pale-cerulean.png),
-    $iconWidth,
-    $iconHeight,
-    $iconMargin
-  ); // button__ic-lab_type_services
-  @include icon(
-    book_appointment,
-    url(../../images/UI-control-elements/appointment_icon-pale-cerulean.png),
-    $iconWidth,
-    $iconHeight,
-    $iconMargin
-  ); // button__ic-lab_type_book_appointment
-  @include icon(
-    about_doctor,
-    url(../../images/UI-control-elements/female_dentist_icon-pale-cerulean.png),
-    $iconWidth,
-    $iconHeight,
-    $iconMargin
-  ); // button__ic-lab_type_about_doctor
-  @include icon(
-    blog,
-    url(../../images/UI-control-elements/icon_feather-pen-pale-cerulean.png),
-    $iconWidth,
-    $iconHeight,
-    $iconMargin
-  ); // button__ic-lab_type_blog
-  @include icon(
-    for_colleagues,
-    url(../../images/UI-control-elements/doctors-pale-cerulean.png),
-    $iconWidth,
-    $iconHeight,
-    $iconMargin
-  ); // button__ic-lab_type_for_colleagues
+.cover__menu-icon {
+  width: 60px;
+  height: 60px;
+  margin: auto 11px auto 0;
+  object-fit: contain;
+  fill: #97c8eb;
+}
+
+.cover__menu-icon_larger {
+  width: 70px;
+  height: 70px;
+}
+
+.cover__menu-major-link:hover .cover__menu-icon {
+  fill: #64E9EE;
+  transition: fill .3s ease-in-out;
+}
+
+.cover__menu-major-link:active .cover__menu-icon {
+  fill: #003B5A;
+  transition: none;
 }
