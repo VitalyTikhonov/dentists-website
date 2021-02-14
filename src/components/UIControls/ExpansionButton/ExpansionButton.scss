@@ -1,0 +1,6 @@
+@import "../UIControlsGlobals";
+
+.button__expansion { // не переименовывать – зависимость в UIControlsGlobals!
+  width: 189px;
+  height: 50px;
+}

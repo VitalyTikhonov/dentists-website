@@ -1,3 +1,5 @@
+@import "../../css-variables.scss";
+
 $pageWidthSectionHeight: 200px;
 
 .UIDevContainer {
@@ -41,31 +43,19 @@ $pageWidthSectionHeight: 200px;
 }
 
 .UIDevContainer__column_bgBlue {
-  background: linear-gradient(360deg, #97c8eb -51.59%, #176087 112.4%);
+  background: linear-gradient(360deg, $PALE_BLUE -51.59%, $DARK_BLUE 112.4%);
 }
 
 .UIDevContainer__column_bgLightBlue {
   background: linear-gradient(
     360deg,
     rgba(58, 147, 185, 0.8) -192.1%,
-    #97c8eb 170.08%
+    $PALE_BLUE 170.08%
   );
 }
 
 .UIDevContainer__column_bgWallpaper {
   background-image: url(../../images/styling-images/wallpaper_background_grey.png);
   background-repeat: repeat;
-  // background-size: 11%;
   background-size: 450.56px;
 }
-
-// .UIDevContainer__controlsOnTheRight {
-//   position: absolute;
-//   top: 11.06px;
-//   right: 0;
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .cover__topControlOverlay {
-// }

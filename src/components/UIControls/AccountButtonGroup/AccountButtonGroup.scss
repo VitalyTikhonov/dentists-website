@@ -1,3 +1,4 @@
+@import "../../../css-variables.scss";
 @import "../UIControlsGlobals";
 
 %showProperties {
@@ -42,14 +43,14 @@
   padding: 16px 11px 16px 16px;
   background: linear-gradient(
     270deg,
-    #ffffff 0%,
+    $WHITE 0%,
     rgba(225, 226, 230, 0.8) 100%
   );
   border: none;
   border-radius: 5px 0px 0px 5px;
   font-size: 22px;
   line-height: 26px;
-  color: #176087;
+  color: $DARK_BLUE;
   &:hover {
     background: linear-gradient(269.96deg, #eceff1 0.04%, #c4c4c4 99.96%);
     transition: display 1s ease-in-out 0;
@@ -57,7 +58,7 @@
   &:active {
     background: linear-gradient(
       269.96deg,
-      #97c8eb 0.04%,
+      $PALE_BLUE 0.04%,
       rgba(151, 200, 235, 0.5) 99.96%
     );
   }
@@ -68,5 +69,5 @@
   height: 38px;
   margin: auto 11px auto 0;
   object-fit: contain;
-  fill: #176087;
+  fill: $DARK_BLUE;
 }

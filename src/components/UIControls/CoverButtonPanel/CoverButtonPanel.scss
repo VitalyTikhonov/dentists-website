@@ -1,10 +1,11 @@
+@import "../../../css-variables.scss";
 @import "../UIControlsGlobals";
 
 .cover__menu-major {
   // nav
   box-sizing: border-box;
   margin-top: auto;
-  background: linear-gradient(360deg, #97c8eb -51.59%, #176087 112.4%);
+  background: linear-gradient(360deg, $PALE_BLUE -51.59%, $DARK_BLUE 112.4%);
 }
 
 .cover__menu-major-list {
@@ -43,21 +44,21 @@
   font-size: 22px;
   line-height: 26px;
 
-  color: #97c8eb;
+  color: $PALE_BLUE;
 
   &_active {
-    background: linear-gradient(360deg, #97c8eb -108%, #176087 34.38%);
+    background: linear-gradient(360deg, $PALE_BLUE -108%, $DARK_BLUE 34.38%);
     border: none;
     color: #003b5a;
   }
 
   &:hover {
-    color: #ffffff;
-    border: 1px solid #ffffff;
+    color: $WHITE;
+    border: 1px solid $WHITE;
     transition: all 0.15s ease-in-out;
   }
   &:active {
-    background: linear-gradient(360deg, #97c8eb -108%, #176087 34.38%);
+    background: linear-gradient(360deg, $PALE_BLUE -108%, $DARK_BLUE 34.38%);
     border: none;
     color: #003b5a;
     transition: none;
@@ -75,7 +76,7 @@
   height: 60px;
   margin: auto 11px auto 0;
   object-fit: contain;
-  fill: #97c8eb;
+  fill: $PALE_BLUE;
 
   &_larger {
     width: 70px;
@@ -83,7 +84,7 @@
   }
 
   .cover__menu-major-link:hover & {
-    fill: #ffffff;
+    fill: $WHITE;
     transition: fill 0.15s ease-in;
   }
 

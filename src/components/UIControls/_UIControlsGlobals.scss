@@ -1,3 +1,5 @@
+@import "../../css-variables.scss";
+
 .button {
   align-items: center;
   box-sizing: border-box;
@@ -6,20 +8,44 @@
   font-weight: normal;
 }
 
-// @mixin icon($iconType, $filepath, $width, $height, $margin) {
-//   &_type_#{$iconType}::before {
-//     content: "";
-//     width: $width;
-//     height: $height;
-//     margin: $margin;
-//     background-image: $filepath;
-//     background-repeat: no-repeat;
-//     background-size: contain;
-//     background-position: center;
-//     color: inherit;
-//   }
-// }
+.button__svg-container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 
 .aux {
   margin: 10px;
+}
+
+.svg {
+  &-outline-elem {
+    stroke: $PALE_BLUE;
+  }
+
+  .button__expansion:hover &-outline-elem,
+  .button__gallery-link:hover &-outline-elem {
+    stroke: $BRIGHT_BLUE_GREEN;
+  }
+  .button__expansion:active &-outline-elem,
+  .button__gallery-link:active &-outline-elem {
+    stroke: $WHITE;
+  }
+
+  &-fill-elem {
+    fill: $PALE_BLUE;
+  }
+
+  .button__expansion:hover &-fill-elem,
+  .button__gallery-link:hover &-fill-elem {
+    fill: $BRIGHT_BLUE_GREEN;
+  }
+  .button__expansion:active &-fill-elem,
+  .button__gallery-link:active &-fill-elem {
+    fill: $WHITE;
+  }
 }

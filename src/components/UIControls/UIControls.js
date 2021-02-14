@@ -3,6 +3,8 @@ import styles from "./UIControls.module.scss";
 import cn from "classnames";
 import AccountButtonGroup from "./AccountButtonGroup/AccountButtonGroup";
 import CoverButtonPanel from "./CoverButtonPanel/CoverButtonPanel";
+import ExpansionButton from "./ExpansionButton/ExpansionButton";
+import GalleryLinkButton from "./GalleryLinkButton/GalleryLinkButton";
 
 const UIControls = function (props) {
   const [loggedIn] = useState(false);
@@ -30,7 +32,10 @@ const UIControls = function (props) {
             styles.UIDevContainer__column,
             styles.UIDevContainer__column_bgLightBlue
           )}
-        ></div>
+        >
+          <ExpansionButton isOpen={false} />
+          <GalleryLinkButton />
+        </div>
         <div
           className={cn(
             styles.UIDevContainer__column,
