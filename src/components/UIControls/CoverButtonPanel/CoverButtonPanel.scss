@@ -45,29 +45,32 @@
   line-height: 26px;
 
   color: $PALE_BLUE;
+  // transition: color 0.15s ease-in-out;
 
   &_active {
     background: linear-gradient(360deg, $PALE_BLUE -108%, $DARK_BLUE 34.38%);
     border: none;
-    color: #003b5a;
+    color: $WHITE;
   }
 
   &:hover {
-    color: $WHITE;
-    border: 1px solid $WHITE;
-    transition: all 0.15s ease-in-out;
+    color: $BRIGHT_BLUE_GREEN;
+    // border: 1px solid $BRIGHT_BLUE_GREEN;
+    box-shadow: inset 0 0 5px 1px #64e9ee;
   }
   &:active {
     background: linear-gradient(360deg, $PALE_BLUE -108%, $DARK_BLUE 34.38%);
-    border: none;
-    color: #003b5a;
-    transition: none;
+    // border: none;
+    box-shadow: none;
+    color: $WHITE;
+    // transition: none;
   }
 }
 
 .cover__menu-major-link_active:hover {
-  color: #003b5a;
-  border: none;
+  color: $WHITE;
+  // border: none;
+  box-shadow: none;
 }
 
 /* Важен порядок НАЧАЛО */
@@ -77,6 +80,7 @@
   margin: auto 11px auto 0;
   object-fit: contain;
   fill: $PALE_BLUE;
+  // transition: fill 0.15s ease-in;
 
   &_larger {
     width: 70px;
@@ -84,21 +88,20 @@
   }
 
   .cover__menu-major-link:hover & {
-    fill: $WHITE;
-    transition: fill 0.15s ease-in;
+    fill: $BRIGHT_BLUE_GREEN;
   }
 
   .cover__menu-major-link_active & {
-    fill: #003b5a;
+    fill: $WHITE;
   }
 
   .cover__menu-major-link_active:hover & {
-    fill: #003b5a;
+    fill: $WHITE;
   }
 
   .cover__menu-major-link:active & {
-    fill: #003b5a;
-    transition: none;
+    fill: $WHITE;
+    // transition: none;
   }
 }
 /* Важен порядок КОНЕЦ */
