@@ -24,11 +24,10 @@
   width: auto;
   height: 100%;
   border-right: 1px solid #30749a;
-}
 
-.cover__menu-major-item:last-of-type {
-  // li
-  border-right: none;
+  &:last-of-type {
+    border-right: none;
+  }
 }
 
 .cover__menu-major-link {
@@ -41,80 +40,64 @@
   height: 100%;
   padding-left: 21px;
   padding-right: 21px;
-
-  // padding: 16px 11px 16px 16px;
   font-size: 22px;
   line-height: 26px;
-  // text-align: center;
 
   color: #97c8eb;
 
   &_active {
-    background: linear-gradient(360deg, #97C8EB -108%, #176087 34.38%);
+    background: linear-gradient(360deg, #97c8eb -108%, #176087 34.38%);
     border: none;
-    color: #003B5A;
+    color: #003b5a;
   }
-
-  // &_active {
-  //   color: #ffffff;
-  // }
 
   &:hover {
     color: #ffffff;
-    // border: 1px solid #64E9EE;
-    // background: rgba(255, 255, 255, 0.2);
-    // color: #64E9EE;
-    // border: 1px solid #64E9EE;
-    // background: rgba(255, 255, 255, 0.2);
-    transition: all .15s ease-in-out;
+    border: 1px solid #ffffff;
+    transition: all 0.15s ease-in-out;
   }
   &:active {
-    background: linear-gradient(360deg, #97C8EB -108%, #176087 34.38%);
+    background: linear-gradient(360deg, #97c8eb -108%, #176087 34.38%);
     border: none;
-    color: #003B5A;
+    color: #003b5a;
     transition: none;
   }
 }
 
-$iconWidth: 60px;
-$iconHeight: 60px;
-// $iconMargin: auto;
-$iconMargin: auto 11px auto 0;
+.cover__menu-major-link_active:hover {
+  color: #003b5a;
+  border: none;
+}
 
-.cover__menu-icon {
+/* Важен порядок НАЧАЛО */
+.cover__menu-major-icon {
   width: 60px;
   height: 60px;
   margin: auto 11px auto 0;
   object-fit: contain;
   fill: #97c8eb;
-}
 
-.cover__menu-icon_larger {
-  width: 70px;
-  height: 70px;
-}
+  &_larger {
+    width: 70px;
+    height: 70px;
+  }
 
-/* Важен порядок НАЧАЛО */
-.cover__menu-major-link:hover .cover__menu-icon {
-  fill: #ffffff;
-  // fill: #64E9EE;
-  transition: fill .15s ease-in;
-}
+  .cover__menu-major-link:hover & {
+    fill: #ffffff;
+    transition: fill 0.15s ease-in;
+  }
 
-.cover__menu-major-link_active:hover {
-  color: #003B5A;
-}
+  .cover__menu-major-link_active & {
+    fill: #003b5a;
+  }
 
-.cover__menu-major-link_active .cover__menu-icon {
-  fill: #003B5A;
-}
+  .cover__menu-major-link_active:hover & {
+    fill: #003b5a;
+  }
 
-.cover__menu-major-link_active:hover .cover__menu-icon {
-  fill: #003B5A;
-}
-
-.cover__menu-major-link:active .cover__menu-icon {
-  fill: #003B5A;
-  transition: none;
+  .cover__menu-major-link:active & {
+    fill: #003b5a;
+    transition: none;
+  }
 }
 /* Важен порядок КОНЕЦ */

@@ -1,6 +1,10 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
 import "./AccountButtonGroup.scss";
+import AccountIcon from "../../../images/UI-control-elements/svg/SvgComponents/MockAvatar";
+import LogoutIcon from "../../../images/UI-control-elements/svg/SvgComponents/Logout";
+import LoginIcon from "../../../images/UI-control-elements/svg/SvgComponents/Login";
+import Signup from "../../../images/UI-control-elements/svg/SvgComponents/AddUser";
 
 const AccountButtonGroup = memo(function (props) {
   return (
@@ -16,6 +20,7 @@ const AccountButtonGroup = memo(function (props) {
                 to="account"
                 className="button button__overCover button__ic-lab_type_account link-unstyling"
               >
+                <AccountIcon className="cover__menu-icon" />
                 Личный кабинет
               </Link>
             </li>
@@ -24,6 +29,7 @@ const AccountButtonGroup = memo(function (props) {
                 type="button"
                 className="button button__overCover button__ic-lab_type_logout"
               >
+                <LogoutIcon className="cover__menu-icon" />
                 Выйти
               </button>
             </li>
@@ -35,6 +41,7 @@ const AccountButtonGroup = memo(function (props) {
                 to="login"
                 className="button button__overCover button__ic-lab_type_login link-unstyling"
               >
+                <LoginIcon className="cover__menu-icon" />
                 Войти
               </Link>
             </li>
@@ -43,6 +50,7 @@ const AccountButtonGroup = memo(function (props) {
                 to="signup"
                 className="button button__overCover button__ic-lab_type_signup link-unstyling"
               >
+                <Signup className="cover__menu-icon" />
                 Регистрация
               </Link>
             </li>

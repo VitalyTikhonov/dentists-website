@@ -6,16 +6,16 @@
   font-weight: normal;
 }
 
-@mixin icon($iconType, $filepath, $width, $height, $margin) {
-  &_type_#{$iconType}::before {
-    content: "";
-    width: $width;
-    height: $height;
-    margin: $margin;
-    background-image: $filepath;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    color: inherit;
-  }
-}
+// @mixin icon($iconType, $filepath, $width, $height, $margin) {
+//   &_type_#{$iconType}::before {
+//     content: "";
+//     width: $width;
+//     height: $height;
+//     margin: $margin;
+//     background-image: $filepath;
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     background-position: center;
+//     color: inherit;
+//   }
+// }

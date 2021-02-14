@@ -1,11 +1,11 @@
 import { memo } from "react";
 import { HashRouter, NavLink } from "react-router-dom";
 import "./CoverButtonPanel.scss";
-import ServicesIcon from "../../../images/UI-control-elements/svg/SvgComponents/ServicesIcon.js";
-import AppointmentIcon from "../../../images/UI-control-elements/svg/SvgComponents/AppointmentIcon.js";
-import FemaleDentistIcon from "../../../images/UI-control-elements/svg/SvgComponents/FemaleDentistIcon.js";
-import FeatherPen from "../../../images/UI-control-elements/svg/SvgComponents/IconFeatherPen.js";
-import Doctors from "../../../images/UI-control-elements/svg/SvgComponents/Doctors.js";
+import ServicesIcon from "../../../images/UI-control-elements/svg/SvgComponents/ServicesIcon";
+import AppointmentIcon from "../../../images/UI-control-elements/svg/SvgComponents/AppointmentIcon";
+import FemaleDentistIcon from "../../../images/UI-control-elements/svg/SvgComponents/FemaleDentistIcon";
+import FeatherPen from "../../../images/UI-control-elements/svg/SvgComponents/IconFeatherPen";
+import Doctors from "../../../images/UI-control-elements/svg/SvgComponents/Doctors";
 
 const CoverButtonPanel = memo(function (props) {
   return (
@@ -25,7 +25,7 @@ const CoverButtonPanel = memo(function (props) {
               className="cover__menu-major-link link-unstyling"
               activeClassName="cover__menu-major-link_active"
             >
-              <ServicesIcon className="cover__menu-icon" />
+              <ServicesIcon className="cover__menu-major-icon" />
               Услуги
             </NavLink>
           </li>
@@ -35,7 +35,7 @@ const CoverButtonPanel = memo(function (props) {
               className="cover__menu-major-link link-unstyling"
               activeClassName="cover__menu-major-link_active"
             >
-              <AppointmentIcon className="cover__menu-icon" />
+              <AppointmentIcon className="cover__menu-major-icon" />
               Запись на приём
             </NavLink>
           </li>
@@ -45,7 +45,7 @@ const CoverButtonPanel = memo(function (props) {
               className="cover__menu-major-link link-unstyling"
               activeClassName="cover__menu-major-link_active"
             >
-              <FemaleDentistIcon className="cover__menu-icon cover__menu-icon_larger" />
+              <FemaleDentistIcon className="cover__menu-major-icon cover__menu-major-icon_larger" />
               Обо мне
             </NavLink>
           </li>
@@ -57,7 +57,7 @@ const CoverButtonPanel = memo(function (props) {
               className="cover__menu-major-link link-unstyling"
               activeClassName="cover__menu-major-link_active"
             >
-              <FeatherPen className="cover__menu-icon" />
+              <FeatherPen className="cover__menu-major-icon" />
               Мой блог
             </NavLink>
           </li>
@@ -69,7 +69,7 @@ const CoverButtonPanel = memo(function (props) {
               className="cover__menu-major-link link-unstyling"
               activeClassName="cover__menu-major-link_active"
             >
-              <Doctors className="cover__menu-icon" />
+              <Doctors className="cover__menu-major-icon" />
               Коллегам
             </NavLink>
           </li>
