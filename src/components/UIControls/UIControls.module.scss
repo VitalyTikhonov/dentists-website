@@ -36,6 +36,7 @@ $pageWidthSectionHeight: 200px;
 
 .UIDevContainer__sectionWithPhotoBg {
   // height: 400px;
+  position: relative;
   background-image: url(../../images/Natasha_WhatsApp_04_v_kabinete.jpeg);
 }
 
@@ -58,13 +59,13 @@ $pageWidthSectionHeight: 200px;
   background-size: 450.56px;
 }
 
-.UIDevContainer__controlsOnTheRight {
-  position: fixed;
-  top: 11.06px;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-}
+// .UIDevContainer__controlsOnTheRight {
+//   position: absolute;
+//   top: 11.06px;
+//   right: 0;
+//   display: flex;
+//   flex-direction: column;
+// }
 
 // .cover__topControlOverlay {
 // }
