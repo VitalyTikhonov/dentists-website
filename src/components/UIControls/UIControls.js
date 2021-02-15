@@ -4,6 +4,7 @@ import cn from "classnames";
 import AccountButtonGroup from "./AccountButtonGroup/AccountButtonGroup";
 import CoverButtonPanel from "./CoverButtonPanel/CoverButtonPanel";
 import LabelAndPinButton from "./LabelAndPinButton/LabelAndPinButton";
+import Pin from "./Pin/Pin";
 
 const UIControls = function (props) {
   const [loggedIn] = useState(false);
@@ -32,27 +33,21 @@ const UIControls = function (props) {
             styles.UIDevContainer__column_bgLightBlue
           )}
         >
-          <LabelAndPinButton
-            label={"Свернуть"}
-            direction="up"
-          />
-          <LabelAndPinButton
-            label={"Подробнее"}
-            direction="down"
-          />
-          <LabelAndPinButton
-            label={"Примеры работ"}
-            direction="right"
-          />
+          <LabelAndPinButton label={"Свернуть"} direction="up" />
+          <LabelAndPinButton label={"Подробнее"} direction="down" />
+          <LabelAndPinButton label={"Примеры работ"} direction="right" />
         </div>
         <div
           className={cn(
             styles.UIDevContainer__column,
             styles.UIDevContainer__column_bgWallpaper
           )}
-        ></div>
+        >
+          <div className={cn(styles.UIDevContainer__textDimmerOnBgWallpaper)}>
+            <Pin className="button__pin button__pin_direction_right" />
+          </div>
+        </div>
       </div>
-      {/* <div className={cn(styles.)} ></div> */}
     </div>
   );
 };

@@ -55,7 +55,23 @@ $pageWidthSectionHeight: 200px;
 }
 
 .UIDevContainer__column_bgWallpaper {
+  position: relative;
   background-image: url(../../images/styling-images/wallpaper_background_grey.png);
   background-repeat: repeat;
   background-size: 450.56px;
+}
+
+.UIDevContainer__textDimmerOnBgWallpaper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 1239px;
+  height: 92px;
+  background: linear-gradient(
+    178.38deg,
+    rgba(255, 255, 255, 0) -152.41%,
+    #ffffff 79.97%
+  );
 }
