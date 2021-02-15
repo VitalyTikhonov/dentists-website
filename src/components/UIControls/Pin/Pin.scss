@@ -1,0 +1,32 @@
+@import "../UIControlsGlobals";
+
+.button__pin { // не переименовывать – зависимость в UIControlsGlobals!
+  margin-right: -1px;
+  width: 50px;
+  height: 50px;
+  fill: $PALE_BLUE;
+
+  &_on-right-in-button {
+    margin-left: 10px;
+  }
+
+  .button:hover & {
+    fill: $BRIGHT_BLUE_GREEN;
+  }
+
+  .button:active & {
+    fill: $WHITE;
+  }
+
+  &_direction_right {
+    transform: rotate(0deg);
+  }
+
+  &_direction_up {
+    transform: rotate(-90deg);
+  }
+
+  &_direction_down {
+    transform: rotate(90deg);
+  }
+}
