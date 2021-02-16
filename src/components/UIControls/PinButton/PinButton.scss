@@ -1,0 +1,17 @@
+@import "../UIControlsGlobals";
+
+.button__pin-only {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+// .button__pin_type_parent-size {
+// }

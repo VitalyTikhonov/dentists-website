@@ -1,21 +1,36 @@
 @import "../UIControlsGlobals";
 
-.button__pin { // не переименовывать – зависимость в UIControlsGlobals!
-  margin-right: -1px;
-  width: 50px;
-  height: 50px;
-  fill: $PALE_BLUE;
+.pin {
+  // &_position {
+  //   &_right_of_label {
+  //   }
+  //   &_parent_size {
+  //   }
+  // }
 
-  &_on-right-in-button {
-    margin-left: 10px;
+  &_type_flat {
+    fill: $PALE_BLUE;
+
+    .button:hover & {
+      fill: $BRIGHT_BLUE_GREEN;
+    }
+
+    .button:active & {
+      fill: $WHITE;
+    }
   }
 
-  .button:hover & {
-    fill: $BRIGHT_BLUE_GREEN;
-  }
+  &_type_domed {
+    fill: linear-gradient(228.01deg, #176087 4.74%, #97c8eb 100%);
 
-  .button:active & {
-    fill: $WHITE;
+    .button:hover & {
+      // background-color: linear-gradient(228.01deg, #176087 4.74%, #97c8eb 100%);
+      background-color: $BRIGHT_BLUE_GREEN;
+    }
+
+    .button:active & {
+      fill: $WHITE;
+    }
   }
 
   &_direction_right {
@@ -28,9 +43,5 @@
 
   &_direction_down {
     transform: rotate(90deg);
-  }
-
-  &_on-text-dimmer {
-
   }
 }

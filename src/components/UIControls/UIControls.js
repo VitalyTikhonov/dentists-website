@@ -4,7 +4,7 @@ import cn from "classnames";
 import AccountButtonGroup from "./AccountButtonGroup/AccountButtonGroup";
 import CoverButtonPanel from "./CoverButtonPanel/CoverButtonPanel";
 import LabelAndPinButton from "./LabelAndPinButton/LabelAndPinButton";
-import Pin from "./Pin/Pin";
+import PinButton from "./PinButton/PinButton";
 
 const UIControls = function (props) {
   const [loggedIn] = useState(false);
@@ -44,7 +44,7 @@ const UIControls = function (props) {
           )}
         >
           <div className={cn(styles.UIDevContainer__textDimmerOnBgWallpaper)}>
-            <Pin className="button__pin button__pin_direction_right" />
+            <PinButton direction="down"/>
           </div>
         </div>
       </div>
