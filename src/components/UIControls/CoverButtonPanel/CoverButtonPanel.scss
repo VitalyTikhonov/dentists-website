@@ -1,14 +1,14 @@
 @import "../../../css-variables.scss";
 // @import "../UIControlsGlobals";
 
-.cover__menu-major {
+.cover-and-mob-menu__major {
   // nav
   box-sizing: border-box;
   margin-top: auto;
   background: linear-gradient(360deg, $PALE_BLUE -51.59%, $DARK_BLUE 112.4%);
 }
 
-.cover__menu-major-list {
+.cover-and-mob-menu__major-list {
   // ul
   display: grid;
   grid-auto-columns: 1fr;
@@ -19,7 +19,7 @@
   height: 96.77px;
 }
 
-.cover__menu-major-item {
+.cover-and-mob-menu__major-item {
   // li
   box-sizing: border-box;
   width: auto;
@@ -31,7 +31,7 @@
   }
 }
 
-.cover__menu-major-link {
+.cover-and-mob-menu__major-link {
   // a
   display: flex;
   box-sizing: border-box;
@@ -67,14 +67,14 @@
   }
 }
 
-.cover__menu-major-link_active:hover {
+.cover-and-mob-menu__major-link_active:hover {
   color: $WHITE;
   // border: none;
   box-shadow: none;
 }
 
 /* Важен порядок НАЧАЛО */
-.cover__menu-major-icon {
+.cover-and-mob-menu__major-icon {
   width: 60px;
   height: 60px;
   margin: auto 11px auto 0;
@@ -87,21 +87,56 @@
     height: 70px;
   }
 
-  .cover__menu-major-link:hover & {
+  .cover-and-mob-menu__major-link:hover & {
     fill: $BRIGHT_BLUE_GREEN;
   }
 
-  .cover__menu-major-link_active & {
+  .cover-and-mob-menu__major-link_active & {
     fill: $WHITE;
   }
 
-  .cover__menu-major-link_active:hover & {
+  .cover-and-mob-menu__major-link_active:hover & {
     fill: $WHITE;
   }
 
-  .cover__menu-major-link:active & {
+  .cover-and-mob-menu__major-link:active & {
     fill: $WHITE;
     // transition: none;
   }
 }
 /* Важен порядок КОНЕЦ */
+
+.cover-and-mob-menu__major-close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 304px;
+  height: 39px;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid $PALE_BLUE;
+  border-radius: 5px;
+
+  // &:hover {
+  //   background: rgba(255, 255, 255, 0.2);
+  //   border: 1px solid $BRIGHT_BLUE_GREEN;
+  // }
+
+  &:active {
+    background-color: #ffffff45;
+    border: 1px solid $WHITE;
+  }
+}
+
+.cover-and-mob-menu__major-close-icon {
+  fill: $PALE_BLUE;
+
+  // &:hover {
+  //   fill: $BRIGHT_BLUE_GREEN;
+  // }
+
+  .button:active & {
+    fill: $WHITE;
+  }
+}

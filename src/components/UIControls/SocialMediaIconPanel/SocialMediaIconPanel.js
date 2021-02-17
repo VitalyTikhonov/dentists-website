@@ -1,14 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
 import "./SocialMediaIconPanel.scss";
-// import facebookIcon from "../../../images/social-media-icons/facebook.svg";
-// import vkIcon from "../../../images/social-media-icons/free-icon-vk-733639.svg";
-// import youtubeIcon from "../../../images/social-media-icons/youtube.svg";
-// import instagramIcon from "../../../images/social-media-icons/instagram.svg";
-// import telegramIcon from "../../../images/social-media-icons/telegram.svg";
-// import whatsappIcon from "../../../images/social-media-icons/whatsapp.svg";
-// import gmailIcon from "../../../images/social-media-icons/gmail.svg";
-
 import FacebookIcon from "../../../images/social-media-icons/withBg/FacebookIcon.js";
 import VkIcon from "../../../images/social-media-icons/withBg/VkIcon.js";
 import YoutubeIcon from "../../../images/social-media-icons/withBg/YoutubeIcon.js";
@@ -16,14 +8,6 @@ import InstagramIcon from "../../../images/social-media-icons/withBg/InstagramIc
 import TelegramIcon from "../../../images/social-media-icons/withBg/TelegramIcon.js";
 import WhatsappIcon from "../../../images/social-media-icons/withBg/WhatsappIcon.js";
 import GmailIcon from "../../../images/social-media-icons/withBg/GmailIcon.js";
-
-// import facebookIcon from "../../../images/social-media-icons/facebook.svg";
-// import vkIcon from "../../../images/social-media-icons/free-icon-vk-733639.svg";
-// import youtubeIcon from "../../../images/social-media-icons/youtube.svg";
-// import instagramIcon from "../../../images/social-media-icons/instagram.svg";
-// import telegramIcon from "../../../images/social-media-icons/telegram.svg";
-// import whatsappIcon from "../../../images/social-media-icons/whatsapp.svg";
-// import gmailIcon from "../../../images/social-media-icons/gmail.svg";
 
 const SocialMediaIconPanel = memo(function (props) {
   return (

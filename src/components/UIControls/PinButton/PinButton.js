@@ -6,12 +6,11 @@ function PinButton(props) {
 
   return (
     <button
-      className={`button button__pin-only ${parentClass}`}
+      className={`button button_type_icon-only button__pin-only ${parentClass}`}
     >
       <Pin
         type={type}
         direction={direction}
-        parentClass="button__pin"
         opaque={opaque}
       />
     </button>

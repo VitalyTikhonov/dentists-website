@@ -8,21 +8,15 @@
   font-weight: normal;
 }
 
-// .button__svg-container-button {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 0;
-//   background-color: transparent;
-//   border: none;
-//   outline: none;
-// }
-
-// .button__pin {
-//   // не переименовывать – зависимость в UIControlsGlobals!
-//   width: 50px;
-//   height: 50px;
-// }
+.button_type_icon-only {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 
 .aux {
   margin: 10px;

@@ -2,26 +2,19 @@
 // @import "../UIControlsGlobals";
 
 .button__pin-only {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50px;
   height: 50px;
-  padding: 0;
-  background-color: transparent;
-  border: none;
   border-radius: 50%;
-  outline: none;
 
   &_type_opaque {
+    background-color: $PALE_BLUE;
     &:hover {
       background-color: $BRIGHT_BLUE_GREEN;
-      box-shadow: 0 0 20px 10px #64e9ee4f;
+      box-shadow: 0 0 14px 7px $BRIGHT_BLUE_GREEN;
     }
 
     &:active {
-      background-color: #ff4141e8;
-      box-shadow: 0 0 20px 10px #ff00004f;
+      box-shadow: 0 0 20px 10px $BRIGHT_BLUE_GREEN;
     }
   }
 }

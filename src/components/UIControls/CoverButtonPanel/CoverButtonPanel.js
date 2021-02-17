@@ -6,70 +6,78 @@ import AppointmentIcon from "../../../images/UI-control-elements/svg/SvgComponen
 import FemaleDentistIcon from "../../../images/UI-control-elements/svg/SvgComponents/FemaleDentistIcon";
 import FeatherPen from "../../../images/UI-control-elements/svg/SvgComponents/IconFeatherPen";
 import Doctors from "../../../images/UI-control-elements/svg/SvgComponents/Doctors";
+import DoubleChevronLeft from "../../../images/UI-control-elements/svg/SvgComponents/DoubleChevronLeft";
 
 const CoverButtonPanel = memo(function (props) {
   return (
-    <nav className="cover__menu-major" aria-labelledby="header-navigation">
+    <nav
+      className="cover-and-mob-menu__major"
+      aria-labelledby="header-navigation"
+    >
       <h2 className="ariaLabelledTitle" id="header-navigation">
         Центральное меню на обложке сайта
       </h2>
 
-      <ul className="cover__menu-major-list">
+      <button className="button cover-and-mob-menu__major-close-button">
+        <DoubleChevronLeft className="cover-and-mob-menu__major-close-icon" />
+      </button>
+
+      <ul className="cover-and-mob-menu__major-list">
         <HashRouter
           // basename="/" // после хеша
           hashType="noslash"
         >
-          <li className="cover__menu-major-item button list-item-unstyling">
+          <li className="cover-and-mob-menu__major-item button list-item-unstyling">
             <NavLink
               to="services"
-              className="cover__menu-major-link link-unstyling"
-              activeClassName="cover__menu-major-link_active"
+              className="cover-and-mob-menu__major-link link-unstyling"
+              activeClassName="cover-and-mob-menu__major-link_active"
             >
-              <ServicesIcon className="cover__menu-major-icon" />
+              <ServicesIcon className="cover-and-mob-menu__major-icon" />
               Услуги
             </NavLink>
           </li>
-          <li className="cover__menu-major-item button list-item-unstyling">
+          <li className="cover-and-mob-menu__major-item button list-item-unstyling">
             <NavLink
               to="book_appointment"
-              className="cover__menu-major-link link-unstyling"
-              activeClassName="cover__menu-major-link_active"
+              className="cover-and-mob-menu__major-link link-unstyling"
+              activeClassName="cover-and-mob-menu__major-link_active"
             >
-              <AppointmentIcon className="cover__menu-major-icon" />
+              <AppointmentIcon className="cover-and-mob-menu__major-icon" />
               Запись на приём
             </NavLink>
           </li>
-          <li className="cover__menu-major-item button list-item-unstyling">
+          <li className="cover-and-mob-menu__major-item button list-item-unstyling">
             <NavLink
               to="/about_doctor"
-              className="cover__menu-major-link link-unstyling"
-              activeClassName="cover__menu-major-link_active"
+              className="cover-and-mob-menu__major-link link-unstyling"
+              activeClassName="cover-and-mob-menu__major-link_active"
             >
-              <FemaleDentistIcon className="cover__menu-major-icon cover__menu-major-icon_larger" />
+              <FemaleDentistIcon className="cover-and-mob-menu__major-icon cover-and-mob-menu__major-icon_larger" />
               Обо мне
             </NavLink>
           </li>
         </HashRouter>
         {true && (
-          <li className="cover__menu-major-item button list-item-unstyling">
+          <li className="cover-and-mob-menu__major-item button list-item-unstyling">
             <NavLink
               to="blog"
-              className="cover__menu-major-link link-unstyling"
-              activeClassName="cover__menu-major-link_active"
+              className="cover-and-mob-menu__major-link link-unstyling"
+              activeClassName="cover-and-mob-menu__major-link_active"
             >
-              <FeatherPen className="cover__menu-major-icon" />
+              <FeatherPen className="cover-and-mob-menu__major-icon" />
               Мой блог
             </NavLink>
           </li>
         )}
         {true && (
-          <li className="cover__menu-major-item button list-item-unstyling">
+          <li className="cover-and-mob-menu__major-item button list-item-unstyling">
             <NavLink
               to="blog/for_colleagues"
-              className="cover__menu-major-link link-unstyling"
-              activeClassName="cover__menu-major-link_active"
+              className="cover-and-mob-menu__major-link link-unstyling"
+              activeClassName="cover-and-mob-menu__major-link_active"
             >
-              <Doctors className="cover__menu-major-icon" />
+              <Doctors className="cover-and-mob-menu__major-icon" />
               Коллегам
             </NavLink>
           </li>

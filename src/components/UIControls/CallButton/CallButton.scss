@@ -1,0 +1,35 @@
+@import "../../../css-variables.scss";
+// @import "../UIControlsGlobals";
+
+.button__call {
+  // не переименовывать – зависимость в UIControlsGlobals!
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 24px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 285px;
+  // height: 50px;
+  background: linear-gradient(122.71deg, #97C8EB 0%, #176087 117.58%);
+  border-radius: 75px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: $PALE_BLUE;
+  // fill: $PALE_BLUE;
+
+  &:active {
+    color: $WHITE;
+  }
+}
+
+.button__icon-left-to-label {
+  width: 46px;
+  height: 46px;
+  fill: $PALE_BLUE;
+
+  .button__call:active & {
+    fill: $WHITE;
+  }
+}

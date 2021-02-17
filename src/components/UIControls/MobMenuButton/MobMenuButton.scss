@@ -1,0 +1,15 @@
+@import "../../../css-variables.scss";
+// @import "../UIControlsGlobals";
+
+.button__mob-menu {
+  width: 30px;
+  height: 30px;
+
+  &-icon {
+    fill: $PALE_BLUE;
+
+    .button__mob-menu:active & {
+      fill: $WHITE;
+    }
+  }
+}

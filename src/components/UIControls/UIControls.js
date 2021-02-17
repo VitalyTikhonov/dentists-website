@@ -7,6 +7,8 @@ import CoverButtonPanel from "./CoverButtonPanel/CoverButtonPanel";
 import LabelAndPinButton from "./LabelAndPinButton/LabelAndPinButton";
 import PinButton from "./PinButton/PinButton";
 import SocialMediaIconPanel from "./SocialMediaIconPanel/SocialMediaIconPanel";
+import MobMenuButton from "./MobMenuButton/MobMenuButton";
+import CallButton from "./CallButton/CallButton";
 
 const UIControls = function (props) {
   const [loggedIn] = useState(false);
@@ -28,6 +30,7 @@ const UIControls = function (props) {
           styles.UIDevContainer__column_bgBlue
         )}
       >
+        <MobMenuButton />
         <PinButton type="flat" direction="down" parentClass="aux" />
         <SocialMediaIconPanel />
       </div>
@@ -47,6 +50,7 @@ const UIControls = function (props) {
           styles.UIDevContainer__column_bgWallpaper
         )}
       >
+        <CallButton />
         <div className={cn(styles.UIDevContainer__textDimmerOnBgWallpaper)}>
           <PinButton
             type="domed"
