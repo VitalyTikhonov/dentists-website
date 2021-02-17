@@ -10,7 +10,7 @@ function PinButton(props) {
         type="domed"
         direction={direction}
         parentClass="button__pin button__pin_type_parent-size"
-        useOwnColorScheme={false}
+        useOwnColorScheme={true}
       />
     </button>
   );

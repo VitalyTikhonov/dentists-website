@@ -1,4 +1,5 @@
-@import "../UIControlsGlobals";
+// @import "../UIControlsGlobals";
+@import "../../../css-variables.scss";
 
 .pin {
   // &_position {
@@ -21,11 +22,11 @@
   }
 
   &_type_domed {
-    fill: linear-gradient(228.01deg, #176087 4.74%, #97c8eb 100%);
-
     .button:hover & {
       // background-color: linear-gradient(228.01deg, #176087 4.74%, #97c8eb 100%);
-      background-color: $BRIGHT_BLUE_GREEN;
+      // background-color: $BRIGHT_BLUE_GREEN;
+      // filter: drop-shadow(0 0 4px $BRIGHT_BLUE_GREEN);
+      // box-shadow: 0 0 4px 4px $BRIGHT_BLUE_GREEN;
     }
 
     .button:active & {

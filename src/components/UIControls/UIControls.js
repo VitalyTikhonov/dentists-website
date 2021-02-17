@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./UIControls.module.scss";
+import "./_UIControlsGlobals.scss";
 import cn from "classnames";
 import AccountButtonGroup from "./AccountButtonGroup/AccountButtonGroup";
 import CoverButtonPanel from "./CoverButtonPanel/CoverButtonPanel";
