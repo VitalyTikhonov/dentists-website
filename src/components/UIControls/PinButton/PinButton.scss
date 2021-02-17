@@ -13,16 +13,15 @@
   border-radius: 50%;
   outline: none;
 
-  &:hover {
-    background-color: $BRIGHT_BLUE_GREEN;
-    box-shadow: 0 0 20px 10px #64e9ee4f;
-  }
+  &_type_opaque {
+    &:hover {
+      background-color: $BRIGHT_BLUE_GREEN;
+      box-shadow: 0 0 20px 10px #64e9ee4f;
+    }
 
-  &:active {
-    background-color: #ff000085;
-    box-shadow: 0 0 20px 10px #ff00004f;
+    &:active {
+      background-color: #ff000085;
+      box-shadow: 0 0 20px 10px #ff00004f;
+    }
   }
 }
-
-// .button__pin_type_parent-size {
-// }

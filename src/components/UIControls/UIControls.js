@@ -27,7 +27,9 @@ const UIControls = function (props) {
             styles.UIDevContainer__column,
             styles.UIDevContainer__column_bgBlue
           )}
-        ></div>
+        >
+          <PinButton type="flat" direction="down" parentClass="aux" />
+        </div>
         <div
           className={cn(
             styles.UIDevContainer__column,
@@ -45,7 +47,12 @@ const UIControls = function (props) {
           )}
         >
           <div className={cn(styles.UIDevContainer__textDimmerOnBgWallpaper)}>
-            <PinButton direction="down"/>
+            <PinButton
+              type="domed"
+              direction="down"
+              opaque={true}
+              parentClass="button__pin-only_type_opaque"
+            />
           </div>
         </div>
       </div>

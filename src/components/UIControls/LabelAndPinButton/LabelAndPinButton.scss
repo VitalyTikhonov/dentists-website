@@ -15,18 +15,18 @@
   border-radius: 25px;
   font-size: 22px;
   color: $PALE_BLUE;
-  fill: $PALE_BLUE;
+  // fill: $PALE_BLUE;
 
   &:hover {
     border: 1px solid $BRIGHT_BLUE_GREEN;
     color: $BRIGHT_BLUE_GREEN;
-    fill: $BRIGHT_BLUE_GREEN;
+    // fill: $BRIGHT_BLUE_GREEN;
   }
 
   &:active {
     border: 1px solid $WHITE;
     color: $WHITE;
-    fill: $WHITE;
+    // fill: $WHITE;
   }
 }
 

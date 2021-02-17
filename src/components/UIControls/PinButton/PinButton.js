@@ -2,15 +2,17 @@ import "./PinButton.scss";
 import Pin from "../Pin/Pin";
 
 function PinButton(props) {
-  const { direction } = props;
+  const { type, direction, opaque, parentClass } = props;
 
   return (
-    <button className="button button__pin-only">
+    <button
+      className={`button button__pin-only ${parentClass}`}
+    >
       <Pin
-        type="domed"
+        type={type}
         direction={direction}
-        parentClass="button__pin button__pin_type_parent-size"
-        useOwnColorScheme={true}
+        parentClass="button__pin"
+        opaque={opaque}
       />
     </button>
   );

@@ -21,18 +21,18 @@
     }
   }
 
-  &_type_domed {
-    .button:hover & {
-      // background-color: linear-gradient(228.01deg, #176087 4.74%, #97c8eb 100%);
-      // background-color: $BRIGHT_BLUE_GREEN;
-      // filter: drop-shadow(0 0 4px $BRIGHT_BLUE_GREEN);
-      // box-shadow: 0 0 4px 4px $BRIGHT_BLUE_GREEN;
-    }
+  // &_type_domed {
+  //   .button:hover & {
+  //     // background-color: linear-gradient(228.01deg, #176087 4.74%, #97c8eb 100%);
+  //     // background-color: $BRIGHT_BLUE_GREEN;
+  //     // filter: drop-shadow(0 0 4px $BRIGHT_BLUE_GREEN);
+  //     // box-shadow: 0 0 4px 4px $BRIGHT_BLUE_GREEN;
+  //   }
 
-    .button:active & {
-      fill: $WHITE;
-    }
-  }
+  //   .button:active & {
+  //     fill: $WHITE;
+  //   }
+  // }
 
   &_direction_right {
     transform: rotate(0deg);
