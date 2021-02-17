@@ -1,0 +1,7 @@
+export { default as FacebookIcon } from './FacebookIcon'
+export { default as GmailIcon } from './GmailIcon'
+export { default as InstagramIcon } from './InstagramIcon'
+export { default as TelegramIcon } from './TelegramIcon'
+export { default as VkIcon } from './VkIcon'
+export { default as WhatsappIcon } from './WhatsappIcon'
+export { default as YoutubeIcon } from './YoutubeIcon'
