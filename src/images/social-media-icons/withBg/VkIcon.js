@@ -30,8 +30,8 @@ function SvgVkIcon(props) {
           y2={0}
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset={0.136} stopColor="#4B6F9C" stopOpacity={0.3} />
-          <stop offset={0.615} stopColor="#4B6F9C" />
+          <stop offset={0.229} stopColor="#4B6F9C" />
+          <stop offset={0.719} stopColor="#4B6F9C" stopOpacity={0.3} />
         </linearGradient>
         <clipPath id="vkIcon_svg__clip0">
           <path

@@ -28,8 +28,8 @@ function SvgTelegramIcon(props) {
           y2={50}
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset={0.172} stopColor="#008BD0" />
-          <stop offset={0.859} stopColor="#32AFED" stopOpacity={0.3} />
+          <stop offset={0.145} stopColor="#32AFED" stopOpacity={0.3} />
+          <stop offset={0.87} stopColor="#186185" />
         </linearGradient>
       </defs>
     </svg>

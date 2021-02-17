@@ -28,8 +28,8 @@ function SvgWhatsappIcon(props) {
           y2={50}
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset={0.292} stopColor="#148E0C" />
-          <stop offset={0.646} stopColor="#3AB429" stopOpacity={0.5} />
+          <stop offset={0.309} stopColor="#3AB429" stopOpacity={0.5} />
+          <stop offset={0.707} stopColor="#148E0C" />
         </linearGradient>
       </defs>
     </svg>

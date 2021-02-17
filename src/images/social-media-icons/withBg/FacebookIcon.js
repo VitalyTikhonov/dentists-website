@@ -28,8 +28,8 @@ function SvgFacebookIcon(props) {
           y2={50}
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset={0.391} stopColor="#26478D" />
-          <stop offset={1} stopColor="#26478D" stopOpacity={0.3} />
+          <stop offset={0.182} stopColor="#26478D" stopOpacity={0.3} />
+          <stop offset={0.838} stopColor="#26478D" />
         </linearGradient>
       </defs>
     </svg>
