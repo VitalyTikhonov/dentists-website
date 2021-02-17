@@ -6,6 +6,7 @@ import AccountButtonGroup from "./AccountButtonGroup/AccountButtonGroup";
 import CoverButtonPanel from "./CoverButtonPanel/CoverButtonPanel";
 import LabelAndPinButton from "./LabelAndPinButton/LabelAndPinButton";
 import PinButton from "./PinButton/PinButton";
+import SocialMediaIconPanel from "./SocialMediaIconPanel/SocialMediaIconPanel";
 
 const UIControls = function (props) {
   const [loggedIn] = useState(false);
@@ -21,41 +22,41 @@ const UIControls = function (props) {
         <AccountButtonGroup loggedIn={loggedIn} />
         <CoverButtonPanel loggedIn={loggedIn} />
       </div>
-      <div className={cn(styles.UIDevContainer__columnContainer)}>
-        <div
-          className={cn(
-            styles.UIDevContainer__column,
-            styles.UIDevContainer__column_bgBlue
-          )}
-        >
-          <PinButton type="flat" direction="down" parentClass="aux" />
-        </div>
-        <div
-          className={cn(
-            styles.UIDevContainer__column,
-            styles.UIDevContainer__column_bgLightBlue
-          )}
-        >
-          <LabelAndPinButton label={"Свернуть"} direction="up" />
-          <LabelAndPinButton label={"Подробнее"} direction="down" />
-          <LabelAndPinButton label={"Примеры работ"} direction="right" />
-        </div>
-        <div
-          className={cn(
-            styles.UIDevContainer__column,
-            styles.UIDevContainer__column_bgWallpaper
-          )}
-        >
-          <div className={cn(styles.UIDevContainer__textDimmerOnBgWallpaper)}>
-            <PinButton
-              type="domed"
-              direction="down"
-              opaque={true}
-              parentClass="button__pin-only_type_opaque"
-            />
-          </div>
+      <div
+        className={cn(
+          styles.UIDevContainer__pageWidthSection,
+          styles.UIDevContainer__column_bgBlue
+        )}
+      >
+        <PinButton type="flat" direction="down" parentClass="aux" />
+        <SocialMediaIconPanel />
+      </div>
+      <div
+        className={cn(
+          styles.UIDevContainer__pageWidthSection,
+          styles.UIDevContainer__column_bgLightBlue
+        )}
+      >
+        <LabelAndPinButton label={"Свернуть"} direction="up" />
+        <LabelAndPinButton label={"Подробнее"} direction="down" />
+        <LabelAndPinButton label={"Примеры работ"} direction="right" />
+      </div>
+      <div
+        className={cn(
+          styles.UIDevContainer__pageWidthSection,
+          styles.UIDevContainer__column_bgWallpaper
+        )}
+      >
+        <div className={cn(styles.UIDevContainer__textDimmerOnBgWallpaper)}>
+          <PinButton
+            type="domed"
+            direction="down"
+            opaque="true"
+            parentClass="button__pin-only_type_opaque"
+          />
         </div>
       </div>
+      <div className={cn(styles.UIDevContainer__columnContainer)}></div>
     </div>
   );
 };
