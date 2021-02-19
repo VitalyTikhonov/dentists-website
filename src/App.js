@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import styles from "./App.module.scss";
+import "./App.scss";
 // import Header from './components/Header/Header';
 // import DoctorProfile from './components/DoctorProfile/DoctorProfile';
 import UIControls from "./components/UIControls/UIControls";
@@ -8,9 +8,9 @@ import Counter from "./components/counter/Counter";
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div className="App">
       {/* <Header /> */}
-      <main className={styles.main}>
+      <main className="main">
         <Switch>
           {/* <Route exact path='/'>
             <DoctorProfile />
