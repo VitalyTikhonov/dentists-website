@@ -17,35 +17,3 @@
   border: none;
   outline: none;
 }
-
-.aux {
-  margin: 10px;
-}
-
-.svg {
-  &-outline-elem {
-    stroke: $PALE_BLUE;
-  }
-
-  .button__expansion:hover &-outline-elem,
-  .button__gallery-link:hover &-outline-elem {
-    stroke: $BRIGHT_BLUE_GREEN;
-  }
-  .button__expansion:active &-outline-elem,
-  .button__gallery-link:active &-outline-elem {
-    stroke: $WHITE;
-  }
-
-  &-fill-elem {
-    fill: $PALE_BLUE;
-  }
-
-  .button__expansion:hover &-fill-elem,
-  .button__gallery-link:hover &-fill-elem {
-    fill: $BRIGHT_BLUE_GREEN;
-  }
-  .button__expansion:active &-fill-elem,
-  .button__gallery-link:active &-fill-elem {
-    fill: $WHITE;
-  }
-}

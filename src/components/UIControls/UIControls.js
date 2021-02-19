@@ -1,7 +1,6 @@
 import { useState } from "react";
-import styles from "./UIControls.module.scss";
+import "./UIControls.scss";
 import "./_UIControlsGlobals.scss";
-import cn from "classnames";
 import AccountButtonGroup from "./AccountButtonGroup/AccountButtonGroup";
 import CoverButtonPanel from "./CoverButtonPanel/CoverButtonPanel";
 import LabelAndPinButton from "./LabelAndPinButton/LabelAndPinButton";
@@ -14,44 +13,24 @@ const UIControls = function (props) {
   const [loggedIn] = useState(false);
 
   return (
-    <div className={cn(styles.UIDevContainer)}>
-      <div
-        className={cn(
-          styles.UIDevContainer__pageWidthSection,
-          styles.UIDevContainer__sectionWithPhotoBg
-        )}
-      >
+    <div className="ui-dev-page">
+      <div className="ui-dev-page__section ui-dev-page__section_width_page ui-dev-page__section_bg_photo">
         <AccountButtonGroup loggedIn={loggedIn} />
         <CoverButtonPanel loggedIn={loggedIn} />
       </div>
-      <div
-        className={cn(
-          styles.UIDevContainer__pageWidthSection,
-          styles.UIDevContainer__column_bgBlue
-        )}
-      >
+      <div className="ui-dev-page__section ui-dev-page__section_width_page ui-dev-page__section_bg_blue">
         <MobMenuButton />
         <PinButton type="flat" direction="down" parentClass="aux" />
         <SocialMediaIconPanel />
       </div>
-      <div
-        className={cn(
-          styles.UIDevContainer__pageWidthSection,
-          styles.UIDevContainer__column_bgLightBlue
-        )}
-      >
+      <div className="ui-dev-page__section ui-dev-page__section_width_page ui-dev-page__section_bg_light-blue">
         <LabelAndPinButton label={"Свернуть"} direction="up" />
         <LabelAndPinButton label={"Подробнее"} direction="down" />
         <LabelAndPinButton label={"Примеры работ"} direction="right" />
       </div>
-      <div
-        className={cn(
-          styles.UIDevContainer__pageWidthSection,
-          styles.UIDevContainer__column_bgWallpaper
-        )}
-      >
+      <div className="ui-dev-page__section ui-dev-page__section_width_page ui-dev-page__section_bg_wallpaper">
         <CallButton />
-        <div className={cn(styles.UIDevContainer__textDimmerOnBgWallpaper)}>
+        <div className="ui-dev-page__text-dimmer-on-wallpaper">
           <PinButton
             type="domed"
             direction="down"
@@ -60,7 +39,6 @@ const UIControls = function (props) {
           />
         </div>
       </div>
-      <div className={cn(styles.UIDevContainer__columnContainer)}></div>
     </div>
   );
 };

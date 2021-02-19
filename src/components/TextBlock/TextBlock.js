@@ -1,8 +1,7 @@
-import { memo } from "react";
 import styles from "./TextBlock.module.scss";
 import getCN from "classnames";
 
-const TextBlock = memo(function TextBlock(props) {
+const TextBlock = function TextBlock(props) {
   // console.log('props.contents', props.contents);
   const { subsection, sectionHeadline } = props.contents;
 
@@ -43,6 +42,6 @@ const TextBlock = memo(function TextBlock(props) {
       </div>
     </>
   );
-});
+}
 
 export default TextBlock;

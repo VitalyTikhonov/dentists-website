@@ -7,7 +7,7 @@ const LabelAndPinButton = function (props) {
   return (
     <button className="button button__label-and-pin aux">
       {label}
-      <Pin type="flat" direction={direction} parentClass="button__pin-right-to-label"/>
+      <Pin type="flat" direction={direction} parentClass="button__pin"/>
     </button>
   );
 };

@@ -1,11 +1,11 @@
-import { memo, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMobileView, selectMobileView } from "./headerSlice";
 import styles from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
 // import PageDimmer from "../PageDimmer/PageDimmer";
 
-const Header = memo(function Header(props) {
+const Header = function Header(props) {
   const mobileView = useSelector(selectMobileView);
   const dispatch = useDispatch();
   // const { loginStatus, logout, setLoginPopupOpen } = props;
@@ -76,6 +76,6 @@ const Header = memo(function Header(props) {
     //   } */}
     // </header>
   );
-});
+}
 
 export default Header;

@@ -1,9 +1,8 @@
-import { memo } from "react";
 import { NavLink } from "react-router-dom";
 import getCN from "classnames";
 import styles from "./Navbar.module.scss";
 
-const Navbar = memo(function Navbar(props) {
+const Navbar = function Navbar(props) {
   const loginStatus = false;
 
   return (
@@ -72,6 +71,6 @@ const Navbar = memo(function Navbar(props) {
       </ul>
     </nav>
   );
-});
+}
 
 export default Navbar;

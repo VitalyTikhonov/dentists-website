@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.socal-media-panel-list {
+.socal-media-panel__list {
   // ul
   display: flex;
   justify-content: space-evenly;
@@ -17,7 +17,7 @@
   height: 96.77px;
 }
 
-.socal-media-panel-item {
+.socal-media-panel__item {
   // li
   box-sizing: border-box;
   border-radius: 50%;
@@ -30,7 +30,7 @@
   }
 }
 
-.socal-media-panel-link {
+.socal-media-panel__link {
   // a
   display: flex;
   box-sizing: border-box;
@@ -42,6 +42,6 @@
   &_active {
     background: linear-gradient(360deg, $PALE_BLUE -108%, $DARK_BLUE 34.38%);
     border: none;
-    color: $WHITE;
+    color: white;
   }
 }

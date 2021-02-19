@@ -6,9 +6,9 @@ function MobMenuButton(props) {
 
   return (
     <button
-      className={`button button_type_icon-only button__mob-menu ${parentClass}`}
+      className={`button button_type_icon-only button__mob-menu-open-button ${parentClass}`}
     >
-      <MenuIcon className="button__mob-menu-icon" />
+      <MenuIcon className="button__mob-menu-open-button-icon" />
     </button>
   );
 }

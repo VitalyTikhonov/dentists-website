@@ -1,14 +1,14 @@
 @import "../../../css-variables.scss";
 // @import "../UIControlsGlobals";
 
-.cover-and-mob-menu__major {
+.cover-and-mob-menu {
   // nav
   box-sizing: border-box;
   margin-top: auto;
   background: linear-gradient(360deg, $PALE_BLUE -51.59%, $DARK_BLUE 112.4%);
 }
 
-.cover-and-mob-menu__major-list {
+.cover-and-mob-menu__list {
   // ul
   display: grid;
   grid-auto-columns: 1fr;
@@ -19,7 +19,7 @@
   height: 96.77px;
 }
 
-.cover-and-mob-menu__major-item {
+.cover-and-mob-menu__item {
   // li
   box-sizing: border-box;
   width: auto;
@@ -31,7 +31,7 @@
   }
 }
 
-.cover-and-mob-menu__major-link {
+.cover-and-mob-menu__link {
   // a
   display: flex;
   box-sizing: border-box;
@@ -50,7 +50,7 @@
   &_active {
     background: linear-gradient(360deg, $PALE_BLUE -108%, $DARK_BLUE 34.38%);
     border: none;
-    color: $WHITE;
+    color: white;
   }
 
   &:hover {
@@ -62,19 +62,19 @@
     background: linear-gradient(360deg, $PALE_BLUE -108%, $DARK_BLUE 34.38%);
     // border: none;
     box-shadow: none;
-    color: $WHITE;
+    color: white;
     // transition: none;
   }
 }
 
-.cover-and-mob-menu__major-link_active:hover {
-  color: $WHITE;
+.cover-and-mob-menu__link_active:hover {
+  color: white;
   // border: none;
   box-shadow: none;
 }
 
 /* Важен порядок НАЧАЛО */
-.cover-and-mob-menu__major-icon {
+.cover-and-mob-menu__icon {
   width: 60px;
   height: 60px;
   margin: auto 11px auto 0;
@@ -87,26 +87,26 @@
     height: 70px;
   }
 
-  .cover-and-mob-menu__major-link:hover & {
+  .cover-and-mob-menu__link:hover & {
     fill: $BRIGHT_BLUE_GREEN;
   }
 
-  .cover-and-mob-menu__major-link_active & {
-    fill: $WHITE;
+  .cover-and-mob-menu__link_active & {
+    fill: white;
   }
 
-  .cover-and-mob-menu__major-link_active:hover & {
-    fill: $WHITE;
+  .cover-and-mob-menu__link_active:hover & {
+    fill: white;
   }
 
-  .cover-and-mob-menu__major-link:active & {
-    fill: $WHITE;
+  .cover-and-mob-menu__link:active & {
+    fill: white;
     // transition: none;
   }
 }
 /* Важен порядок КОНЕЦ */
 
-.cover-and-mob-menu__major-close-button {
+.cover-and-mob-menu__close-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,11 +125,11 @@
 
   &:active {
     background-color: #ffffff45;
-    border: 1px solid $WHITE;
+    border: 1px solid white;
   }
 }
 
-.cover-and-mob-menu__major-close-icon {
+.cover-and-mob-menu__close-icon {
   fill: $PALE_BLUE;
 
   // &:hover {
@@ -137,6 +137,6 @@
   // }
 
   .button:active & {
-    fill: $WHITE;
+    fill: white;
   }
 }

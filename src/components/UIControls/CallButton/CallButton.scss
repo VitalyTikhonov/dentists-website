@@ -20,7 +20,7 @@
   // fill: $PALE_BLUE;
 
   &:active {
-    color: $WHITE;
+    color: white;
   }
 }
 
@@ -30,6 +30,6 @@
   fill: $PALE_BLUE;
 
   .button__call:active & {
-    fill: $WHITE;
+    fill: white;
   }
 }

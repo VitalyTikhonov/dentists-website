@@ -2,7 +2,7 @@
 
 $pageWidthSectionHeight: 200px;
 
-.UIDevContainer {
+.ui-dev-page {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -12,7 +12,7 @@ $pageWidthSectionHeight: 200px;
   background-color: #1a1b22;
 }
 
-.UIDevContainer__pageWidthSection {
+.ui-dev-page__section_width_page {
   display: flex;
   flex-direction: column;
   // justify-content: flex-end;
@@ -22,31 +22,17 @@ $pageWidthSectionHeight: 200px;
   border: 1px solid white;
 }
 
-.UIDevContainer__columnContainer {
-  display: flex;
-  flex-direction: row;
-  // min-height: 100px;
-}
-
-.UIDevContainer__column {
-  display: flex;
-  flex-direction: column;
-  width: calc(100vw / 3);
-  min-height: calc(100vw - #{$pageWidthSectionHeight});
-  border: 1px solid white;
-}
-
-.UIDevContainer__sectionWithPhotoBg {
+.ui-dev-page__section_bg_photo {
   // height: 400px;
   position: relative;
   background-image: url(../../images/cover/Natasha_original_warm_tone.jpg);
 }
 
-.UIDevContainer__column_bgBlue {
+.ui-dev-page__section_bg_blue {
   background: linear-gradient(360deg, $PALE_BLUE -51.59%, $DARK_BLUE 112.4%);
 }
 
-.UIDevContainer__column_bgLightBlue {
+.ui-dev-page__section_bg_light-blue {
   background: linear-gradient(
     360deg,
     rgba(58, 147, 185, 0.8) -192.1%,
@@ -54,14 +40,14 @@ $pageWidthSectionHeight: 200px;
   );
 }
 
-.UIDevContainer__column_bgWallpaper {
+.ui-dev-page__section_bg_wallpaper {
   position: relative;
   background-image: url(../../images/styling-images/wallpaper_background_grey.png);
   background-repeat: repeat;
   background-size: 450.56px;
 }
 
-.UIDevContainer__textDimmerOnBgWallpaper {
+.ui-dev-page__text-dimmer-on-wallpaper {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -74,4 +60,8 @@ $pageWidthSectionHeight: 200px;
     rgba(255, 255, 255, 0) -152.41%,
     #ffffff 79.97%
   );
+}
+
+.aux {
+  margin: 10px;
 }

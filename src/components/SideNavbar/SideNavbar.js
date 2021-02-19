@@ -1,9 +1,8 @@
-import { memo } from "react";
 // import { NavLink } from "react-router-dom";
 import getCN from "classnames";
 import styles from "./SideNavbar.module.scss";
 
-const SideNavbar = memo(function SideNavbar(props) {
+const SideNavbar = function SideNavbar(props) {
   const { contentsMap } = props;
 
   return (
@@ -32,6 +31,6 @@ const SideNavbar = memo(function SideNavbar(props) {
       </ul>
     </nav>
   );
-});
+}
 
 export default SideNavbar;

@@ -24,13 +24,13 @@
   }
 
   &:active {
-    border: 1px solid $WHITE;
-    color: $WHITE;
-    // fill: $WHITE;
+    border: 1px solid white;
+    color: white;
+    // fill: white;
   }
 }
 
-.button__pin-right-to-label {
+.button__pin {
   width: 50px;
   height: 50px;
   margin-left: 10px;
