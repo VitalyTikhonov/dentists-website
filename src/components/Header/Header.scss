@@ -1,0 +1,62 @@
+@import "../../css-variables.scss";
+@import "../../vendor/fonts/fonts.scss";
+
+.header {
+  box-sizing: border-box;
+  // min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: linear-gradient(to left, #74ebd5 0%, #9face6 100%);
+}
+
+.headerBar {
+  box-shadow: 0px 0px 20px 8px rgba(154, 180, 228, 0.8);
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: $paddingBasic;
+  padding-right: $paddingBasic;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #008b8b;
+}
+
+.headerBarLogo {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: $logoFontSize;
+  // color: #f55aa6;
+  // color: #445778;
+  background: #445778;
+  background: -webkit-linear-gradient(to bottom, #445778 20%, #f55aa6 50%, #445778 90%);
+  background: -moz-linear-gradient(to bottom, #445778 20%, #f55aa6 50%, #445778 90%);
+  background: linear-gradient(to bottom, #445778 20%, #f55aa6 50%, #445778 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headerBarName {
+  font-weight: 700;
+  font-size: $logoNameFontSize;
+  // color: #445778;
+}
+
+// .mobileMenuButton {
+//   width: 30px;
+//   height: 30px;
+//   background-image: url(../../images/menu_button.svg);
+//   background-size: contain;
+//   background-color: transparent;
+//   background-repeat: no-repeat;
+//   border: none;
+// }
