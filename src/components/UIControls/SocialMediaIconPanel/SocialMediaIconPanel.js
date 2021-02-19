@@ -1,13 +1,13 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
 import "./SocialMediaIconPanel.scss";
-import FacebookIcon from "../../../images/social-media-icons/withBg/FacebookIcon.js";
-import VkIcon from "../../../images/social-media-icons/withBg/VkIcon.js";
-import YoutubeIcon from "../../../images/social-media-icons/withBg/YoutubeIcon.js";
-import InstagramIcon from "../../../images/social-media-icons/withBg/InstagramIcon.js";
-import TelegramIcon from "../../../images/social-media-icons/withBg/TelegramIcon.js";
-import WhatsappIcon from "../../../images/social-media-icons/withBg/WhatsappIcon.js";
-import GmailIcon from "../../../images/social-media-icons/withBg/GmailIcon.js";
+import FacebookIcon from "../svgReactComponents/Facebook.js";
+import VkIcon from "../svgReactComponents/Vk.js";
+import YoutubeIcon from "../svgReactComponents/Youtube.js";
+import InstagramIcon from "../svgReactComponents/Instagram.js";
+import TelegramIcon from "../svgReactComponents/Telegram.js";
+import WhatsappIcon from "../svgReactComponents/WhatsApp.js";
+import GmailIcon from "../svgReactComponents/Gmail.js";
 
 const SocialMediaIconPanel = memo(function (props) {
   return (

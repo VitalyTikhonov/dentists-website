@@ -1,4 +1,4 @@
-import Pin from "../../../images/UI-control-elements/svg/SvgComponents/Pin.js";
+import Pin from "../svgReactComponents/Pin.js";
 import "./Pin.scss";
 
 function PinButton(props) {

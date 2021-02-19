@@ -1,10 +1,10 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
 import "./AccountButtonGroup.scss";
-import AccountIcon from "../../../images/UI-control-elements/svg/SvgComponents/MockAvatar";
-import LogoutIcon from "../../../images/UI-control-elements/svg/SvgComponents/Logout";
-import LoginIcon from "../../../images/UI-control-elements/svg/SvgComponents/Login";
-import Signup from "../../../images/UI-control-elements/svg/SvgComponents/AddUser";
+import AccountIcon from "../svgReactComponents/MockAvatar";
+import LogoutIcon from "../svgReactComponents/Logout";
+import LoginIcon from "../svgReactComponents/Login";
+import Signup from "../svgReactComponents/AddUser";
 
 const AccountButtonGroup = memo(function (props) {
   return (

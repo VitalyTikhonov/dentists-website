@@ -1,5 +1,5 @@
 import "./CallButton.scss";
-import CallIcon from "../../../images/UI-control-elements/svg/SvgComponents/Call";
+import CallIcon from "../svgReactComponents/Call";
 
 const CallButton = function () {
 

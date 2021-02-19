@@ -1,7 +1,0 @@
-export { default as Facebook } from './Facebook'
-export { default as FreeIconVk733639 } from './FreeIconVk733639'
-export { default as Gmail } from './Gmail'
-export { default as Instagram } from './Instagram'
-export { default as Telegram } from './Telegram'
-export { default as Whatsapp } from './Whatsapp'
-export { default as Youtube } from './Youtube'

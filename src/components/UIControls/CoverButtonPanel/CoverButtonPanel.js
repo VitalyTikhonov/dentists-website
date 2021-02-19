@@ -1,12 +1,12 @@
 import { memo } from "react";
 import { HashRouter, NavLink } from "react-router-dom";
 import "./CoverButtonPanel.scss";
-import ServicesIcon from "../../../images/UI-control-elements/svg/SvgComponents/ServicesIcon";
-import AppointmentIcon from "../../../images/UI-control-elements/svg/SvgComponents/AppointmentIcon";
-import FemaleDentistIcon from "../../../images/UI-control-elements/svg/SvgComponents/FemaleDentistIcon";
-import FeatherPen from "../../../images/UI-control-elements/svg/SvgComponents/IconFeatherPen";
-import Doctors from "../../../images/UI-control-elements/svg/SvgComponents/Doctors";
-import DoubleChevronLeft from "../../../images/UI-control-elements/svg/SvgComponents/DoubleChevronLeft";
+import ServicesIcon from "../svgReactComponents/DentistryServices";
+import AppointmentIcon from "../svgReactComponents/DentistAppointment";
+import FemaleDentistIcon from "../svgReactComponents/FemaleDentist";
+import FeatherPen from "../svgReactComponents/FeatherPen";
+import Doctors from "../svgReactComponents/Doctors";
+import DoubleChevronLeft from "../svgReactComponents/DoubleChevronLeft";
 
 const CoverButtonPanel = memo(function (props) {
   return (

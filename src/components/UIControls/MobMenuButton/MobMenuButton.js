@@ -1,5 +1,5 @@
 import "./MobMenuButton.scss";
-import MenuIcon from "../../../images/UI-control-elements/svg/SvgComponents/Menu";
+import MenuIcon from "../svgReactComponents/MenuBurger";
 
 function MobMenuButton(props) {
   const { parentClass } = props;
