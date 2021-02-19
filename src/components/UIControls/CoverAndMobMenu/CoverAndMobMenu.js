@@ -1,5 +1,5 @@
 import { HashRouter, NavLink } from "react-router-dom";
-import "./CoverButtonPanel.scss";
+import "./CoverAndMobMenu.scss";
 import ServicesIcon from "../svgReactComponents/DentistryServices";
 import AppointmentIcon from "../svgReactComponents/DentistAppointment";
 import FemaleDentistIcon from "../svgReactComponents/FemaleDentist";
@@ -7,7 +7,7 @@ import FeatherPen from "../svgReactComponents/FeatherPen";
 import Doctors from "../svgReactComponents/Doctors";
 import DoubleChevronLeft from "../svgReactComponents/DoubleChevronLeft";
 
-const CoverButtonPanel = function (props) {
+const CoverAndMobMenu = function (props) {
   return (
     <nav
       className="cover-and-mob-menu"
@@ -86,4 +86,4 @@ const CoverButtonPanel = function (props) {
   );
 }
 
-export default CoverButtonPanel;
+export default CoverAndMobMenu;

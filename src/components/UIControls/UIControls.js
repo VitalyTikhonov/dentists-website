@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./UIControls.scss";
 import "./_UIControlsGlobals.scss";
 import AccountButtonGroup from "./AccountButtonGroup/AccountButtonGroup";
-import CoverButtonPanel from "./CoverButtonPanel/CoverButtonPanel";
+import CoverAndMobMenu from "./CoverAndMobMenu/CoverAndMobMenu";
 import LabelAndPinButton from "./LabelAndPinButton/LabelAndPinButton";
 import PinButton from "./PinButton/PinButton";
 import SocialMediaIconPanel from "./SocialMediaIconPanel/SocialMediaIconPanel";
@@ -16,7 +16,7 @@ const UIControls = function (props) {
     <div className="ui-dev-page">
       <div className="ui-dev-page__section ui-dev-page__section_width_page ui-dev-page__section_bg_photo">
         <AccountButtonGroup loggedIn={loggedIn} />
-        <CoverButtonPanel loggedIn={loggedIn} />
+        <CoverAndMobMenu loggedIn={loggedIn} />
       </div>
       <div className="ui-dev-page__section ui-dev-page__section_width_page ui-dev-page__section_bg_blue">
         <MobMenuButton />
