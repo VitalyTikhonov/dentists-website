@@ -4,7 +4,7 @@ import "./App.scss";
 import Header from './components/Header/Header';
 // import DoctorProfile from './components/DoctorProfile/DoctorProfile';
 import UIControls from "./components/UIControls/UIControls";
-import Counter from "./components/counter/Counter";
+import Counter from "./components/v1/counter/Counter";
 
 function App() {
   return (

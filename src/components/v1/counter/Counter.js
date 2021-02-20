@@ -7,7 +7,7 @@ import {
   incrementAsync,
   selectCount,
 } from './counterSlice';
-import '../../App.scss';
+import '../../../App.scss';
 import styles from './Counter.module.scss';
 import logo from './logo.svg';
 
