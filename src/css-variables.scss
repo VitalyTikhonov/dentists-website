@@ -1,20 +1,8 @@
 // SIZE
 $PAGE_WIDTH_NOTEBOOK: 1240px;
+$PAGE_WIDTH_TABLET: 896px;
 
 $paddingBasic: calc(5px + 1.94vw);
-$basicFontSize: 17px;
-$logoFontSize: calc(#{$basicFontSize} + 3.67vw);
-$logoNameFontSize: calc(#{$basicFontSize} + 2.58vw);
-$menuFontSize: calc(#{$basicFontSize} + .83vw);
-$bodyFontSize: calc(#{$basicFontSize} + .5vw);
-$sectionHeadlineFontSize: calc(#{$basicFontSize} * 1.6 + .5vw);
-$sectionSidebarSpacing: calc(#{$paddingBasic} * .5);
-$desktopSidebarWidth: 23vw;
-$desktopSectionBodyWidth: calc(100vw - #{$desktopSidebarWidth} - #{$paddingBasic} * 3);
-// $desktopSidebarWidth: calc(100vw - #{$desktopSectionBodyWidth});
-// $profilePhotoOriginalWidth: 384px;
-// $profilePhotoOriginalHeight: 846px;
-// $docProfilePageWidth: calc((#{$paddingBasic} + #{$docProfilePhotoWidth}) * 2);
 // COLOUR
 $DARK_BLUE: #176087;
 $PALE_BLUE: #97C8EB;
@@ -22,7 +10,81 @@ $BRIGHT_BLUE_GREEN: #64E9EE;
 $DARK_BLUE_GREEN: #3AAFB9;
 $WHITE: #FFFFFF;
 
-// FONT STYLES
+// FONT
+// $FS1240_HEADER_AND_COVER_NAME: calc(15px + 2.26vw);
+// $FS1240_SECTION_TITLE: calc(14px + 2.10vw);
+// $FS1240_SECTION_SUBTITLE: calc(13px + 1.21vw);
+// $FS1240_CARD_TITLE: calc(13px + .97vw);
+// $FS1240_COVER_CONTROLS: calc(10px + .97vw);
+// $FS1240_CARD_BODY: calc(11px + .89vw);
+// $FS1240_FOOTER_TITLE: calc(13px + .73vw);
+// $FS1240_HEADER_MENU: calc(10px + .81vw);
+// $FS1240_SECTION_BODY: calc(11px + .73vw);
+// $FS1240_HEADER_SUBMENU: calc(11px + .73vw);
+// $FS1240_FOOTER_BODY: calc(7px + .40vw);
+
+// $FS896_HEADER_AND_COVER_NAME: calc(15px + 2.34vw);
+// $FS896_SECTION_TITLE: calc(14px + 1.23vw);
+// $FS896_SECTION_SUBTITLE: calc(13px + .78vw);
+// $FS896_CARD_TITLE: calc(13px + .56vw);
+// $FS896_COVER_CONTROLS: calc(10px + .67vw);
+// $FS896_CARD_BODY: calc(11px + .56vw);
+// $FS896_FOOTER_TITLE: calc(13px + .78vw);
+// $FS896_HEADER_MENU: calc(10px + .67vw);
+// $FS896_SECTION_BODY: calc(11px + .56vw);
+// $FS896_HEADER_SUBMENU: calc(11px + .56vw);
+// $FS896_FOOTER_BODY: calc(7px + .33vw);
+
+// $FS320_HEADER_AND_COVER_NAME: calc(15px + 2.19vw);
+// $FS320_SECTION_TITLE: calc(14px + 1.88vw);
+// $FS320_SECTION_SUBTITLE: calc(13px + 1.56vw);
+// $FS320_CARD_TITLE: calc(13px + 1.56vw);
+// $FS320_COVER_CONTROLS: calc(10px + 1.25vw);
+// $FS320_CARD_BODY: calc(11px + 1.56vw);
+// $FS320_FOOTER_TITLE: calc(13px + 1.56vw);
+// $FS320_HEADER_MENU: calc(10px + 1.25vw);
+// $FS320_SECTION_BODY: calc(11px + 1.56vw);
+// $FS320_HEADER_SUBMENU: calc(11px + 1.56vw);
+// $FS320_FOOTER_BODY: calc(7px + .94vw);
+// $FS320_MOB_MENU: calc(13px + 1.56vw);
+
+
+$FS1240_HEADER_AND_COVER_NAME: calc(min(max(15px, 3.468vw), 43px));
+$FS1240_SECTION_TITLE: calc(min(max(14px, 3.226vw), 40px));
+$FS1240_SECTION_SUBTITLE: calc(min(max(13px, 2.258vw), 28px));
+$FS1240_CARD_TITLE: calc(min(max(13px, 2.016vw), 25px));
+$FS1240_COVER_CONTROLS: calc(min(max(12px, 1.774vw), 22px));
+$FS1240_CARD_BODY: calc(min(max(12px, 1.774vw), 22px));
+$FS1240_FOOTER_TITLE: calc(min(max(13px, 1.774vw), 22px));
+$FS1240_HEADER_MENU: calc(min(max(12px, 1.613vw), 20px));
+$FS1240_SECTION_BODY: calc(min(max(12px, 1.613vw), 20px));
+$FS1240_HEADER_SUBMENU: calc(min(max(12px, 1.371vw), 17px));
+$FS1240_FOOTER_BODY: calc(min(max(12px, .968vw), 12px));
+
+$FS896_HEADER_AND_COVER_NAME: calc(min(max(15px, 4.018vw), 36px));
+$FS896_SECTION_TITLE: calc(min(max(14px, 2.790vw), 25px));
+$FS896_SECTION_SUBTITLE: calc(min(max(13px, 2.232vw), 20px));
+$FS896_CARD_TITLE: calc(min(max(13px, 2.009vw), 18px));
+$FS896_COVER_CONTROLS: calc(min(max(12px, 1.786vw), 16px));
+$FS896_CARD_BODY: calc(min(max(12px, 1.786vw), 16px));
+$FS896_FOOTER_TITLE: calc(min(max(13px, 2.232vw), 20px));
+$FS896_HEADER_MENU: calc(min(max(12px, 1.786vw), 16px));
+$FS896_SECTION_BODY: calc(min(max(12px, 1.786vw), 16px));
+$FS896_HEADER_SUBMENU: calc(min(max(12px, 1.563vw), 14px));
+$FS896_FOOTER_BODY: calc(min(max(12px, 1.116vw), 10px));
+
+$FS320_HEADER_AND_COVER_NAME: calc(min(max(15px, 6.875vw), 22px));
+$FS320_SECTION_TITLE: calc(min(max(14px, 6.250vw), 20px));
+$FS320_SECTION_SUBTITLE: calc(min(max(13px, 5.625vw), 18px));
+$FS320_CARD_TITLE: calc(min(max(13px, 5.625vw), 18px));
+$FS320_COVER_CONTROLS: calc(min(max(12px, 4.375vw), 14px));
+$FS320_CARD_BODY: calc(min(max(12px, 5.000vw), 16px));
+$FS320_FOOTER_TITLE: calc(min(max(13px, 5.625vw), 18px));
+$FS320_HEADER_MENU: calc(min(max(12px, 4.375vw), 14px));
+$FS320_SECTION_BODY: calc(min(max(12px, 5.000vw), 16px));
+$FS320_HEADER_SUBMENU: calc(min(max(12px, 3.125vw), 10px));
+$FS320_FOOTER_BODY: calc(min(max(12px, 3.125vw), 10px));
+$FS320_MOB_MENU: calc(min(max(13px, 5.625vw), 18px));
 
 // composes: cormorantInfantBoldItalic from './vendor/fonts/fonts.scss';
 // .cormorantInfantBoldItalic {
@@ -37,3 +99,18 @@ $WHITE: #FFFFFF;
 //   font-weight: 300;
 //   font-style: italic;
 // }
+// V1
+
+$basicFontSize: 17px;
+$logoFontSize: calc(#{$basicFontSize} + 3.67vw);
+$logoNameFontSize: calc(#{$basicFontSize} + 2.58vw);
+$menuFontSize: calc(#{$basicFontSize} + .83vw);
+$bodyFontSize: calc(#{$basicFontSize} + .5vw);
+$sectionHeadlineFontSize: calc(#{$basicFontSize} * 1.6 + .5vw);
+$sectionSidebarSpacing: calc(#{$paddingBasic} * .5);
+$desktopSidebarWidth: 23vw;
+$desktopSectionBodyWidth: calc(100vw - #{$desktopSidebarWidth} - #{$paddingBasic} * 3);
+// $desktopSidebarWidth: calc(100vw - #{$desktopSectionBodyWidth});
+// $profilePhotoOriginalWidth: 384px;
+// $profilePhotoOriginalHeight: 846px;
+// $docProfilePageWidth: calc((#{$paddingBasic} + #{$docProfilePhotoWidth}) * 2);

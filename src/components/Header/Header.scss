@@ -2,10 +2,6 @@
 @import "../../vendor/fonts/fonts.scss";
 
 .header {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: flex-end;
   box-sizing: border-box;
 }
 
@@ -34,8 +30,8 @@
   align-items: center;
   padding: 14px 0;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: $FS1240_HEADER_MENU;
+  // line-height: 23px;
   color: $PALE_BLUE;
 
   &:hover {
@@ -57,6 +53,7 @@ $submenuOneHOffset: calc(#{$submenuOnePadding} * -1);
 
 .header__submenu-1 {
   display: none;
+  font-size: $FS1240_HEADER_SUBMENU;
 
   .header__menu-top-item:hover &,
   &:hover {
@@ -86,7 +83,7 @@ $submenuOneHOffset: calc(#{$submenuOnePadding} * -1);
   padding-left: $submenuOnePadding;
 }
 
-$itemSpacing: calc(#{$submenuOnePadding} * 0.5);
+$itemSpacing: calc(#{$submenuOnePadding} * 1);
 
 .header__menu-item-1 {
   margin-bottom: $itemSpacing;
@@ -151,68 +148,34 @@ $itemSpacing: calc(#{$submenuOnePadding} * 0.5);
 .header__name {
   margin: 0;
   font-weight: 300;
-  font-size: 45px;
-  line-height: 53px;
+  font-size: $FS1240_HEADER_AND_COVER_NAME;
+  // line-height: 53px;
   color: $DARK_BLUE;
 }
 
-// V1
-.headerBar {
-  box-shadow: 0px 0px 20px 8px rgba(154, 180, 228, 0.8);
-  box-sizing: border-box;
-  width: 100%;
-  padding-left: $paddingBasic;
-  padding-right: $paddingBasic;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  color: #008b8b;
-}
+@media (max-width: $PAGE_WIDTH_TABLET) {
+  .header__menu-top-label {
+    font-size: $FS896_HEADER_MENU;
+  }
 
-.headerBarLogo {
-  font-family: "Cormorant Infant", serif;
-  font-weight: 500;
-  font-style: italic;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: $logoFontSize;
-  // color: #f55aa6;
-  // color: #445778;
-  background: #445778;
-  background: -webkit-linear-gradient(
-    to bottom,
-    #445778 20%,
-    #f55aa6 50%,
-    #445778 90%
-  );
-  background: -moz-linear-gradient(
-    to bottom,
-    #445778 20%,
-    #f55aa6 50%,
-    #445778 90%
-  );
-  background: linear-gradient(to bottom, #445778 20%, #f55aa6 50%, #445778 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  .header__submenu-1 {
+    font-size: $FS896_HEADER_SUBMENU;
 
-.headerBarName {
-  font-weight: 700;
-  font-size: $logoNameFontSize;
-  // color: #445778;
-}
+    .header__menu-top-item:hover &,
+    &:hover {
+      flex-direction: row;
+    }
+  }
 
-// .mobileMenuButton {
-//   width: 30px;
-//   height: 30px;
-//   background-image: url(../../images/menu_button.svg);
-//   background-size: contain;
-//   background-color: transparent;
-//   background-repeat: no-repeat;
-//   border: none;
-// }
+  .header__menu-item-1 {
+    margin-right: calc(#{$submenuOnePadding} * 3);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .header__name {
+    font-size: $FS896_HEADER_AND_COVER_NAME;
+  }
+}
