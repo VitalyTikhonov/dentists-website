@@ -1,5 +1,7 @@
 // SIZE
-$paddingBasic: calc(5px + 3vw);
+$PAGE_WIDTH_NOTEBOOK: 1240px;
+
+$paddingBasic: calc(5px + 1.94vw);
 $basicFontSize: 17px;
 $logoFontSize: calc(#{$basicFontSize} + 3.67vw);
 $logoNameFontSize: calc(#{$basicFontSize} + 2.58vw);

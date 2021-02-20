@@ -1,27 +1,13 @@
-// @font-face {
-//   font-family: 'CoventryC';
-//   font-style:  normal;
-//   font-weight: 400;
-//   src: url('./CoventryC.otf') format('opentype');
-// }
-
-// @font-face {
-//   font-family: 'CoventryC';
-//   font-style:  normal;
-//   font-weight: 900;
-//   src: url('./CoventryC.otf') format('opentype');
-// }
-
 @font-face {
   font-family: 'Roboto';
   font-weight: 300;
-  font-style: italic;
-  src: url('./Roboto-LightItalic.ttf') format('truetype');
+  font-style: normal;
+  src: url('./Roboto-Light.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   src: url('./Roboto-Regular.ttf') format('truetype');
 }

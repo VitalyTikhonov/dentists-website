@@ -15,41 +15,41 @@ const SocialMediaIconPanel = function (props) {
         Ссылки на соцсети и мессенджеры
       </h2>
 
-      <ul className="socal-media-panel__list">
-        <li className="socal-media-panel__item list-item-unstyling">
+      <ul className="socal-media-panel__list list-unstyling">
+        <li className="socal-media-panel__item">
           <Link to="" className="socal-media-panel__link link-unstyling">
             <FacebookIcon className="socal-media-panel__icon"/>
           </Link>
         </li>
-        <li className="socal-media-panel__item list-item-unstyling">
+        <li className="socal-media-panel__item">
           <Link to="" className="socal-media-panel__link link-unstyling">
             <VkIcon className="socal-media-panel__icon" />
           </Link>
         </li>
-        <li className="socal-media-panel__item list-item-unstyling">
+        <li className="socal-media-panel__item">
           <Link to="" className="socal-media-panel__link link-unstyling">
             <YoutubeIcon className="socal-media-panel__icon" />
           </Link>
         </li>
-        <li className="socal-media-panel__item list-item-unstyling">
+        <li className="socal-media-panel__item">
           <Link to="" className="socal-media-panel__link link-unstyling">
             <InstagramIcon className="socal-media-panel__icon" />
           </Link>
         </li>
-        <li className="socal-media-panel__item list-item-unstyling">
+        <li className="socal-media-panel__item">
           <Link to="" className="socal-media-panel__link link-unstyling">
             <TelegramIcon className="socal-media-panel__icon" />
           </Link>
         </li>
         {false && (
-          <li className="socal-media-panel__item list-item-unstyling">
+          <li className="socal-media-panel__item">
             <Link to="" className="socal-media-panel__link link-unstyling">
               <WhatsappIcon className="socal-media-panel__icon" />
             </Link>
           </li>
         )}
         {false && (
-          <li className="socal-media-panel__item list-item-unstyling">
+          <li className="socal-media-panel__item">
             <Link to="" className="socal-media-panel__link link-unstyling">
               <GmailIcon className="socal-media-panel__icon" />
             </Link>

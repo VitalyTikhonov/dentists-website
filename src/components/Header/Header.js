@@ -1,11 +1,13 @@
-// import { useState, useEffect } from "react";
+import { useState } from "react";
 import { HashRouter, NavLink } from "react-router-dom";
 // import { useSelector, useDispatch } from "react-redux";
 // import { toggleMobileView, selectMobileView } from "./headerSlice";
 import "./Header.scss";
+import TriangleArrowDown from "../UIControls/svgReactComponents/TriangleArrowDown";
 
 const Header = function Header(props) {
   // const mobileView = useSelector(selectMobileView);
+  const [loggedIn] = useState(false); // const loggedIn = useSelector(selectLoggedIn);
   // const dispatch = useDispatch();
 
   // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,72 +29,85 @@ const Header = function Header(props) {
 
   return (
     <header className="header">
-      <nav>
-        <ul className="">
-          <li className="">
-            <button className="">Меню</button>
+      <nav className="header__menu">
+        <ul className="header__menu-list list-unstyling">
+          <li className="header__menu-top-item">
+            <button className="header__menu-top-label button-unstyling">
+              Меню
+              <TriangleArrowDown className="header__menu-triangle"/>
+            </button>
 
-            <ul className="">
-              <li className="">
-                <NavLink className="" to="/" activeClassName="">Главная</NavLink>
+            <ul className="header__submenu-1 header__submenu-1_align_left list-unstyling">
+              <li className="header__menu-item-1">
+                <NavLink className="header__menu-label link-unstyling" to="" activeClassName="">Главная</NavLink>
 
-                <ul className="">
+                <ul className="header__submenu-2 list-unstyling">
                   <HashRouter hashType="noslash">
-                    <li className=""><NavLink className="" to="services" activeClassName="">Услуги</NavLink></li>
-                    <li className=""><NavLink className="" to="about_me" activeClassName="">Обо мне</NavLink></li>
-                    <li className=""><NavLink className="" to="my_education" activeClassName="">Мое образование</NavLink></li>
-                    <li className=""><NavLink className="" to="my_certificates" activeClassName="" >Дипломы и сертификаты</NavLink></li>
-                    <li className=""><NavLink className="" to="book_appointment"activeClassName="">Запись на прием</NavLink></li>
+                    <li className="header__menu-item-2"><NavLink className="header__menu-label link-unstyling" to="services" activeClassName="">Услуги</NavLink></li>
+                    <li className="header__menu-item-2"><NavLink className="header__menu-label link-unstyling" to="about_me" activeClassName="">Обо мне</NavLink></li>
+                    <li className="header__menu-item-2"><NavLink className="header__menu-label link-unstyling" to="my_education" activeClassName="">Мое образование</NavLink></li>
+                    <li className="header__menu-item-2"><NavLink className="header__menu-label link-unstyling" to="my_certificates" activeClassName="" >Дипломы и сертификаты</NavLink></li>
+                    <li className="header__menu-item-2"><NavLink className="header__menu-label link-unstyling" to="book_appointment"activeClassName="">Запись на прием</NavLink></li>
                   </HashRouter>
                 </ul>
               </li>
 
-              <li className=""><NavLink className="" to="/blog" activeClassName="">Блог</NavLink></li>
-              <li className=""><NavLink className="" to="/for_colleagues" activeClassName="">Коллегам</NavLink></li>
-              <li className="">
-                <NavLink className="" to="/account" activeClassName="">Личный кабинет</NavLink>
+              <li className="header__menu-item-1"><NavLink className="header__menu-label link-unstyling" to="/blog" activeClassName="">Блог</NavLink></li>
+              <li className="header__menu-item-1"><NavLink className="header__menu-label link-unstyling" to="/for_colleagues" activeClassName="">Коллегам</NavLink></li>
+              <li className="header__menu-item-1">
+                <NavLink className="header__menu-label link-unstyling" to="/account" activeClassName="">Личный кабинет</NavLink>
 
-                <ul className="">
+                <ul className="header__submenu-2 list-unstyling">
                   <HashRouter hashType="noslash">
-                    <li className=""><NavLink className="" to="recommendations"activeClassName="">Персональные рекомендации</NavLink></li>
-                    <li className=""><NavLink className="" to="medical_profile"activeClassName="">Стоматологический профиль</NavLink></li>
-                    <li className=""><NavLink className="" to="records" activeClassName="">История лечения</NavLink></li>
-                    <li className=""><NavLink className="" to="personal_data" activeClassName="">Личные данные</NavLink></li>
+                    <li className="header__menu-item-2"><NavLink className="header__menu-label link-unstyling" to="recommendations"activeClassName="">Персональные рекомендации</NavLink></li>
+                    <li className="header__menu-item-2"><NavLink className="header__menu-label link-unstyling" to="medical_profile"activeClassName="">Стоматологический профиль</NavLink></li>
+                    <li className="header__menu-item-2"><NavLink className="header__menu-label link-unstyling" to="records" activeClassName="">История лечения</NavLink></li>
+                    <li className="header__menu-item-2"><NavLink className="header__menu-label link-unstyling" to="personal_data" activeClassName="">Личные данные</NavLink></li>
                   </HashRouter>
                 </ul>
               </li>
             </ul>
           </li>
 
-          <HashRouter hashType="noslash">
-            <li className=""><NavLink className="" to="services" activeClassName="">Услуги</NavLink></li>
-            <li className=""><NavLink className="" to="book_appointment" activeClassName="">Запись на прием</NavLink></li>
-            <li className=""><NavLink className="" to="about_me" activeClassName="">Обо мне</NavLink></li>
-          </HashRouter>
+          {/* <HashRouter hashType="noslash"> */}
+            <li className="header__menu-top-item"><NavLink className="header__menu-top-label link-unstyling" to="services" activeClassName="header__menu-top-label_active">Услуги</NavLink></li>
+            <li className="header__menu-top-item"><NavLink className="header__menu-top-label link-unstyling" to="book_appointment" activeClassName="header__menu-top-label_active">Запись на прием</NavLink></li>
+            <li className="header__menu-top-item"><NavLink className="header__menu-top-label link-unstyling" to="about_me" activeClassName="header__menu-top-label_active">Обо мне</NavLink></li>
+          {/* </HashRouter> */}
 
-          <li className=""><NavLink className="" to="about_me" activeClassName="">Блог</NavLink></li>
-          <li className=""><NavLink className="" to="about_me" activeClassName="">Коллегам</NavLink></li>
+          <li className="header__menu-top-item"><NavLink className="header__menu-top-label link-unstyling" to="/blog" activeClassName="header__menu-top-label_active">Блог</NavLink></li>
+          <li className="header__menu-top-item"><NavLink className="header__menu-top-label link-unstyling" to="/for_colleagues" activeClassName="header__menu-top-label_active">Коллегам</NavLink></li>
 
-          <li className="">
-            <NavLink className="" to="/account" activeClassName="">Личный кабинет</NavLink>
+          {loggedIn &&
+            <li className="header__menu-top-item">
+              <NavLink className="header__menu-top-label link-unstyling" to="/account" activeClassName="header__menu-top-label_active">
+                  Личный кабинет
+                <TriangleArrowDown className="header__menu-triangle"/>
+              </NavLink>
 
-            <ul className="">
-              <li className=""><NavLink className="" to="recommendations" activeClassName="">Выйти</NavLink></li>
-            </ul>
-          </li>
+              <ul className="header__submenu-1 header__submenu-1_align_right list-unstyling">
+                <li className="header__menu-item-1"><NavLink className="header__menu-label link-unstyling" to="recommendations" activeClassName="">Выйти</NavLink></li>
+              </ul>
+            </li>
+          }
 
-          <li className="">
-            <NavLink className="" to="/account" activeClassName="">Войти</NavLink>
+          {!loggedIn &&
+            <li className="header__menu-top-item">
+              <NavLink className="header__menu-top-label link-unstyling" to="/account" activeClassName="header__menu-top-label_active">
+                Войти
+                <TriangleArrowDown className="header__menu-triangle"/>
+              </NavLink>
 
-            <ul className="">
-              <li className=""><NavLink className="" to="recommendations" activeClassName="">Регистрация</NavLink></li>
-            </ul>
-          </li>
+              <ul className="header__submenu-1 header__submenu-1_align_right list-unstyling">
+                <li className="header__menu-item-1"><NavLink className="header__menu-label link-unstyling" to="recommendations" activeClassName="">Регистрация</NavLink></li>
+              </ul>
+            </li>
+          }
         </ul>
       </nav>
 
-      <div>
-        <h1>Наталья Натфуллина. Врач-стоматолог</h1>
+      <div className="header__name-bar">
+        <h1 className="header__name">Наталья Натфуллина. Врач-стоматолог</h1>
       </div>
     </header>
   );

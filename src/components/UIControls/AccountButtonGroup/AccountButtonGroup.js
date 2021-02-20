@@ -14,7 +14,7 @@ const AccountButtonGroup = function (props) {
       <ul className="list-unstyling">
         {props.loggedIn ? (
           <>
-            <li className="cover__overlay-menu-item cover__overlay-menu-item_principal list-item-unstyling" >
+            <li className="cover__overlay-menu-item cover__overlay-menu-item_principal" >
               <Link
                 to="account"
                 className="button cover__overlay-menu-button button__ic-lab_type_account link-unstyling"
@@ -23,7 +23,7 @@ const AccountButtonGroup = function (props) {
                 Личный кабинет
               </Link>
             </li>
-            <li className="cover__overlay-menu-item cover__overlay-menu-item_secondary list-item-unstyling" >
+            <li className="cover__overlay-menu-item cover__overlay-menu-item_secondary" >
               <button
                 type="button"
                 className="button cover__overlay-menu-button button__ic-lab_type_logout"
@@ -35,7 +35,7 @@ const AccountButtonGroup = function (props) {
           </>
         ) : (
           <>
-            <li className="cover__overlay-menu-item cover__overlay-menu-item_principal list-item-unstyling" >
+            <li className="cover__overlay-menu-item cover__overlay-menu-item_principal" >
               <Link
                 to="login"
                 className="button cover__overlay-menu-button button__ic-lab_type_login link-unstyling"
@@ -44,7 +44,7 @@ const AccountButtonGroup = function (props) {
                 Войти
               </Link>
             </li>
-            <li className="cover__overlay-menu-item cover__overlay-menu-item_secondary list-item-unstyling" >
+            <li className="cover__overlay-menu-item cover__overlay-menu-item_secondary" >
               <Link
                 to="signup"
                 className="button cover__overlay-menu-button button__ic-lab_type_signup link-unstyling"

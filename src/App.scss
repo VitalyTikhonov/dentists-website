@@ -2,21 +2,17 @@
 @import './vendor/fonts/fonts.scss';
 
 .App {
-  // text-align: center;
-  // background-color: #bcf5eb;
+  max-width: $PAGE_WIDTH_NOTEBOOK;
+  margin: 0 auto;
   font-family: 'Roboto', serif;
+  font-style: normal;
   font-weight: 300;
-  font-style: italic;
   font-size: $basicFontSize;
+  color: $PALE_BLUE;
 }
 
-.main {
-  // background-image: url(./images/seamless-pattern_02.jpg);
-  // background-image: url(./images/wallpaper_background.png);
-  // background-image: url(./images/seamless-pattern_03.jpg);
-  background-size: 300px;
-  background-repeat: repeat;
-}
+// .main {
+// }
 
 .AppLogo {
   height: 40vmin;

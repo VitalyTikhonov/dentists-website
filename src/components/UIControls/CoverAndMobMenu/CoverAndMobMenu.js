@@ -21,12 +21,12 @@ const CoverAndMobMenu = function (props) {
         <DoubleChevronLeft className="cover-and-mob-menu__close-icon" />
       </button>
 
-      <ul className="cover-and-mob-menu__list">
+      <ul className="cover-and-mob-menu__list list-unstyling">
         <HashRouter
           // basename="/" // после хеша
           hashType="noslash"
         >
-          <li className="cover-and-mob-menu__item button list-item-unstyling">
+          <li className="cover-and-mob-menu__item button">
             <NavLink
               to="services"
               className="cover-and-mob-menu__link link-unstyling"
@@ -36,7 +36,7 @@ const CoverAndMobMenu = function (props) {
               Услуги
             </NavLink>
           </li>
-          <li className="cover-and-mob-menu__item button list-item-unstyling">
+          <li className="cover-and-mob-menu__item button">
             <NavLink
               to="book_appointment"
               className="cover-and-mob-menu__link link-unstyling"
@@ -46,7 +46,7 @@ const CoverAndMobMenu = function (props) {
               Запись на приём
             </NavLink>
           </li>
-          <li className="cover-and-mob-menu__item button list-item-unstyling">
+          <li className="cover-and-mob-menu__item button">
             <NavLink
               to="/about_doctor"
               className="cover-and-mob-menu__link link-unstyling"
@@ -58,7 +58,7 @@ const CoverAndMobMenu = function (props) {
           </li>
         </HashRouter>
         {true && (
-          <li className="cover-and-mob-menu__item button list-item-unstyling">
+          <li className="cover-and-mob-menu__item button">
             <NavLink
               to="blog"
               className="cover-and-mob-menu__link link-unstyling"
@@ -70,7 +70,7 @@ const CoverAndMobMenu = function (props) {
           </li>
         )}
         {true && (
-          <li className="cover-and-mob-menu__item button list-item-unstyling">
+          <li className="cover-and-mob-menu__item button">
             <NavLink
               to="blog/for_colleagues"
               className="cover-and-mob-menu__link link-unstyling"
