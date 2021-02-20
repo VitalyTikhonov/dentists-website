@@ -107,7 +107,7 @@ const Header = function Header(props) {
       </nav>
 
       <div className="header__name-bar">
-        <h1 className="header__name">Наталья Натфуллина. Врач-стоматолог</h1>
+        <h1 className="header__name"><span className="header__name-first-line">Наталья Натфуллина</span>Врач-стоматолог</h1>
       </div>
     </header>
   );

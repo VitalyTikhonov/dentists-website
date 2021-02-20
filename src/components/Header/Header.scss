@@ -60,7 +60,7 @@ $submenuOneHOffset: calc(#{$submenuOnePadding} * -1);
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 51px;
+    top: 100%;
     box-sizing: border-box;
     padding: $submenuOnePadding;
     background: linear-gradient(
@@ -177,5 +177,17 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
 
   .header__name {
     font-size: $FS896_HEADER_AND_COVER_NAME;
+  }
+}
+
+@media (min-width: $PAGE_WIDTH_DESKTOP_HEADER_MIN_POINT) {
+  .header__name-first-line::after {
+    content: ". ";
+  }
+}
+
+@media (max-width: $PAGE_WIDTH_MOB_HEADER_MAX_POINT) {
+  .header__menu-top-label {
+    display: none;
   }
 }

@@ -1,6 +1,9 @@
 // SIZE
 $PAGE_WIDTH_NOTEBOOK: 1240px;
 $PAGE_WIDTH_TABLET: 896px;
+$PAGE_WIDTH_NOTEBOOK_MIN_POINT: calc(#{$PAGE_WIDTH_TABLET} + 1);
+$PAGE_WIDTH_DESKTOP_HEADER_MIN_POINT: 701px;
+$PAGE_WIDTH_MOB_HEADER_MAX_POINT: calc(#{$PAGE_WIDTH_DESKTOP_HEADER_MIN_POINT} - 1);
 
 $paddingBasic: calc(5px + 1.94vw);
 // COLOUR
@@ -56,9 +59,9 @@ $FS1240_CARD_TITLE: calc(min(max(13px, 2.016vw), 25px));
 $FS1240_COVER_CONTROLS: calc(min(max(12px, 1.774vw), 22px));
 $FS1240_CARD_BODY: calc(min(max(12px, 1.774vw), 22px));
 $FS1240_FOOTER_TITLE: calc(min(max(13px, 1.774vw), 22px));
-$FS1240_HEADER_MENU: calc(min(max(12px, 1.613vw), 20px));
+$FS1240_HEADER_MENU: calc(min(max(15px, 1.613vw), 20px));
 $FS1240_SECTION_BODY: calc(min(max(12px, 1.613vw), 20px));
-$FS1240_HEADER_SUBMENU: calc(min(max(12px, 1.371vw), 17px));
+$FS1240_HEADER_SUBMENU: calc(min(max(15px, 1.371vw), 17px));
 $FS1240_FOOTER_BODY: calc(min(max(12px, .968vw), 12px));
 
 $FS896_HEADER_AND_COVER_NAME: calc(min(max(15px, 4.018vw), 36px));
@@ -68,9 +71,9 @@ $FS896_CARD_TITLE: calc(min(max(13px, 2.009vw), 18px));
 $FS896_COVER_CONTROLS: calc(min(max(12px, 1.786vw), 16px));
 $FS896_CARD_BODY: calc(min(max(12px, 1.786vw), 16px));
 $FS896_FOOTER_TITLE: calc(min(max(13px, 2.232vw), 20px));
-$FS896_HEADER_MENU: calc(min(max(12px, 1.786vw), 16px));
+$FS896_HEADER_MENU: calc(min(max(15px, 1.786vw), 16px));
 $FS896_SECTION_BODY: calc(min(max(12px, 1.786vw), 16px));
-$FS896_HEADER_SUBMENU: calc(min(max(12px, 1.563vw), 14px));
+$FS896_HEADER_SUBMENU: calc(min(max(15px, 1.674vw), 15px));
 $FS896_FOOTER_BODY: calc(min(max(12px, 1.116vw), 10px));
 
 $FS320_HEADER_AND_COVER_NAME: calc(min(max(15px, 6.875vw), 22px));
@@ -80,11 +83,11 @@ $FS320_CARD_TITLE: calc(min(max(13px, 5.625vw), 18px));
 $FS320_COVER_CONTROLS: calc(min(max(12px, 4.375vw), 14px));
 $FS320_CARD_BODY: calc(min(max(12px, 5.000vw), 16px));
 $FS320_FOOTER_TITLE: calc(min(max(13px, 5.625vw), 18px));
-$FS320_HEADER_MENU: calc(min(max(12px, 4.375vw), 14px));
+$FS320_HEADER_MENU: calc(min(max(15px, 4.688vw), 15px));
 $FS320_SECTION_BODY: calc(min(max(12px, 5.000vw), 16px));
-$FS320_HEADER_SUBMENU: calc(min(max(12px, 3.125vw), 10px));
+$FS320_HEADER_SUBMENU: calc(min(max(15px, 4.688vw), 15px));
 $FS320_FOOTER_BODY: calc(min(max(12px, 3.125vw), 10px));
-$FS320_MOB_MENU: calc(min(max(13px, 5.625vw), 18px));
+$FS320_MOB_MENU: calc(min(max(14px, 5.625vw), 18px));
 
 // composes: cormorantInfantBoldItalic from './vendor/fonts/fonts.scss';
 // .cormorantInfantBoldItalic {
