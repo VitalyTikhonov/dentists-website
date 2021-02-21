@@ -8,8 +8,11 @@ import Doctors from "../svgReactComponents/Doctors";
 import DoubleChevronLeft from "../svgReactComponents/DoubleChevronLeft";
 
 const CoverAndMobMenu = function (props) {
+  const { onCloseButtonClick } = props;
+
   return (
     <nav
+      // className={`cover-and-mob-menu ${props.parentClass}`}
       className="cover-and-mob-menu"
       aria-labelledby="header-navigation"
     >
@@ -17,7 +20,7 @@ const CoverAndMobMenu = function (props) {
         Центральное меню на обложке сайта
       </h2>
 
-      <button className="button cover-and-mob-menu__close-button">
+      <button className="button cover-and-mob-menu__close-button" onClick={onCloseButtonClick} >
         <DoubleChevronLeft className="cover-and-mob-menu__close-icon" />
       </button>
 

@@ -4,17 +4,19 @@ import { HashRouter, NavLink } from "react-router-dom";
 // import { toggleMobileView, selectMobileView } from "./headerSlice";
 import "./Header.scss";
 import TriangleArrowDown from "../UIControls/svgReactComponents/TriangleArrowDown";
+import MobMenuButton from "../UIControls/MobMenuButton/MobMenuButton";
+import CoverAndMobMenu from "../UIControls/CoverAndMobMenu/CoverAndMobMenu";
 
 const Header = function Header(props) {
   // const mobileView = useSelector(selectMobileView);
   const [loggedIn] = useState(false); // const loggedIn = useSelector(selectLoggedIn);
   // const dispatch = useDispatch();
 
-  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // function toggleMobileMenuOpen() {
-  //   setMobileMenuOpen(!mobileMenuOpen);
-  // }
+  function toggleMobileMenuOpen() {
+    setMobileMenuOpen(!mobileMenuOpen);
+  }
 
   // useEffect(() => {
   //   function setResponsiveness() {
@@ -107,8 +109,11 @@ const Header = function Header(props) {
       </nav>
 
       <div className="header__name-bar">
+        <MobMenuButton onClick={toggleMobileMenuOpen} />
         <h1 className="header__name"><span className="header__name-first-line">Наталья Натфуллина</span>Врач-стоматолог</h1>
       </div>
+
+      {mobileMenuOpen && <CoverAndMobMenu onCloseButtonClick={toggleMobileMenuOpen} />}
     </header>
   );
 };

@@ -2,14 +2,22 @@
 // @import "../UIControlsGlobals";
 
 .button__mob-menu-open-button {
-  width: 30px;
-  height: 30px;
+  display: none;
 
   &-icon {
+    width: 30px;
+    height: 30px;
     fill: $PALE_BLUE;
 
     .button__mob-menu-open-button:active & {
       fill: white;
     }
+  }
+}
+
+// @media (max-width: 700px) {
+@media (max-width: $PW_MOB_HEADER_MAX) {
+  .button__mob-menu-open-button {
+    display: inline;
   }
 }

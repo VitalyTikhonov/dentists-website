@@ -1,17 +1,25 @@
 @import "../../css-variables.scss";
 @import "../../vendor/fonts/fonts.scss";
 
+$submenuOnePadding: calc(#{$paddingBasic} * 0.4);
+$submenuOneHOffset: calc(#{$submenuOnePadding} * -1);
+$itemSpacing: calc(#{$submenuOnePadding} * 1);
+
+@mixin headerBlueBar {
+  background: linear-gradient(
+    0deg,
+    rgba(151, 200, 235, 0.17) -220%,
+    #176087 88.23%
+  );
+}
+
 .header {
   box-sizing: border-box;
 }
 
 .header__menu {
   box-sizing: border-box;
-  background: linear-gradient(
-    0deg,
-    rgba(151, 200, 235, 0.17) -220%,
-    #176087 88.23%
-  );
+  @include headerBlueBar();
 }
 
 .header__menu-list {
@@ -48,9 +56,6 @@
   }
 }
 
-$submenuOnePadding: calc(#{$paddingBasic} * 0.4);
-$submenuOneHOffset: calc(#{$submenuOnePadding} * -1);
-
 .header__submenu-1 {
   display: none;
   font-size: $FS1240_HEADER_SUBMENU;
@@ -82,8 +87,6 @@ $submenuOneHOffset: calc(#{$submenuOnePadding} * -1);
 .header__submenu-2 {
   padding-left: $submenuOnePadding;
 }
-
-$itemSpacing: calc(#{$submenuOnePadding} * 1);
 
 .header__menu-item-1 {
   margin-bottom: $itemSpacing;
@@ -137,7 +140,9 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
 .header__name-bar {
   display: flex;
   justify-content: center;
-  padding: 14px 0;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 4%;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.81) 0%,
@@ -153,7 +158,12 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
   color: $DARK_BLUE;
 }
 
-@media (max-width: $PAGE_WIDTH_TABLET) {
+.header__name-first-line::after {
+  content: ". ";
+}
+
+@media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET) {
+  // 701 - 896
   .header__menu-top-label {
     font-size: $FS896_HEADER_MENU;
   }
@@ -180,14 +190,27 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
   }
 }
 
-@media (min-width: $PAGE_WIDTH_DESKTOP_HEADER_MIN_POINT) {
-  .header__name-first-line::after {
-    content: ". ";
+@media (max-width: $PW_MOB_HEADER_MAX) {
+  .header__menu {
+    display: none;
+  }
+
+  .header__name-bar {
+    @include headerBlueBar();
+    justify-content: space-between;
+  }
+
+  .header__name {
+    margin-left: 4%;
+    text-align: right;
+    font-weight: normal;
+    color: $PALE_BLUE;
   }
 }
 
-@media (max-width: $PAGE_WIDTH_MOB_HEADER_MAX_POINT) {
-  .header__menu-top-label {
-    display: none;
+@media (max-width: 395px) {
+  .header__name-first-line::after {
+    content: "\00000a";
+    white-space: pre;
   }
 }
