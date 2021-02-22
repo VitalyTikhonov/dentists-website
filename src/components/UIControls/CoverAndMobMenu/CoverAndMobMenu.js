@@ -6,6 +6,13 @@ import FemaleDentistIcon from "../svgReactComponents/FemaleDentist";
 import FeatherPen from "../svgReactComponents/FeatherPen";
 import Doctors from "../svgReactComponents/Doctors";
 import DoubleChevronLeft from "../svgReactComponents/DoubleChevronLeft";
+import AccountIcon from "../svgReactComponents/MockAvatar";
+// import LogoutIcon from "../svgReactComponents/Logout";
+// import LoginIcon from "../svgReactComponents/Login";
+// import Signup from "../svgReactComponents/AddUser";
+import LogoutIcon from "../svgReactComponents/LogoutThinner";
+import LoginIcon from "../svgReactComponents/LoginThinner";
+import Signup from "../svgReactComponents/AddUserThinner";
 
 const CoverAndMobMenu = function (props) {
   const { onCloseButtonClick } = props;
@@ -20,7 +27,10 @@ const CoverAndMobMenu = function (props) {
         Центральное меню на обложке сайта
       </h2>
 
-      <button className="button cover-and-mob-menu__close-button" onClick={onCloseButtonClick} >
+      <button
+        className="button cover-and-mob-menu__close-button"
+        onClick={onCloseButtonClick}
+      >
         <DoubleChevronLeft className="cover-and-mob-menu__close-icon" />
       </button>
 
@@ -49,7 +59,7 @@ const CoverAndMobMenu = function (props) {
               Запись на приём
             </NavLink>
           </li>
-          <li className="cover-and-mob-menu__item button">
+          <li className="cover-and-mob-menu__item cover-and-mob-menu__item_order_first button">
             <NavLink
               to="/about_doctor"
               className="cover-and-mob-menu__link link-unstyling"
@@ -84,9 +94,56 @@ const CoverAndMobMenu = function (props) {
             </NavLink>
           </li>
         )}
+        {true ? (
+          <>
+            <li className="cover-and-mob-menu__item button">
+              <NavLink
+                to="account"
+                className="cover-and-mob-menu__link link-unstyling"
+                activeClassName="cover-and-mob-menu__link_active"
+              >
+                <AccountIcon className="cover-and-mob-menu__icon" />
+                Личный кабинет
+              </NavLink>
+            </li>
+            <li className="cover-and-mob-menu__item button">
+              <NavLink
+                to="logout"
+                className="cover-and-mob-menu__link link-unstyling"
+                activeClassName="cover-and-mob-menu__link_active"
+              >
+                <LogoutIcon className="cover-and-mob-menu__icon" />
+                Выйти
+              </NavLink>
+            </li>
+          </>
+        ) : (
+          <>
+            <li className="cover-and-mob-menu__item button">
+              <NavLink
+                to="login"
+                className="cover-and-mob-menu__link link-unstyling"
+                activeClassName="cover-and-mob-menu__link_active"
+              >
+                <LoginIcon className="cover-and-mob-menu__icon" />
+                Войти
+              </NavLink>
+            </li>
+            <li className="cover-and-mob-menu__item button">
+              <NavLink
+                to="signup"
+                className="cover-and-mob-menu__link link-unstyling"
+                activeClassName="cover-and-mob-menu__link_active"
+              >
+                <Signup className="cover-and-mob-menu__icon" />
+                Регистрация
+              </NavLink>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );
-}
+};
 
 export default CoverAndMobMenu;

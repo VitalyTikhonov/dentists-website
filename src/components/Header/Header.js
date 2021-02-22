@@ -88,20 +88,20 @@ const Header = function Header(props) {
               </NavLink>
 
               <ul className="header__submenu-1 header__submenu-1_align_right list-unstyling">
-                <li className="header__menu-item-1"><NavLink className="header__menu-label link-unstyling" to="recommendations" activeClassName="">Выйти</NavLink></li>
+                <li className="header__menu-item-1"><NavLink className="header__menu-label link-unstyling" to="logout" activeClassName="">Выйти</NavLink></li>
               </ul>
             </li>
           }
 
           {!loggedIn &&
             <li className="header__menu-top-item">
-              <NavLink className="header__menu-top-label link-unstyling" to="/account" activeClassName="header__menu-top-label_active">
+              <NavLink className="header__menu-top-label link-unstyling" to="/login" activeClassName="header__menu-top-label_active">
                 Войти
                 <TriangleArrowDown className="header__menu-triangle"/>
               </NavLink>
 
               <ul className="header__submenu-1 header__submenu-1_align_right list-unstyling">
-                <li className="header__menu-item-1"><NavLink className="header__menu-label link-unstyling" to="recommendations" activeClassName="">Регистрация</NavLink></li>
+                <li className="header__menu-item-1"><NavLink className="header__menu-label link-unstyling" to="signup" activeClassName="">Регистрация</NavLink></li>
               </ul>
             </li>
           }
