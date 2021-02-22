@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { HashRouter, NavLink } from "react-router-dom";
 import "./CoverAndMobMenu.scss";
 import ServicesIcon from "../svgReactComponents/DentistryServices";
@@ -15,7 +16,8 @@ import LoginIcon from "../svgReactComponents/LoginThinner";
 import Signup from "../svgReactComponents/AddUserThinner";
 
 const CoverAndMobMenu = function (props) {
-  const { onCloseButtonClick } = props;
+  const { onCloseButtonClick, showAccountButtons } = props;
+  const [loggedIn] = useState(false); // const loggedIn = useSelector(selectLoggedIn);
 
   return (
     <nav
@@ -94,7 +96,8 @@ const CoverAndMobMenu = function (props) {
             </NavLink>
           </li>
         )}
-        {true ? (
+        {showAccountButtons && (
+        loggedIn ? (
           <>
             <li className="cover-and-mob-menu__item button">
               <NavLink
@@ -140,7 +143,7 @@ const CoverAndMobMenu = function (props) {
               </NavLink>
             </li>
           </>
-        )}
+        ))}
       </ul>
     </nav>
   );

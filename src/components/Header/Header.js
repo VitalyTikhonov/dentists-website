@@ -113,7 +113,7 @@ const Header = function Header(props) {
         <h1 className="header__name"><span className="header__name-first-line">Наталья Натфуллина</span>Врач-стоматолог</h1>
       </div>
 
-      {mobileMenuOpen && <CoverAndMobMenu onCloseButtonClick={toggleMobileMenuOpen} />}
+      {mobileMenuOpen && <CoverAndMobMenu onCloseButtonClick={toggleMobileMenuOpen} showAccountButtons={true} />}
     </header>
   );
 };

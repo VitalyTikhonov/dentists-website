@@ -1,0 +1,33 @@
+@import '../../css-variables.scss';
+
+.cover {
+  height: $COVER_HEIHT_1240;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover__picture {
+  overflow: hidden;
+}
+
+.cover__image {
+  width: 114%;
+  height: $COVER_PHOTO_AREA_HEIGHT;
+  object-fit: cover;
+  object-position: 0 35%;
+}
+
+// @media (min-height: 626px) {
+//   .cover__image {
+//     width: 104%;
+//     object-position: 0 37%;
+//   }
+// }
+
+@media (max-width: 1200px) {
+  .cover__image {
+    width: 116%;
+    object-position: 0 23%;
+  }
+}

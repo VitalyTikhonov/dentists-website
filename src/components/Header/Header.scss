@@ -1,5 +1,4 @@
-@import "../../css-variables.scss";
-@import "../../vendor/fonts/fonts.scss";
+@import '../../css-variables.scss';
 
 $submenuOnePadding: calc(#{$paddingBasic} * 0.4);
 $submenuOneHOffset: calc(#{$submenuOnePadding} * -1);
@@ -159,7 +158,7 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
 }
 
 .header__name-first-line::after {
-  content: ". ";
+  content: '. ';
 }
 
 @media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET) {
@@ -210,7 +209,7 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
 
 @media (max-width: 395px) {
   .header__name-first-line::after {
-    content: "\00000a";
+    content: '\00000a';
     white-space: pre;
   }
 }
