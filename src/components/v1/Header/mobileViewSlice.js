@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const headerSlice = createSlice({
+export const mobileViewSlice = createSlice({
   name: 'mobileView',
   initialState: {
     value: false,
@@ -19,11 +19,11 @@ export const headerSlice = createSlice({
   },
 });
 
-export const { toggleMobileView } = headerSlice.actions;
+export const { toggleMobileView } = mobileViewSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state) => state.counter.value)`
 export const selectMobileView = state => state.mobileView.value;
 
-export default headerSlice.reducer;
+export default mobileViewSlice.reducer;

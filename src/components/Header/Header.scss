@@ -161,7 +161,7 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
   content: '. ';
 }
 
-@media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET) {
+@media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET_MAX) {
   // 701 - 896
   .header__menu-top-label {
     font-size: $FS896_HEADER_MENU;

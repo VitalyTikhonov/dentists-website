@@ -31,3 +31,10 @@
     object-position: 0 23%;
   }
 }
+
+@media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET_MAX) {
+  .cover {
+    height: $COVER_HEIHT_896;
+    flex-direction: row-reverse;
+  }
+}

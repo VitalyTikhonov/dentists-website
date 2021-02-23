@@ -1,14 +1,16 @@
 // SIZE
 /* Some of these wouldn't compile when with calc */
-$PW_NOTEBOOK: 1240px;
-$PW_TABLET: 896px;
+$PW_NOTEBOOK_MAX: 1240px;
 $PW_NOTEBOOK_MIN: 897px;
+$PW_TABLET_MAX: 896px;
 $PW_DESKTOP_HEADER_MIN: 701px;
 $PW_MOB_HEADER_MAX: 700px;
+$PW_TABLET_MIN: 897px;
 
 $paddingBasic: calc(5px + 1.94vw);
 
 $COVER_HEIHT_1240: calc(min(100vh, 625px));
+$COVER_HEIHT_896: calc(min(100vh, 414px));
 // $COVER_HEIHT_1240: 100vh;
 $COVER_MENU_HEIGHT_1240: 96.77px;
 $COVER_PHOTO_AREA_HEIGHT: calc(#{$COVER_HEIHT_1240} - #{$COVER_MENU_HEIGHT_1240});
@@ -85,3 +87,8 @@ $desktopSectionBodyWidth: calc(100vw - #{$desktopSidebarWidth} - #{$paddingBasic
 // $profilePhotoOriginalWidth: 384px;
 // $profilePhotoOriginalHeight: 846px;
 // $docProfilePageWidth: calc((#{$paddingBasic} + #{$docProfilePhotoWidth}) * 2);
+
+:export {
+  PW_DESKTOP_HEADER_MIN: $PW_DESKTOP_HEADER_MIN;
+  testProp: 500px;
+}

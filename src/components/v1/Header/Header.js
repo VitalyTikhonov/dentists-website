@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleMobileView, selectMobileView } from "./headerSlice";
+import { toggleMobileView, selectMobileView } from "./mobileViewSlice";
 import styles from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
 // import PageDimmer from "../PageDimmer/PageDimmer";

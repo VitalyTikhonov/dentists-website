@@ -57,7 +57,7 @@ const CoverAndMobMenu = function (props) {
               className="cover-and-mob-menu__link link-unstyling"
               activeClassName="cover-and-mob-menu__link_active"
             >
-              <AppointmentIcon className="cover-and-mob-menu__icon" />
+              <AppointmentIcon className="cover-and-mob-menu__icon cover-and-mob-menu__icon_wider" />
               Запись на приём
             </NavLink>
           </li>
@@ -124,22 +124,22 @@ const CoverAndMobMenu = function (props) {
           <>
             <li className="cover-and-mob-menu__item button">
               <NavLink
-                to="login"
-                className="cover-and-mob-menu__link link-unstyling"
-                activeClassName="cover-and-mob-menu__link_active"
-              >
-                <LoginIcon className="cover-and-mob-menu__icon" />
-                Войти
-              </NavLink>
-            </li>
-            <li className="cover-and-mob-menu__item button">
-              <NavLink
                 to="signup"
                 className="cover-and-mob-menu__link link-unstyling"
                 activeClassName="cover-and-mob-menu__link_active"
               >
                 <Signup className="cover-and-mob-menu__icon" />
                 Регистрация
+              </NavLink>
+            </li>
+            <li className="cover-and-mob-menu__item button">
+              <NavLink
+                to="login"
+                className="cover-and-mob-menu__link link-unstyling"
+                activeClassName="cover-and-mob-menu__link_active"
+              >
+                <LoginIcon className="cover-and-mob-menu__icon" />
+                Войти
               </NavLink>
             </li>
           </>
