@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { HashRouter, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleMobileView, selectMobileView } from "./mobileViewSlice";
+import { toggleMobileHeaderView, selectMobileHeaderView } from "./mobileHeaderViewSlice";
 import { toggleTabletView } from "./tabletViewSlice";
 import "./Header.scss";
 import TriangleArrowDown from "../UIControls/svgReactComponents/TriangleArrowDown";
@@ -14,7 +14,7 @@ import {
 
 const Header = function Header(props) {
   const dispatch = useDispatch();
-  const mobileView = useSelector(selectMobileView);
+  const mobileHeaderView = useSelector(selectMobileHeaderView);
   const [loggedIn] = useState(false); // const loggedIn = useSelector(selectLoggedIn);
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,11 +28,11 @@ const Header = function Header(props) {
     const TABLET_MAX_PW = parseInt(PW_TABLET_MAX, 10);
 
     function setDislpayMode() {
-      /* на данный момент переменные mobileView и tabletView вводятся для разных невзаимоискл. задач
+      /* на данный момент переменные mobileHeaderView и tabletView вводятся для разных невзаимоискл. задач
       и поэтому могут одновременно иметь одинаковые значения. */
       window.innerWidth < DESKTOP_HEADER_MIN_PW
-        ? dispatch(toggleMobileView(true))
-        : dispatch(toggleMobileView(false));
+        ? dispatch(toggleMobileHeaderView(true))
+        : dispatch(toggleMobileHeaderView(false));
       window.innerWidth <= TABLET_MAX_PW
         ? dispatch(toggleTabletView(true))
         : dispatch(toggleTabletView(false));
@@ -294,7 +294,7 @@ const Header = function Header(props) {
         </h1>
       </div>
 
-      {mobileView && mobileMenuOpen && (
+      {mobileHeaderView && mobileMenuOpen && (
         <CoverAndMobMenu
           onCloseButtonClick={toggleMobileMenuOpen}
           showAccountButtons={true}

@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleMobileView, selectMobileView } from "./mobileViewSlice";
+import { toggleMobileHeaderView, selectMobileHeaderView } from "./mobileHeaderViewSlice";
 import styles from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
 // import PageDimmer from "../PageDimmer/PageDimmer";
 
 const Header = function Header(props) {
-  const mobileView = useSelector(selectMobileView);
+  const mobileHeaderView = useSelector(selectMobileHeaderView);
   const dispatch = useDispatch();
   // const { loginStatus, logout, setLoginPopupOpen } = props;
 
@@ -30,8 +30,8 @@ const Header = function Header(props) {
     function setResponsiveness() {
       // console.log('window.innerWidth', window.innerWidth);
       return window.innerWidth < 421
-        ? dispatch(toggleMobileView(true))
-        : dispatch(toggleMobileView(false));
+        ? dispatch(toggleMobileHeaderView(true))
+        : dispatch(toggleMobileHeaderView(false));
     }
     setResponsiveness();
 
@@ -46,9 +46,9 @@ const Header = function Header(props) {
           Стоматолог
         </a>
 
-        {(!mobileView || mobileMenuOpen) && <Navbar />}
+        {(!mobileHeaderView || mobileMenuOpen) && <Navbar />}
 
-        {mobileView && (
+        {mobileHeaderView && (
           <button
             className={styles.mobileMenuButton}
             onClick={toggleMobileMenuOpen}
@@ -59,12 +59,12 @@ const Header = function Header(props) {
 
     // <header className="header root__section">
     //   <img src={logoImage} alt="mesto logo" className="logo" />
-    //   {mobileView &&
+    //   {mobileHeaderView &&
     //     <button className="button button__modal button__modal_burger-white button_hover-on-black" onClick={toggleMobileMenuOpen} />
     //   }
-    //   {(!mobileView || mobileMenuOpen) &&
+    //   {(!mobileHeaderView || mobileMenuOpen) &&
     //     <div className="header__menu" >
-    //       {mobileView && <PageDimmer handleClick={toggleMobileMenuOpen} />}
+    //       {mobileHeaderView && <PageDimmer handleClick={toggleMobileMenuOpen} />}
     //       <Navbar
     //         toggleMobileMenuOpen={toggleMobileMenuOpen}
     //         handleAuthButtonClick={handleAuthButtonClick}
