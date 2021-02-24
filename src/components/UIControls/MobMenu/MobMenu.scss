@@ -144,6 +144,7 @@ $ICON_SIZE_1240_ENLARGED: calc(min(5.65vw, 70px));
   }
 }
 
+// 896px
 @media (max-width: $PW_TABLET_MAX) {
   // @media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET_MAX) {
   .mob-menu {
@@ -185,6 +186,7 @@ $ICON_SIZE_1240_ENLARGED: calc(min(5.65vw, 70px));
   }
 }
 
+// 700px
 @media (max-width: $PW_MOB_HEADER_MAX) {
   .mob-menu {
     position: fixed;

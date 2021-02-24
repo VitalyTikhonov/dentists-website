@@ -3,6 +3,7 @@
 
 $ICON_SIZE_1240: calc(min(4.84vw, 60px));
 $ICON_SIZE_1240_ENLARGED: calc(min(5.65vw, 70px));
+$ICON_SIZE_896: calc(max(3.91vw, 24px));
 
 .cover-menu {
   // nav
@@ -144,6 +145,7 @@ $ICON_SIZE_1240_ENLARGED: calc(min(5.65vw, 70px));
   }
 }
 
+// 896px
 @media (max-width: $PW_TABLET_MAX) {
   // @media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET_MAX) {
   .cover-menu {
@@ -172,43 +174,52 @@ $ICON_SIZE_1240_ENLARGED: calc(min(5.65vw, 70px));
   .cover-menu__link {
     justify-content: start;
     font-size: $FS896_COVER_CONTROLS;
+    white-space: nowrap;
   }
 
   .cover-menu__icon {
     margin: auto 1.5vw auto 0;
-    width: 3.91vw;
-    height: 3.91vw;
+    width: $ICON_SIZE_896;
+    height: $ICON_SIZE_896;
 
-    &_wider {
-      width: 5vw;
-    }
+    // &_wider {
+    //   width: 5vw;
+    // }
   }
 }
 
-@media (max-width: $PW_MOB_HEADER_MAX) {
+// 700px
+// @media (max-width: $PW_MOB_HEADER_MAX) {
+//   .cover-menu {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+
+//   .cover-menu__close-button {
+//     display: flex;
+//   }
+
+//   .cover-menu__item {
+//     margin: 2px 0;
+//   }
+
+//   .cover-menu__icon {
+//     width: 38px;
+//     height: 38px;
+
+//     &_larger {
+//       width: 45px;
+//       height: 45px;
+//     }
+//   }
+// }
+
+// ...320
+@media (max-width: $PW_MOBILE_MAX) {
   .cover-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .cover-menu__close-button {
-    display: flex;
-  }
-
-  .cover-menu__item {
-    margin: 2px 0;
-  }
-
-  .cover-menu__icon {
-    width: 38px;
-    height: 38px;
-
-    &_larger {
-      width: 45px;
-      height: 45px;
-    }
+    display: none;
   }
 }

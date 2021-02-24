@@ -8,6 +8,7 @@
 }
 
 .cover__photo-part {
+  position: relative;
   display: flex;
 }
 
@@ -17,10 +18,10 @@
 }
 
 .cover__image {
-  width: 114%;
+  width: 100%;
   height: $COVER_PHOTO_AREA_HEIGHT_1240;
   object-fit: cover;
-  object-position: 0 35%;
+  object-position: center;
 }
 
 // @media (min-height: 626px) {
@@ -30,15 +31,17 @@
 //   }
 // }
 
-@media (max-width: 1200px) {
-  .cover__image {
-    width: 116%;
-    object-position: 0 23%;
-  }
-}
+// @media (max-width: 1200px) {
+//   .cover__image {
+//     width: 100%;
+//     object-position: center;
+//   }
+// }
 
 // 701px - 896px
-@media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET_MAX) {
+// @media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET_MAX) {
+// 321 – 896
+@media (min-width: $PW_TABLET_MIN) and (max-width: $PW_TABLET_MAX) {
   .cover {
     height: $COVER_HEIHT_896;
     flex-direction: row-reverse;

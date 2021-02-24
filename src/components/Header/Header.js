@@ -294,12 +294,12 @@ const Header = function Header(props) {
         </h1>
       </div>
 
-      {mobileHeaderView && mobileMenuOpen && (
+      {/* {mobileHeaderView && mobileMenuOpen && (
         <MobMenu
           onCloseButtonClick={toggleMobileMenuOpen}
           showAccountButtons={true}
         />
-      )}
+      )} */}
     </header>
   );
 };
