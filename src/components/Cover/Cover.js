@@ -5,7 +5,7 @@ import { selectTabletView } from "../Header/tabletViewSlice";
 import NatashaOriginal from "../../images/cover/Natasha_original_warm_tone.jpg";
 import NatashaArmsFolded from "../../images/cover/Natasha_arms_folded_warm_tone.jpg";
 import NatashaArmsFolded_896 from "../../images/cover/Natasha_arms_folded_warm_tone_896.jpg";
-import CoverAndMobMenu from "../UIControls/CoverAndMobMenu/CoverAndMobMenu";
+import CoverMenu from "../UIControls/CoverMenu/CoverMenu";
 
 function Cover() {
   const mobileHeaderView = useSelector(selectMobileHeaderView);
@@ -25,7 +25,7 @@ function Cover() {
           />
         </picture>
       </div>
-      {!mobileHeaderView && <CoverAndMobMenu showAccountButtons={tabletView} />}
+      {!mobileHeaderView && <CoverMenu showAccountButtons={tabletView} />}
     </section>
   );
 }

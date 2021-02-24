@@ -6,7 +6,7 @@ import { toggleTabletView } from "./tabletViewSlice";
 import "./Header.scss";
 import TriangleArrowDown from "../UIControls/svgReactComponents/TriangleArrowDown";
 import MobMenuButton from "../UIControls/MobMenuButton/MobMenuButton";
-import CoverAndMobMenu from "../UIControls/CoverAndMobMenu/CoverAndMobMenu";
+import MobMenu from "../UIControls/MobMenu/MobMenu";
 import {
   PW_TABLET_MAX,
   PW_DESKTOP_HEADER_MIN,
@@ -295,7 +295,7 @@ const Header = function Header(props) {
       </div>
 
       {mobileHeaderView && mobileMenuOpen && (
-        <CoverAndMobMenu
+        <MobMenu
           onCloseButtonClick={toggleMobileMenuOpen}
           showAccountButtons={true}
         />

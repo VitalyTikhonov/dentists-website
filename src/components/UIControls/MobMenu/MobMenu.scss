@@ -1,0 +1,214 @@
+@import "../../../css-variables.scss";
+// @import "../UIControlsGlobals";
+
+$ICON_SIZE_1240: calc(min(4.84vw, 60px));
+$ICON_SIZE_1240_ENLARGED: calc(min(5.65vw, 70px));
+
+.mob-menu {
+  // nav
+  box-sizing: border-box;
+  margin-top: auto;
+  background: linear-gradient(360deg, $PALE_BLUE -51.59%, $DARK_BLUE 112.4%);
+}
+
+.mob-menu__list {
+  // ul
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: $COVER_MENU_HEIGHT_1240;
+}
+
+.mob-menu__item {
+  // li
+  box-sizing: border-box;
+  width: auto;
+  height: 100%;
+  border-right: 1px solid #30749a;
+
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+.mob-menu__link {
+  // a
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 1.69vw;
+  padding-right: 1.69vw;
+  font-size: $FS1240_COVER_CONTROLS;
+
+  color: $PALE_BLUE;
+  // transition: color 0.15s ease-in-out;
+
+  &_active {
+    background: linear-gradient(360deg, $PALE_BLUE -108%, $DARK_BLUE 34.38%);
+    border: none;
+    color: white;
+  }
+
+  &:hover {
+    color: $BRIGHT_BLUE_GREEN;
+    // border: 1px solid $BRIGHT_BLUE_GREEN;
+    box-shadow: inset 0 0 5px 1px #64e9ee;
+  }
+  &:active {
+    background: linear-gradient(360deg, $PALE_BLUE -108%, $DARK_BLUE 34.38%);
+    // border: none;
+    box-shadow: none;
+    color: white;
+    // transition: none;
+  }
+}
+
+.mob-menu__link_active:hover {
+  color: white;
+  // border: none;
+  box-shadow: none;
+}
+
+/* Важен порядок НАЧАЛО */
+.mob-menu__icon {
+  width: $ICON_SIZE_1240;
+  height: $ICON_SIZE_1240;
+  margin: auto 0.89vw auto 0;
+  object-fit: contain;
+  fill: $PALE_BLUE;
+  // transition: fill 0.15s ease-in;
+
+  &_larger {
+    width: $ICON_SIZE_1240_ENLARGED;
+    height: $ICON_SIZE_1240_ENLARGED;
+  }
+
+  .mob-menu__link:hover & {
+    fill: $BRIGHT_BLUE_GREEN;
+  }
+
+  .mob-menu__link_active & {
+    fill: white;
+  }
+
+  .mob-menu__link_active:hover & {
+    fill: white;
+  }
+
+  .mob-menu__link:active & {
+    fill: white;
+    // transition: none;
+  }
+}
+/* Важен порядок КОНЕЦ */
+
+.mob-menu__close-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: calc(100% - 9px * 2);
+  height: 39px;
+  margin: 9px 9px 0;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid $PALE_BLUE;
+  border-radius: 5px;
+
+  // &:hover {
+  //   background: rgba(255, 255, 255, 0.2);
+  //   border: 1px solid $BRIGHT_BLUE_GREEN;
+  // }
+
+  &:active {
+    background-color: #ffffff45;
+    border: 1px solid white;
+  }
+}
+
+.mob-menu__close-icon {
+  fill: $PALE_BLUE;
+
+  // &:hover {
+  //   fill: $BRIGHT_BLUE_GREEN;
+  // }
+
+  .button:active & {
+    fill: white;
+  }
+}
+
+@media (max-width: $PW_TABLET_MAX) {
+  // @media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET_MAX) {
+  .mob-menu {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mob-menu__list {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-grow: 1;
+    height: auto;
+    overflow: scroll;
+  }
+
+  .mob-menu__item {
+    // border-right: none;
+    border-bottom: 1px solid #30749a;
+
+    &_order_first {
+      order: -1;
+    }
+  }
+
+  .mob-menu__link {
+    justify-content: start;
+    font-size: $FS896_COVER_CONTROLS;
+  }
+
+  .mob-menu__icon {
+    margin: auto 1.5vw auto 0;
+    width: 3.91vw;
+    height: 3.91vw;
+
+    &_wider {
+      width: 5vw;
+    }
+  }
+}
+
+@media (max-width: $PW_MOB_HEADER_MAX) {
+  .mob-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mob-menu__close-button {
+    display: flex;
+  }
+
+  .mob-menu__item {
+    margin: 2px 0;
+  }
+
+  .mob-menu__icon {
+    width: 38px;
+    height: 38px;
+
+    &_larger {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
