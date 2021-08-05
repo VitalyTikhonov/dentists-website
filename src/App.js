@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import "./App.scss";
 import Header from './components/Header/Header';
 import Cover from './components/Cover/Cover';
+import Services from './components/Services/Services';
 import UIControls from "./components/UIControls/UIControls";
 import Counter from "./components/v1/counter/Counter";
 
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Cover />
+            <Services />
           </Route>
 
           {/* <Route path='/signup'>
