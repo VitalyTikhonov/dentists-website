@@ -1,18 +1,20 @@
 @import "../../css-variables.scss";
 
 .headline {
-  margin: 0 0 2px;
+  margin: 0;
   font-weight: normal;
   font-size: $FS1240_SECTION_TITLE;
   line-height: 47px;
 }
 
 .headline_subtitle {
+  margin: 2px 0;
   font-size: $FS1240_SECTION_SUBTITLE;
 }
 
 .headline_card-title {
   font-size: $FS1240_CARD_TITLE;
+  line-height: 29px;
 }
 
 .headline_color_white {
