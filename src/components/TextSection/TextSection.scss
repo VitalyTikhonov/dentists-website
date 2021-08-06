@@ -1,0 +1,33 @@
+@import "../../css-variables.scss";
+
+// .textSection {
+// }
+
+.textSection__title-bar {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background: linear-gradient(360deg, #97c8eb -51.59%, #176087 207.97%);
+  box-shadow: 0px 0px 4px rgba(23, 96, 135, 0.25);
+}
+
+.textSection__body {
+  box-sizing: border-box;
+  padding: 22px $paddingBasic;
+  background-image: url(../../images/styling-images/wallpaper_background_grey_transp.png);
+  background-repeat: repeat;
+  background-size: 450.56px;
+}
+
+.textSection__columns {
+  columns: 2;
+}
+
+.textSection__paragraph {
+  margin: 0 0 10px;
+  font-weight: 400;
+  font-size: $FS1240_SECTION_BODY;
+  line-height: 23px;
+  color: $DARK_BLUE;
+  text-indent: 50px;
+}

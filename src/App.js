@@ -4,8 +4,12 @@ import "./App.scss";
 import Header from './components/Header/Header';
 import Cover from './components/Cover/Cover';
 import Services from './components/Services/Services';
+import TextSection from './components/TextSection/TextSection';
 import UIControls from "./components/UIControls/UIControls";
 import Counter from "./components/v1/counter/Counter";
+
+import textAboutDoctor from "./data/text-about-doctor.json";
+import textEducation from "./data/text-education.json";
 
 function App() {
   return (
@@ -15,12 +19,17 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Cover />
+
             <Services />
+
+            <TextSection textData={textAboutDoctor} columns />
+
+            <TextSection textData={textEducation} />
           </Route>
 
           {/* <Route path='/signup'>
-          <Signup />
-        </Route> */}
+            <Signup />
+          </Route> */}
 
           <Route path="/ui-development">
             <UIControls />
