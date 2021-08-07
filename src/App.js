@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Route, Switch } from "react-router-dom";
 import "./App.scss";
 import Header from './components/Header/Header';
@@ -15,22 +15,31 @@ import textAboutDoctor from "./data/text-about-doctor.json";
 import textEducation from "./data/text-education.json";
 
 function App() {
-  const [showHeaderTitle, setShowHeaderTitle] = useState(false);
-  const [showHeaderMenu, setShowHeaderMenu] = useState(false);
+  const [translateOptions, setTranslateOptions] = useState({
+    transform: `translateY(-100%)`,
+    transitionDuration: `200ms`,
+    transitionTimingFunction: 'ease-out',
+  });
 
   useEffect(() => {
     function toggleHeader() {
       if (window.scrollY >= 200) {
-        setShowHeaderTitle(true);
+        setTranslateOptions({
+          ...translateOptions,
+          transform: `translateY(0%)`,
+        });
       } else {
-        setShowHeaderTitle(false);
+        setTranslateOptions({
+          ...translateOptions,
+          transform: `translateY(-100%)`,
+        });
       }
 
-      if (window.scrollY >= 400) {
-        setShowHeaderMenu(true);
-      } else {
-        setShowHeaderMenu(false);
-      }
+      // if (window.scrollY >= 400) {
+      //   setShowHeaderMenu(true);
+      // } else {
+      //   setShowHeaderMenu(false);
+      // }
     }
 
     window.addEventListener('scroll', toggleHeader);
@@ -40,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header showHeaderTitle={showHeaderTitle} showHeaderMenu={showHeaderMenu} />
+      <Header translateOptions={translateOptions} />
       <main className="main">
         <Switch>
           <Route exact path='/'>

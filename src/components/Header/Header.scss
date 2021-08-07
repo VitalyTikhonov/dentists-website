@@ -38,7 +38,6 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
 .header__menu {
   box-sizing: border-box;
   @include headerBlueBar();
-  @include animateRender();
 }
 
 .header__menu-list {
@@ -157,7 +156,6 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
 }
 
 .header__name-bar {
-  @include animateRender();
   display: flex;
   justify-content: center;
   align-items: center;
