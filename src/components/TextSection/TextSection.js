@@ -12,7 +12,7 @@ function TextSection({ textData, columns }) {
       </div>
 
       <div className={cn("textSection__body", { textSection__columns: columns })} >
-        {blocks.map((blocks) => blocks.map((paragraph) => <p className="textSection__paragraph" >{paragraph}</p>))}
+        {blocks.map((blocks) => blocks.map((paragraph, index) => <p className="textSection__paragraph" key={"c" + index} >{paragraph}</p>))}
       </div>
     </section>
   );
