@@ -12,7 +12,7 @@ import {
   PW_DESKTOP_HEADER_MIN,
 } from "../../css-variables-export-to-js.module.scss";
 
-const Header = function Header(props) {
+const Header = function Header({ showHeaderTitle, showHeaderMenu }) {
   const dispatch = useDispatch();
   const mobileHeaderView = useSelector(selectMobileHeaderView);
   const [loggedIn] = useState(false); // const loggedIn = useSelector(selectLoggedIn);
@@ -45,7 +45,7 @@ const Header = function Header(props) {
 
   return (
     <header className="header">
-      <nav className="header__menu">
+      {showHeaderMenu && <nav className="header__menu">
         <ul className="header__menu-list list-unstyling">
           <li className="header__menu-top-item">
             <button className="header__menu-top-label button-unstyling">
@@ -284,15 +284,15 @@ const Header = function Header(props) {
             </li>
           )}
         </ul>
-      </nav>
+      </nav>}
 
-      <div className="header__name-bar">
+      {showHeaderTitle && <div className="header__name-bar">
         <MobMenuButton onClick={toggleMobileMenuOpen} />
         <h1 className="header__name">
           <span className="header__name-first-line">Наталья Натфуллина</span>
           Врач-стоматолог
         </h1>
-      </div>
+      </div>}
 
       {/* {mobileHeaderView && mobileMenuOpen && (
         <MobMenu

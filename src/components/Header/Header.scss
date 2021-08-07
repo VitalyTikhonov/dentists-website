@@ -12,13 +12,33 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
   );
 }
 
+@keyframes slideDown {
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@mixin animateRender {
+  transform: translateY(-100%);
+  animation-name: slideDown;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
   box-sizing: border-box;
 }
 
 .header__menu {
   box-sizing: border-box;
   @include headerBlueBar();
+  @include animateRender();
 }
 
 .header__menu-list {
@@ -137,6 +157,7 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
 }
 
 .header__name-bar {
+  @include animateRender();
   display: flex;
   justify-content: center;
   align-items: center;
