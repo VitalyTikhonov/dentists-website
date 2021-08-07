@@ -1,0 +1,14 @@
+@import "../../css-variables.scss";
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  padding: 10px $paddingBasic;
+  background: linear-gradient(
+    180deg,
+    #64e9ee -55.42%,
+    rgba(58, 147, 185, 0.8) 34.73%,
+    rgba(58, 147, 185, 0.8) 68.67%,
+    #64e9ee 179.24%
+  );
+}

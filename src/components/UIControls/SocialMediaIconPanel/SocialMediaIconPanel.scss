@@ -3,13 +3,14 @@
 
 .socal-media-panel {
   // nav
-  box-sizing: border-box;
+  // box-sizing: border-box;
+  width: 100%;
 }
 
 .socal-media-panel__list {
   // ul
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
   margin: 0;

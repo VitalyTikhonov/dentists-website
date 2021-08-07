@@ -5,6 +5,9 @@ import Header from './components/Header/Header';
 import Cover from './components/Cover/Cover';
 import Services from './components/Services/Services';
 import TextSection from './components/TextSection/TextSection';
+import Gallery from './components/Gallery/Gallery';
+import ContactsSection from './components/ContactsSection/ContactsSection';
+import Footer from './components/Footer/Footer';
 import UIControls from "./components/UIControls/UIControls";
 import Counter from "./components/v1/counter/Counter";
 
@@ -25,6 +28,12 @@ function App() {
             <TextSection textData={textAboutDoctor} columns />
 
             <TextSection textData={textEducation} />
+            
+            <Gallery />
+            
+            <ContactsSection />
+            
+            <Footer />
           </Route>
 
           {/* <Route path='/signup'>
