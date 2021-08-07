@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HashRouter, NavLink } from "react-router-dom";
 // import "./FocusMenu.scss";
 import ServicesIcon from "../svgReactComponents/DentistryServices";
@@ -12,15 +12,30 @@ import LogoutIcon from "../svgReactComponents/LogoutThinner";
 import LoginIcon from "../svgReactComponents/LoginThinner";
 import Signup from "../svgReactComponents/AddUserThinner";
 
+import useElemOnScreen from "../../../hooks/useElemOnScreen";
+import { useDispatch } from "react-redux";
+import { setCoverMenuVisibility } from "../../Header/coverMenuVisibilitySlice";
+
 const FocusMenu = function (props) {
   const { menuType, onCloseButtonClick, showAccountButtons } = props;
   const [loggedIn] = useState(false); // const loggedIn = useSelector(selectLoggedIn);
+
+  const dispatch = useDispatch();
+  const [elemRef, elemOnScreenResult] = useElemOnScreen();
+
+  useEffect(() => {
+    if (menuType === "cover") {
+      dispatch(setCoverMenuVisibility(elemOnScreenResult));
+    }
+  }, [elemOnScreenResult, dispatch]);
+
 
   return (
     <nav
       // className={`${menuType}-menu ${props.parentClass}`}
       className={`${menuType}-menu`}
       aria-labelledby="header-navigation"
+      ref={elemRef} 
     >
       <h2 className={`ariaLabelledTitle`} id="header-navigation">
         Центральное меню на обложке сайта
@@ -94,53 +109,53 @@ const FocusMenu = function (props) {
           </li>
         )}
         {showAccountButtons && (
-        loggedIn ? (
-          <>
-            <li className={`${menuType}-menu__item button`}>
-              <NavLink
-                to="account"
-                className={`${menuType}-menu__link link-unstyling`}
-                activeClassName={`${menuType}-menu__link_active`}
-              >
-                <AccountIcon className={`${menuType}-menu__icon`} />
-                Личный кабинет
-              </NavLink>
-            </li>
-            <li className={`${menuType}-menu__item button`}>
-              <NavLink
-                to="logout"
-                className={`${menuType}-menu__link link-unstyling`}
-                activeClassName={`${menuType}-menu__link_active`}
-              >
-                <LogoutIcon className={`${menuType}-menu__icon`} />
-                Выйти
-              </NavLink>
-            </li>
-          </>
-        ) : (
-          <>
-            <li className={`${menuType}-menu__item button`}>
-              <NavLink
-                to="signup"
-                className={`${menuType}-menu__link link-unstyling`}
-                activeClassName={`${menuType}-menu__link_active`}
-              >
-                <Signup className={`${menuType}-menu__icon`} />
-                Регистрация
-              </NavLink>
-            </li>
-            <li className={`${menuType}-menu__item button`}>
-              <NavLink
-                to="login"
-                className={`${menuType}-menu__link link-unstyling`}
-                activeClassName={`${menuType}-menu__link_active`}
-              >
-                <LoginIcon className={`${menuType}-menu__icon`} />
-                Войти
-              </NavLink>
-            </li>
-          </>
-        ))}
+          loggedIn ? (
+            <>
+              <li className={`${menuType}-menu__item button`}>
+                <NavLink
+                  to="account"
+                  className={`${menuType}-menu__link link-unstyling`}
+                  activeClassName={`${menuType}-menu__link_active`}
+                >
+                  <AccountIcon className={`${menuType}-menu__icon`} />
+                  Личный кабинет
+                </NavLink>
+              </li>
+              <li className={`${menuType}-menu__item button`}>
+                <NavLink
+                  to="logout"
+                  className={`${menuType}-menu__link link-unstyling`}
+                  activeClassName={`${menuType}-menu__link_active`}
+                >
+                  <LogoutIcon className={`${menuType}-menu__icon`} />
+                  Выйти
+                </NavLink>
+              </li>
+            </>
+          ) : (
+            <>
+              <li className={`${menuType}-menu__item button`}>
+                <NavLink
+                  to="signup"
+                  className={`${menuType}-menu__link link-unstyling`}
+                  activeClassName={`${menuType}-menu__link_active`}
+                >
+                  <Signup className={`${menuType}-menu__icon`} />
+                  Регистрация
+                </NavLink>
+              </li>
+              <li className={`${menuType}-menu__item button`}>
+                <NavLink
+                  to="login"
+                  className={`${menuType}-menu__link link-unstyling`}
+                  activeClassName={`${menuType}-menu__link_active`}
+                >
+                  <LoginIcon className={`${menuType}-menu__icon`} />
+                  Войти
+                </NavLink>
+              </li>
+            </>
+          ))}
       </ul>
     </nav>
   );

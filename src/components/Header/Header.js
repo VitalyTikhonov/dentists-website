@@ -1,23 +1,54 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { HashRouter, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleMobileHeaderView, selectMobileHeaderView } from "./mobileHeaderViewSlice";
+import { toggleMobileHeaderView } from "./mobileHeaderViewSlice";
+// import { toggleMobileHeaderView, selectMobileHeaderView } from "./mobileHeaderViewSlice";
 import { toggleTabletView } from "./tabletViewSlice";
+import { selectAuthButtonVisibility } from "./authButtonVisibilitySlice";
+import { selectCoverMenuVisibility } from "./coverMenuVisibilitySlice";
 import "./Header.scss";
 import TriangleArrowDown from "../UIControls/svgReactComponents/TriangleArrowDown";
 import MobMenuButton from "../UIControls/MobMenuButton/MobMenuButton";
-import MobMenu from "../UIControls/MobMenu/MobMenu";
+// import MobMenu from "../UIControls/MobMenu/MobMenu";
 import {
   PW_TABLET_MAX,
   PW_DESKTOP_HEADER_MIN,
 } from "../../css-variables-export-to-js.module.scss";
 
-const Header = function Header({ translateOptions }) {
+const Header = function Header() {
   const dispatch = useDispatch();
-  const mobileHeaderView = useSelector(selectMobileHeaderView);
+  // const mobileHeaderView = useSelector(selectMobileHeaderView);
+  const authButtonVisibility = useSelector(selectAuthButtonVisibility);
+  const coverMenuVisibility = useSelector(selectCoverMenuVisibility);
   const [loggedIn] = useState(false); // const loggedIn = useSelector(selectLoggedIn);
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const headerRef = useRef(null)
+  const topMenuRef = useRef(null)
+  const [translateOptions, setTranslateOptions] = useState({
+    transform: `translateY(-100%)`,
+  });
+
+  useEffect(() => {
+    if (headerRef.current && !coverMenuVisibility) {
+      setTranslateOptions({
+        transform: `translateY(0%)`,
+      });
+      return;
+    }
+
+    if (topMenuRef.current && !authButtonVisibility) {
+      setTranslateOptions({
+        transform: `translateY(-${topMenuRef.current.offsetHeight}px)`,
+      });
+      return;
+    }
+
+    setTranslateOptions({
+      transform: `translateY(-100%)`,
+    });
+  }, [authButtonVisibility, coverMenuVisibility]);
 
   function toggleMobileMenuOpen() {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -44,8 +75,8 @@ const Header = function Header({ translateOptions }) {
   }, [dispatch]);
 
   return (
-    <header className="header" style={translateOptions} >
-      <nav className="header__menu">
+    <header className="header" style={translateOptions} ref={headerRef} >
+      <nav className="header__menu" ref={topMenuRef} >
         <ul className="header__menu-list list-unstyling">
           <li className="header__menu-top-item">
             <button className="header__menu-top-label button-unstyling">
@@ -286,7 +317,7 @@ const Header = function Header({ translateOptions }) {
         </ul>
       </nav>
 
-      <div className="header__name-bar">
+      <div className="header__name-bar" >
         <MobMenuButton onClick={toggleMobileMenuOpen} />
         <h1 className="header__name">
           <span className="header__name-first-line">Наталья Натфуллина</span>
