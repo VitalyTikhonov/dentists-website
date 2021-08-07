@@ -9,7 +9,7 @@ function Footer() {
       <SocialMediaIconPanel />
       <div className="footer__info" >
         <p className="footer__info-line" >© Наталья Натфуллина, 2021, содержание, дизайн</p>
-        <p className="footer__info-line" >© Виталий Тихонов, 2021, дизайн, исходный код</p>
+        <p className="footer__info-line" >© Виталий Тихонов, 2021, исходный код, дизайн</p>
         <p className="footer__info-line" >Авторы иконок: Icongeek26, monkik, prettycons, Kiranshastry, Pixel perfect, Vitaly Gorbachev, Those Icons, Kiranshastry, Pixel perfect, Freepik, источник: www.flaticon.com</p>
       </div>
     </footer>
