@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import { Link } from "react-router-dom";
 import "./AccountButtonGroup.scss";
 import AccountIcon from "../svgReactComponents/MockAvatar";
@@ -7,27 +5,16 @@ import LogoutIcon from "../svgReactComponents/Logout";
 import LoginIcon from "../svgReactComponents/Login";
 import Signup from "../svgReactComponents/AddUser";
 
-import useElemOnScreen from "../../../hooks/useElemOnScreen";
-import { useDispatch } from "react-redux";
-import { setAuthButtonVisibility } from "../../Header/authButtonVisibilitySlice";
-
 const AccountButtonGroup = function (props) {
-  const dispatch = useDispatch();
-  const [elemRef, elemOnScreenResult] = useElemOnScreen();
-
-  useEffect(() => {
-    dispatch(setAuthButtonVisibility(elemOnScreenResult))
-  }, [elemOnScreenResult, dispatch]);
-
   return (
-    <nav className="cover__overlay-menu-right" aria-labelledby="header-navigation">
+    <nav className="cover__overlay-menu-right" aria-labelledby="header-navigation" >
       <h2 className="ariaLabelledTitle" id="header-navigation">
         Дополнительное меню на обложке сайта – авторизация и аккаунт
       </h2>
       <ul className="list-unstyling">
         {props.loggedIn ? (
           <>
-            <li className="cover__overlay-menu-item cover__overlay-menu-item_principal" ref={elemRef} >
+            <li className="cover__overlay-menu-item cover__overlay-menu-item_principal" >
               <Link
                 to="account"
                 className="button cover__overlay-menu-button button__ic-lab_type_account link-unstyling"
@@ -48,7 +35,7 @@ const AccountButtonGroup = function (props) {
           </>
         ) : (
           <>
-            <li className="cover__overlay-menu-item cover__overlay-menu-item_principal" ref={elemRef} >
+            <li className="cover__overlay-menu-item cover__overlay-menu-item_principal" >
               <Link
                 to="login"
                 className="button cover__overlay-menu-button button__ic-lab_type_login link-unstyling"

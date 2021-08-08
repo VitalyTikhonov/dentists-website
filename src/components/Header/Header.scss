@@ -1,4 +1,4 @@
-@import '../../css-variables.scss';
+@import "../../css-variables.scss";
 
 $submenuOnePadding: calc(#{$paddingBasic} * 0.4);
 $submenuOneHOffset: calc(#{$submenuOnePadding} * -1);
@@ -16,13 +16,11 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
   position: fixed;
   top: 0;
   // left: 0;
-  width: $PW_NOTEBOOK_MAX;
+  width: 100vw;
+  max-width: $PW_DESKTOP_MAX;
   margin: 0 auto;
   z-index: 1;
   box-sizing: border-box;
-  // transform: translateY(-100%);
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
 }
 
 .header__menu {
@@ -167,7 +165,16 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
 }
 
 .header__name-first-line::after {
-  content: '. ';
+  content: ". ";
+}
+
+@media (min-width: $PW_TABLET_MIN) {
+  .header {
+    transform: translateY(-100%);
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+  }
 }
 
 @media (min-width: $PW_DESKTOP_HEADER_MIN) and (max-width: $PW_TABLET_MAX) {
@@ -216,9 +223,9 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
   }
 }
 
-@media (max-width: 395px) {
+@media (max-width: $HEADER_NAMEBAR_BP) {
   .header__name-first-line::after {
-    content: '\00000a';
+    content: "\00000a";
     white-space: pre;
   }
 }

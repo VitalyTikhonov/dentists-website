@@ -1,7 +1,7 @@
 import "./Cover.scss";
 import { useSelector } from "react-redux";
 // import { selectMobileHeaderView } from "../Header/mobileHeaderViewSlice";
-import { selectTabletView } from "../Header/tabletViewSlice";
+import { selectScreenType } from "../Header/screenTypeSlice";
 import NatashaOriginal_1240 from "../../images/cover/Natasha_original_warm_tone_1240.jpg";
 import NatashaArmsFolded_1200 from "../../images/cover/Natasha_arms_folded_warm_tone_1200.jpg";
 import NatashaArmsFolded_896 from "../../images/cover/Natasha_arms_folded_warm_tone_896.jpg";
@@ -9,10 +9,13 @@ import NatashaArmsFolded_700 from "../../images/cover/Natasha_original_warm_tone
 import NameBar from "../NameBar/NameBar";
 import CoverMenu from "../UIControls/CoverMenu/CoverMenu";
 import AccountButtonGroup from "../UIControls/AccountButtonGroup/AccountButtonGroup";
+import { screenType } from "../../constants";
+
+const { tablet } = screenType;
 
 function Cover() {
   // const mobileHeaderView = useSelector(selectMobileHeaderView);
-  const tabletView = useSelector(selectTabletView);
+  const screenType = useSelector(selectScreenType);
 
   return (
     <section className="cover">
@@ -33,7 +36,7 @@ function Cover() {
 
         <AccountButtonGroup />
       </div>
-      <CoverMenu showAccountButtons={tabletView} />
+      <CoverMenu showAccountButtons={screenType === tablet} />
     </section>
   );
 }

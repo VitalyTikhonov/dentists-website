@@ -37,9 +37,9 @@
 
 .cover__overlay-menu-button {
   display: flex;
-  justify-content: flex-start;
-  width: 249px;
-  height: 69.55px;
+  // justify-content: flex-start;
+  // width: 249px;
+  // height: 69.55px;
   padding: 16px 11px 16px 16px;
   background: linear-gradient(
     270deg,
@@ -49,7 +49,7 @@
   border: none;
   border-radius: 5px 0px 0px 5px;
   font-size: 22px;
-  line-height: 26px;
+  line-height: 50px; // должна быть такой же, как в NameBar
   color: $DARK_BLUE;
   &:hover {
     background: linear-gradient(269.96deg, #eceff1 0.04%, #c4c4c4 99.96%);
@@ -72,9 +72,13 @@
   fill: $DARK_BLUE;
 }
 
-
-// 1200px
 @media (max-width: $PW_ORIGINAL_PHOTO_MAX) {
+  .cover__overlay-menu-button {
+    padding: 7px 11px 7px 16px;
+  }
+}
+
+@media (max-width: $PW_TABLET_MAX) {
   .cover__overlay-menu-right {
     display: none;
   }

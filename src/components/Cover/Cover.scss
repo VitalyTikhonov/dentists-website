@@ -1,7 +1,7 @@
 @import "../../css-variables.scss";
 
 .cover {
-  height: $COVER_HEIHT_1240;
+  height: $COVER_HEIGHT_1240;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,6 +24,12 @@
   object-position: center;
 }
 
+@media (min-width: $PW_TABLET_MIN) and (max-width: 700px) {
+  .cover__image {
+    transform: translateY(64px);
+  }
+}
+
 // @media (min-height: 626px) {
 //   .cover__image {
 //     width: 104%;
@@ -43,7 +49,7 @@
 // 321 – 896
 @media (min-width: $PW_TABLET_MIN) and (max-width: $PW_TABLET_MAX) {
   .cover {
-    height: $COVER_HEIHT_896;
+    height: $COVER_HEIGHT_896;
     flex-direction: row-reverse;
   }
 
@@ -62,9 +68,9 @@
   position: absolute;
   top: 11.06px;
   left: 0;
-  max-width: 495px;
+  width: 495px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   box-sizing: border-box;
   padding: 7px 22px 7px $paddingBasic;
@@ -87,15 +93,44 @@
 }
 
 .cover__name-first-line::after {
-  content: '\A';
+  content: "\00000a";
+  white-space: pre;
   // https://stackoverflow.com/questions/17047694/add-line-break-to-after-or-before-pseudo-element-content
   // https://stackoverflow.com/questions/16595483/how-do-you-add-a-line-break-inside-of-a-javascript-variable-using-kineticjs
 }
 
-// 1200px
 @media (max-width: $PW_ORIGINAL_PHOTO_MAX) {
+  .cover__name-bar {
+    width: unset;
+  }
+
   .cover__name-first-line::after {
-    content: '. ';
+    content: ". ";
   }
 }
 
+@media (max-width: $PW_MOBILE_MAX) {
+  .cover {
+    margin-top: 53px;
+  }
+}
+
+@media (max-width: $HEADER_NAMEBAR_BP) {
+  .cover {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: $PW_TABLET_MAX) {
+  .cover__name-bar {
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: $PW_MOBILE_MAX) {
+  .cover__name-bar {
+    display: none;
+  }
+}
