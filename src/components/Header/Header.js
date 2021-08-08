@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { HashRouter, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleMobileHeaderView } from "./mobileHeaderViewSlice";
-// import { toggleMobileHeaderView, selectMobileHeaderView } from "./mobileHeaderViewSlice";
+import { toggleMobileHeaderView, selectMobileHeaderView } from "./mobileHeaderViewSlice";
 import { setScreenType, selectScreenType } from "./screenTypeSlice";
 import { selectAuthButtonVisibility } from "./authButtonVisibilitySlice";
 import { selectCoverMenuVisibility } from "./coverMenuVisibilitySlice";
@@ -10,7 +9,8 @@ import "./Header.scss";
 import TriangleArrowDown from "../UIControls/svgReactComponents/TriangleArrowDown";
 import NameBar from "../NameBar/NameBar";
 import MobMenuButton from "../UIControls/MobMenuButton/MobMenuButton";
-// import MobMenu from "../UIControls/MobMenu/MobMenu";
+import MobMenu from "../UIControls/MobMenu/MobMenu";
+import PageDimmer from "../UIControls/PageDimmer/PageDimmer";
 import {
   PW_DESKTOP_HEADER_MIN,
   PW_TABLET_MAX,
@@ -26,7 +26,7 @@ const TABLET_MIN_PW = parseInt(PW_TABLET_MIN, 10);
 
 const Header = function Header() {
   const dispatch = useDispatch();
-  // const mobileHeaderView = useSelector(selectMobileHeaderView);
+  const mobileHeaderView = useSelector(selectMobileHeaderView);
   const screenType = useSelector(selectScreenType);
   const authButtonVisibility = useSelector(selectAuthButtonVisibility);
   const coverMenuVisibility = useSelector(selectCoverMenuVisibility);
@@ -344,12 +344,15 @@ const Header = function Header() {
         <MobMenuButton onClick={toggleMobileMenuOpen} />
       </NameBar>
 
-      {/* {mobileHeaderView && mobileMenuOpen && (
-        <MobMenu
-          onCloseButtonClick={toggleMobileMenuOpen}
-          showAccountButtons={true}
-        />
-      )} */}
+      {mobileHeaderView && mobileMenuOpen && (
+        <>
+          <MobMenu
+            onCloseButtonClick={toggleMobileMenuOpen}
+            showAccountButtons={true}
+          />
+          <PageDimmer handleClick={toggleMobileMenuOpen} />
+        </>
+      )}
     </header>
   );
 };

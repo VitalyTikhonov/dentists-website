@@ -192,16 +192,22 @@ $ICON_SIZE_1240_ENLARGED: calc(min(5.65vw, 70px));
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100%;
-    height: 100%;
+    // height: 100%;
   }
 
   .mob-menu__close-button {
     display: flex;
+    margin: 9px;
   }
 
   .mob-menu__item {
-    margin: 2px 0;
+    margin: 0;
+  }
+
+  .mob-menu__link {
+    padding: 18px 18px 18px 27px;
   }
 
   .mob-menu__icon {

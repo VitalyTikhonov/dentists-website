@@ -1,4 +1,4 @@
-import './PageDimmer.css';
+import './PageDimmer.scss';
 
 function PageDimmer(props) {
   const { handleClick } = props;
