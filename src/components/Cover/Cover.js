@@ -6,6 +6,7 @@ import NatashaOriginal_1240 from "../../images/cover/Natasha_original_warm_tone_
 import NatashaArmsFolded_1200 from "../../images/cover/Natasha_arms_folded_warm_tone_1200.jpg";
 import NatashaArmsFolded_896 from "../../images/cover/Natasha_arms_folded_warm_tone_896.jpg";
 import NatashaArmsFolded_700 from "../../images/cover/Natasha_original_warm_tone_700.jpg";
+import NameBar from "../NameBar/NameBar";
 import CoverMenu from "../UIControls/CoverMenu/CoverMenu";
 import AccountButtonGroup from "../UIControls/AccountButtonGroup/AccountButtonGroup";
 
@@ -27,6 +28,9 @@ function Cover() {
             className="cover__image"
           />
         </picture>
+
+        <NameBar />
+
         <AccountButtonGroup />
       </div>
       <CoverMenu showAccountButtons={tabletView} />

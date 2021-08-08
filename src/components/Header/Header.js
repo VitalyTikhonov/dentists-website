@@ -8,6 +8,7 @@ import { selectAuthButtonVisibility } from "./authButtonVisibilitySlice";
 import { selectCoverMenuVisibility } from "./coverMenuVisibilitySlice";
 import "./Header.scss";
 import TriangleArrowDown from "../UIControls/svgReactComponents/TriangleArrowDown";
+import NameBar from "../NameBar/NameBar";
 import MobMenuButton from "../UIControls/MobMenuButton/MobMenuButton";
 // import MobMenu from "../UIControls/MobMenu/MobMenu";
 import {
@@ -319,13 +320,9 @@ const Header = function Header() {
         </ul>
       </nav>
 
-      <div className="header__name-bar" >
+      <NameBar inHeader >
         <MobMenuButton onClick={toggleMobileMenuOpen} />
-        <h1 className="header__name">
-          <span className="header__name-first-line">Наталья Натфуллина</span>
-          Врач-стоматолог
-        </h1>
-      </div>
+      </NameBar>
 
       {/* {mobileHeaderView && mobileMenuOpen && (
         <MobMenu

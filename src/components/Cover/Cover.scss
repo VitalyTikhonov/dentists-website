@@ -57,3 +57,45 @@
     object-position: 100% 100%;
   }
 }
+
+.cover__name-bar {
+  position: absolute;
+  top: 11.06px;
+  left: 0;
+  max-width: 495px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 7px 22px 7px $paddingBasic;
+  border-radius: 0px 5px 5px 0px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.81) 0%,
+    rgba(225, 226, 230, 0.81) 100%
+  );
+}
+
+.cover__name {
+  margin: 0;
+  font-weight: 300;
+  font-size: $FS1240_HEADER_AND_COVER_NAME;
+  line-height: 50px;
+  color: $DARK_BLUE;
+  text-align: end;
+  white-space: pre-wrap;
+}
+
+.cover__name-first-line::after {
+  content: '\A';
+  // https://stackoverflow.com/questions/17047694/add-line-break-to-after-or-before-pseudo-element-content
+  // https://stackoverflow.com/questions/16595483/how-do-you-add-a-line-break-inside-of-a-javascript-variable-using-kineticjs
+}
+
+// 1200px
+@media (max-width: $PW_ORIGINAL_PHOTO_MAX) {
+  .cover__name-first-line::after {
+    content: '. ';
+  }
+}
+
