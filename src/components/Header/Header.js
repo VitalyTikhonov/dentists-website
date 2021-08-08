@@ -28,6 +28,8 @@ const Header = function Header() {
   const topMenuRef = useRef(null)
   const [translateOptions, setTranslateOptions] = useState({
     transform: `translateY(-100%)`,
+    // transitionDuration: "200ms",
+    // transitionTimingFunction: "ease-out",
   });
 
   useEffect(() => {

@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const authButtonVisibilitySlice = createSlice({
   name: 'authButtonVisibility',
   initialState: {
-    value: false,
+    value: true,
   },
   reducers: {
     // Redux Toolkit allows us to write "mutating" logic in reducers. It

@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const coverMenuVisibilitySlice = createSlice({
   name: 'coverMenuVisibility',
   initialState: {
-    value: false,
+    value: true,
   },
   reducers: {
     // Redux Toolkit allows us to write "mutating" logic in reducers. It
