@@ -42,6 +42,8 @@
 
 .services__bar-controls {
   display: flex;
+  margin-left: 14px;
+  flex-shrink: 0;
 }
 
 .services__bar-button {
@@ -61,4 +63,10 @@
   font-size: $FS1240_CARD_BODY;
   line-height: 26px;
   color: $BRIGHT_BLUE_GREEN;
+}
+
+@media (max-width: $PW_TABLET_MAX) {
+  .services__bar {
+    padding: 10px 16px;
+  }
 }

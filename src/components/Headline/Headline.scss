@@ -24,3 +24,27 @@
 .headline_color_blue {
   color: $DARK_BLUE;
 }
+
+@media (max-width: $PW_TABLET_MAX) {
+  .headline {
+    font-size: $FS896_SECTION_TITLE;
+  }
+  .headline_subtitle {
+    font-size: $FS896_SECTION_SUBTITLE;
+  }
+  .headline_card-title {
+    font-size: $FS896_CARD_TITLE;
+  }
+}
+
+@media (max-width: $PW_TABLET_MAX) {
+  .headline {
+    font-size: $FS320_SECTION_TITLE;
+  }
+  .headline_subtitle {
+    font-size: $FS320_SECTION_SUBTITLE;
+  }
+  .headline_card-title {
+    font-size: $FS320_CARD_TITLE;
+  }
+}

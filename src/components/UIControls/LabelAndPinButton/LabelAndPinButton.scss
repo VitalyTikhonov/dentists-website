@@ -1,4 +1,4 @@
-// @import "../UIControlsGlobals";
+@import "../../../css-variables.scss";
 @import "../PinButton/PinButton";
 
 .button__label-and-pin {
@@ -35,4 +35,11 @@
   height: 50px;
   margin-left: 10px;
   margin-right: -1px;
+}
+
+@media (max-width: $PW_TABLET_MAX) {
+  .button__label-and-pin {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }

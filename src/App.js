@@ -23,7 +23,7 @@ function App() {
           <Route exact path='/'>
             <Cover />
 
-            {/* <Services /> */}
+            <Services />
 
             <TextSection textData={textAboutDoctor} columns />
 
