@@ -9,7 +9,6 @@ import Gallery from './components/Gallery/Gallery';
 import ContactsSection from './components/ContactsSection/ContactsSection';
 import Footer from './components/Footer/Footer';
 import UIControls from "./components/UIControls/UIControls";
-import Counter from "./components/v1/counter/Counter";
 
 import textAboutDoctor from "./data/text-about-doctor.json";
 import textEducation from "./data/text-education.json";
@@ -42,10 +41,6 @@ function App() {
 
           <Route path="/ui-development">
             <UIControls />
-          </Route>
-
-          <Route path="/counter">
-            <Counter />
           </Route>
         </Switch>
       </main>

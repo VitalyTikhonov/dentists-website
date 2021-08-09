@@ -8,7 +8,6 @@ function PinButton(props) {
     <Pin
       className={`pin pin_type_${type} pin_direction_${direction} ${parentClass}`}
       opaque={opaque}
-      id={id}
       onClick={onClick}
     />
   );

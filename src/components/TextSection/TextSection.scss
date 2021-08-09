@@ -29,5 +29,22 @@
   font-size: $FS1240_SECTION_BODY;
   line-height: 23px;
   color: $DARK_BLUE;
-  text-indent: 50px;
+  text-indent: 30px;
+  text-align: justify;
+}
+
+@media (max-width: $PW_TABLET_MAX) {
+  .textSection__paragraph {
+    font-size: $FS896_SECTION_BODY;
+  }
+}
+
+@media (max-width: $PW_MOBILE_MAX) {
+  .textSection__paragraph {
+    font-size: $FS320_SECTION_BODY;
+  }
+
+  .textSection__columns {
+    columns: unset;
+  }
 }

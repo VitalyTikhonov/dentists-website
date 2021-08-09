@@ -8,20 +8,14 @@ import { useSelector } from "react-redux";
 import { selectScreenType } from "../../Header/screenTypeSlice";
 import { screenType } from "../../../constants";
 
-const { mobile, tablet, desktop } = screenType;
+const { mobile } = screenType;
 
-function Bar({ item, index, openBarState }) {
+function Bar({ item, index, openBar, openBarIndex }) {
   const [pinState, setPinState] = useState(false);
-  const [openBarIndex, setOpenBarIndex] = openBarState;
   const screenType = useSelector(selectScreenType);
 
-  function openBar(event) {
-    const newIndex = Number(event.currentTarget.id);
-    if (newIndex === openBarIndex) {
-      setOpenBarIndex(null);
-    } else {
-      setOpenBarIndex(newIndex);
-    }
+  function handleOpenBarClick(event) {
+    openBar(index);
     setPinState(!pinState);
   }
 
@@ -40,16 +34,14 @@ function Bar({ item, index, openBarState }) {
                 label={pinState ? "Свернуть" : "Подробнее"}
                 direction={pinState ? "up" : "down"}
                 positionClass="services__bar-button"
-                id={index}
-                onClick={openBar}
+                onClick={handleOpenBarClick}
               />
             ) : (
               <Pin
                 type="flat"
                 parentClass="button__pin services__bar-button"
                 direction={pinState ? "up" : "down"}
-                id={index}
-                onClick={openBar}
+                onClick={handleOpenBarClick}
               />
             ))
           }
