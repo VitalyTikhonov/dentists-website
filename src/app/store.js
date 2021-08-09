@@ -3,6 +3,7 @@ import mobileHeaderViewReducer from '../components/Header/mobileHeaderViewSlice'
 import screenTypeReducer from '../components/Header/screenTypeSlice';
 import authButtonVisibilityReducer from '../components/Header/authButtonVisibilitySlice';
 import coverMenuVisibilityReducer from '../components/Header/coverMenuVisibilitySlice';
+import openBarIndexReducer from '../components/Services/Bar/openBarIndexSlice';
 
 export default configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export default configureStore({
     screenType: screenTypeReducer,
     authButtonVisibility: authButtonVisibilityReducer,
     coverMenuVisibility: coverMenuVisibilityReducer,
+    openBarIndex: openBarIndexReducer,
   },
 });

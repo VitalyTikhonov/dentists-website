@@ -4,18 +4,25 @@ import cn from "classnames";
 import Headline from "../../Headline/Headline";
 import LabelAndPinButton from "../../UIControls/LabelAndPinButton/LabelAndPinButton";
 import Pin from "../../UIControls/Pin/Pin";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setOpenBarIndex, selectOpenBarIndex } from "./openBarIndexSlice";
 import { selectScreenType } from "../../Header/screenTypeSlice";
 import { screenType } from "../../../constants";
 
 const { mobile } = screenType;
 
-function Bar({ item, index, openBar, openBarIndex }) {
+function Bar({ item, index }) {
+  const dispatch = useDispatch();
   const [pinState, setPinState] = useState(false);
   const screenType = useSelector(selectScreenType);
+  const openBarIndex = useSelector(selectOpenBarIndex);
 
-  function handleOpenBarClick(event) {
-    openBar(index);
+  function openBar() {
+    if (index === openBarIndex) {
+      dispatch(setOpenBarIndex(null));
+    } else {
+      dispatch(setOpenBarIndex(index));
+    }
     setPinState(!pinState);
   }
 
@@ -34,14 +41,14 @@ function Bar({ item, index, openBar, openBarIndex }) {
                 label={pinState ? "Свернуть" : "Подробнее"}
                 direction={pinState ? "up" : "down"}
                 positionClass="services__bar-button"
-                onClick={handleOpenBarClick}
+                onClick={openBar}
               />
             ) : (
               <Pin
                 type="flat"
                 parentClass="button__pin services__bar-button"
                 direction={pinState ? "up" : "down"}
-                onClick={handleOpenBarClick}
+                onClick={openBar}
               />
             ))
           }
