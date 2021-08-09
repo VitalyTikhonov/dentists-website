@@ -28,7 +28,7 @@
     rgba(58, 147, 185, 0.8) -192.1%,
     #97c8eb 170.08%
   );
-  
+
   &:last-child {
     margin-right: 0;
   }
@@ -48,14 +48,23 @@
 
 .services__bar-button {
   margin-right: 14px;
-  
+
   &:last-child {
     margin-right: 0;
   }
 }
 
 .services__description {
-  margin-top: 21px;
+  overflow: hidden;
+  max-height: 0;
+  padding-top: 0;
+  transition: max-height 0.1s linear;
+  transition: padding-top 0.1s linear;
+  
+  &_shown {
+    padding-top: 21px;
+    max-height: fit-content;
+  }
 }
 
 .services__description-line {

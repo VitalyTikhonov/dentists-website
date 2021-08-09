@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Services.scss";
+import cn from "classnames";
 import Headline from "../Headline/Headline";
 import LabelAndPinButton from "../UIControls/LabelAndPinButton/LabelAndPinButton";
 
@@ -27,22 +28,11 @@ function Services() {
 
   function openBar(event) {
     const newIndex = Number(event.currentTarget.id);
+    console.log(newIndex)
     if (newIndex === openBarIndex) {
       setOpenBarIndex(null);
     } else {
       setOpenBarIndex(newIndex);
-    }
-  }
-
-  function renderDescription(service, index) {
-    if (service[1] && index === openBarIndex) {
-      return (
-        <ul className="services__description list-unstyling" >
-          {service[1].map((line, index) => (
-            <li key={"b" + index} ><p className="services__description-line" >{line}</p></li>
-          ))}
-        </ul>
-      );
     }
   }
 
@@ -60,7 +50,11 @@ function Services() {
                 <LabelAndPinButton label={"Примеры работ"} direction="right" positionClass="services__bar-button" />
               </div>
             </div>
-            {renderDescription(item, index)}
+            {item[1] && <ul className={cn("services__description", "list-unstyling", { services__description_shown: index === openBarIndex })} >
+              {item[1].map((line, index) => (
+                <li key={"b" + index} ><p className="services__description-line" >{line}</p></li>
+              ))}
+            </ul>}
           </li>
         ))}
       </ul>
