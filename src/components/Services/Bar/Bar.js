@@ -13,7 +13,6 @@ const { mobile } = screenType;
 
 function Bar({ item, index }) {
   const dispatch = useDispatch();
-  const [pinState, setPinState] = useState(false);
   const screenType = useSelector(selectScreenType);
   const openBarIndex = useSelector(selectOpenBarIndex);
 
@@ -24,13 +23,8 @@ function Bar({ item, index }) {
       } else {
         dispatch(setOpenBarIndex(index));
       }
-      setPinState(!pinState);
     }
   }
-
-  useEffect(() => {
-    if (openBarIndex !== index && pinState) setPinState(false);
-  }, [openBarIndex]);
 
   return (
     <li className="services__bar" key={"a" + index} >
@@ -39,8 +33,8 @@ function Bar({ item, index }) {
         <div className="services__bar-controls" >
           {item[1] && screenType !== mobile &&
             <LabelAndPinButton
-              label={pinState ? "Свернуть" : "Подробнее"}
-              direction={pinState ? "up" : "down"}
+              label={openBarIndex === index ? "Свернуть" : "Подробнее"}
+              direction={openBarIndex === index ? "up" : "down"}
               positionClass="services__bar-button"
             />
           }
@@ -58,7 +52,7 @@ function Bar({ item, index }) {
       </div>
       {item[1] &&
         <ul
-          className={cn("services__description", "list-unstyling", { services__description_shown: index === openBarIndex })}
+          className={cn("services__description", "list-unstyling", { services__description_shown: openBarIndex === index })}
         >
           {item[1].map((line, index) => (
             <li key={"b" + index} ><p className="services__description-line" >{line}</p></li>
