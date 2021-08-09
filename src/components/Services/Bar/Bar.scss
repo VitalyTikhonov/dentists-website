@@ -1,0 +1,75 @@
+@import "../../../css-variables.scss";
+
+.services__bar {
+  width: 100%;
+  margin-bottom: 13px;
+  box-sizing: border-box;
+  padding: 21px 16px;
+  background: linear-gradient(
+    360deg,
+    rgba(58, 147, 185, 0.8) -192.1%,
+    #97c8eb 170.08%
+  );
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.services__bar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services__bar-controls {
+  display: flex;
+  margin-left: 14px;
+  flex-shrink: 0;
+}
+
+.services__bar-button {
+  margin-right: 14px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.services__description {
+  overflow: hidden;
+  max-height: 0;
+  padding-top: 0;
+  transition: max-height 0.1s linear;
+  transition: padding-top 0.1s linear;
+
+  &_shown {
+    padding-top: 21px;
+    max-height: fit-content;
+  }
+}
+
+.services__description-line {
+  margin: 0;
+  font-size: $FS1240_CARD_BODY;
+  line-height: 26px;
+  color: $BRIGHT_BLUE_GREEN;
+}
+
+@media (max-width: $PW_TABLET_MAX) {
+  .services__bar {
+    padding: 10px 16px;
+  }
+
+  .services__description-line {
+    font-size: $FS896_CARD_BODY;
+    // line-height: 26px;
+  }
+}
+
+@media (max-width: $PW_MOBILE_MAX) {
+  .services__description-line {
+    font-size: $FS320_CARD_BODY;
+    line-height: 19px;
+  }
+}

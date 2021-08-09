@@ -1,0 +1,71 @@
+import { useState, useEffect } from "react";
+import "./Bar.scss";
+import cn from "classnames";
+import Headline from "../../Headline/Headline";
+import LabelAndPinButton from "../../UIControls/LabelAndPinButton/LabelAndPinButton";
+import Pin from "../../UIControls/Pin/Pin";
+import { useSelector } from "react-redux";
+import { selectScreenType } from "../../Header/screenTypeSlice";
+import { screenType } from "../../../constants";
+
+const { mobile, tablet, desktop } = screenType;
+
+function Bar({ item, index, openBarState }) {
+  const [pinState, setPinState] = useState(false);
+  const [openBarIndex, setOpenBarIndex] = openBarState;
+  const screenType = useSelector(selectScreenType);
+
+  function openBar(event) {
+    const newIndex = Number(event.currentTarget.id);
+    if (newIndex === openBarIndex) {
+      setOpenBarIndex(null);
+    } else {
+      setOpenBarIndex(newIndex);
+    }
+    setPinState(!pinState);
+  }
+
+  useEffect(() => {
+    if (openBarIndex !== index && pinState) setPinState(false);
+  }, [openBarIndex]);
+
+  return (
+    <li className="services__bar" key={"a" + index} >
+      <div className="services__bar-title" >
+        <Headline level={4} color="white" >{item[0]}</Headline>
+        <div className="services__bar-controls" >
+          {item[1] &&
+            (screenType !== mobile ? (
+              <LabelAndPinButton
+                label={pinState ? "Свернуть" : "Подробнее"}
+                direction={pinState ? "up" : "down"}
+                positionClass="services__bar-button"
+                id={index}
+                onClick={openBar}
+              />
+            ) : (
+              <Pin
+                type="flat"
+                parentClass="button__pin services__bar-button"
+                direction={pinState ? "up" : "down"}
+                id={index}
+                onClick={openBar}
+              />
+            ))
+          }
+          {screenType !== mobile && <LabelAndPinButton label={"Примеры работ"} direction="right" positionClass="services__bar-button" />}
+        </div>
+      </div>
+      {item[1] &&
+        <ul
+          className={cn("services__description", "list-unstyling", { services__description_shown: index === openBarIndex })}
+        >
+          {item[1].map((line, index) => (
+            <li key={"b" + index} ><p className="services__description-line" >{line}</p></li>
+          ))}
+        </ul>}
+    </li>
+  )
+}
+
+export default Bar;
