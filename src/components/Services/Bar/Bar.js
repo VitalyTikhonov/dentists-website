@@ -18,12 +18,14 @@ function Bar({ item, index }) {
   const openBarIndex = useSelector(selectOpenBarIndex);
 
   function openBar() {
-    if (index === openBarIndex) {
-      dispatch(setOpenBarIndex(null));
-    } else {
-      dispatch(setOpenBarIndex(index));
+    if (item[1]) {
+      if (index === openBarIndex) {
+        dispatch(setOpenBarIndex(null));
+      } else {
+        dispatch(setOpenBarIndex(index));
+      }
+      setPinState(!pinState);
     }
-    setPinState(!pinState);
   }
 
   useEffect(() => {
@@ -32,27 +34,26 @@ function Bar({ item, index }) {
 
   return (
     <li className="services__bar" key={"a" + index} >
-      <div className="services__bar-title" >
+      <div className="services__bar-title" onClick={openBar} >
         <Headline level={4} color="white" >{item[0]}</Headline>
         <div className="services__bar-controls" >
-          {item[1] &&
-            (screenType !== mobile ? (
-              <LabelAndPinButton
-                label={pinState ? "Свернуть" : "Подробнее"}
-                direction={pinState ? "up" : "down"}
-                positionClass="services__bar-button"
-                onClick={openBar}
-              />
-            ) : (
-              <Pin
-                type="flat"
-                parentClass="button__pin services__bar-button"
-                direction={pinState ? "up" : "down"}
-                onClick={openBar}
-              />
-            ))
+          {item[1] && screenType !== mobile &&
+            <LabelAndPinButton
+              label={pinState ? "Свернуть" : "Подробнее"}
+              direction={pinState ? "up" : "down"}
+              positionClass="services__bar-button"
+            />
           }
-          {screenType !== mobile && <LabelAndPinButton label={"Примеры работ"} direction="right" positionClass="services__bar-button" />}
+
+          {screenType !== mobile ? (
+            <LabelAndPinButton label={"Примеры работ"} direction="right" positionClass="services__bar-button" />
+          ) : (
+            <Pin
+              type="flat"
+              parentClass="button__pin services__bar-button"
+              direction="right"
+            />
+          )}
         </div>
       </div>
       {item[1] &&
