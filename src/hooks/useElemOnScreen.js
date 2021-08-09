@@ -8,13 +8,13 @@ function useElemOnScreen() {
     setElemOnScreenResult(entries[0].isIntersecting);
   }
 
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1,
-  };
-
   useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1,
+    };
+  
     const observer = new IntersectionObserver(handleIntersection, options);
     const target = elemRef.current;
     if (target) {
@@ -24,7 +24,7 @@ function useElemOnScreen() {
     return () => {
       if (target) observer.unobserve(target)
     }
-  }, [elemRef, options]);
+  }, [elemRef]);
 
   return [elemRef, elemOnScreenResult];
 }
