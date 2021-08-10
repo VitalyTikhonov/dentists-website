@@ -1,7 +1,7 @@
 import "./Cover.scss";
 import { useSelector } from "react-redux";
-// import { selectMobileHeaderView } from "../Header/mobileHeaderViewSlice";
-import { selectScreenType } from "../Header/screenTypeSlice";
+// import { selectMobileHeaderView } from "../../state/mobileHeaderViewSlice";
+import { selectScreenType } from "../../store/screenTypeSlice";
 import NatashaOriginal_1240 from "../../images/cover/Natasha_original_warm_tone_1240.jpg";
 import NatashaArmsFolded_1200 from "../../images/cover/Natasha_arms_folded_warm_tone_1200.jpg";
 import NatashaArmsFolded_896 from "../../images/cover/Natasha_arms_folded_warm_tone_896.jpg";

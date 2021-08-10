@@ -151,9 +151,11 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
   padding: 10px 4%;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.81) 0%,
-    rgba(225, 226, 230, 0.81) 100%
-  );
+    rgb(255, 255, 255) 0%,
+    rgb(225, 226, 230) 100%
+    );
+    // rgba(255, 255, 255, 0.81) 0%,
+    // rgba(225, 226, 230, 0.81) 100%
 }
 
 .header__name {

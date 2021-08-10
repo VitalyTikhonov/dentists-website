@@ -14,7 +14,7 @@ import Signup from "../svgReactComponents/AddUserThinner";
 
 import useElemOnScreen from "../../../hooks/useElemOnScreen";
 import { useDispatch } from "react-redux";
-import { setCoverMenuVisibility } from "../../Header/coverMenuVisibilitySlice";
+import { setCoverMenuVisibility } from "../../../store/coverMenuVisibilitySlice";
 
 const FocusMenu = function (props) {
   const { menuType, onCloseButtonClick, showAccountButtons } = props;

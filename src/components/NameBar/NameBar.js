@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import useElemOnScreen from "../../hooks/useElemOnScreen";
 import { useDispatch } from "react-redux";
-import { setAuthButtonVisibility } from "../Header/authButtonVisibilitySlice";
+import { setAuthButtonVisibility } from "../../store/authButtonVisibilitySlice";
 
 function NameBar({ children, inHeader }) {
   const dispatch = useDispatch();

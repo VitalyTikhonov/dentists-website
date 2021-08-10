@@ -5,8 +5,8 @@ import Headline from "../../Headline/Headline";
 import LabelAndPinButton from "../../UIControls/LabelAndPinButton/LabelAndPinButton";
 import Pin from "../../UIControls/Pin/Pin";
 import { useSelector, useDispatch } from "react-redux";
-import { setOpenBarIndex, selectOpenBarIndex } from "./openBarIndexSlice";
-import { selectScreenType } from "../../Header/screenTypeSlice";
+import { setOpenBarIndex, selectOpenBarIndex } from "../../../store/openBarIndexSlice";
+import { selectScreenType } from "../../../store/screenTypeSlice";
 import { screenType } from "../../../constants";
 
 const { mobile } = screenType;

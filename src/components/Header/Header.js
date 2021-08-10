@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { HashRouter, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleMobileHeaderView, selectMobileHeaderView } from "./mobileHeaderViewSlice";
-import { setScreenType, selectScreenType } from "./screenTypeSlice";
-import { selectAuthButtonVisibility } from "./authButtonVisibilitySlice";
-import { selectCoverMenuVisibility } from "./coverMenuVisibilitySlice";
+import { toggleMobileHeaderView, selectMobileHeaderView } from "../../store/mobileHeaderViewSlice";
+import { setScreenType, selectScreenType } from "../../store/screenTypeSlice";
+import { setPageProps } from "../../store/pagePropsSlice";
+import { selectAuthButtonVisibility } from "../../store/authButtonVisibilitySlice";
+import { selectCoverMenuVisibility } from "../../store/coverMenuVisibilitySlice";
 import "./Header.scss";
 import TriangleArrowDown from "../UIControls/svgReactComponents/TriangleArrowDown";
 import NameBar from "../NameBar/NameBar";
@@ -61,6 +62,10 @@ const Header = function Header() {
     }
 
     setDislpayMode();
+
+    if (headerRef.current) {
+      dispatch(setPageProps({headerHeight: headerRef.current.offsetHeight}))
+    }
 
     window.addEventListener("resize", setDislpayMode);
   }, []);
