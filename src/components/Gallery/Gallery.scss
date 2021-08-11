@@ -28,15 +28,15 @@
   margin-right: 7px;
 }
 
-.gallery__popup {
-  position: fixed;
-  left: calc((100% - #{$PW_DESKTOP_MAX}) / 2);
-  width: $PW_DESKTOP_MAX;
-  height: 100%;
-  background-color: rgba(46, 92, 132, .8);
-  display: flex;
-  justify-content: center;
-}
+// .gallery__popup {
+//   position: fixed;
+//   left: calc((100% - #{$PW_DESKTOP_MAX}) / 2);
+//   width: $PW_DESKTOP_MAX;
+//   height: 100%;
+//   background-color: rgba(46, 92, 132, .8);
+//   display: flex;
+//   justify-content: center;
+// }
 
 .gallery__popup-image {
   height: 90%;

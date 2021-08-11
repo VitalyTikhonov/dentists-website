@@ -3,7 +3,7 @@ import { HashRouter, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMobileHeaderView, selectMobileHeaderView } from "../../store/mobileHeaderViewSlice";
 import { setScreenType, selectScreenType } from "../../store/screenTypeSlice";
-import { setPageProps } from "../../store/pagePropsSlice";
+// import { setPageProps } from "../../store/pagePropsSlice";
 import { selectAuthButtonVisibility } from "../../store/authButtonVisibilitySlice";
 import { selectCoverMenuVisibility } from "../../store/coverMenuVisibilitySlice";
 import "./Header.scss";
@@ -11,7 +11,7 @@ import TriangleArrowDown from "../UIControls/svgReactComponents/TriangleArrowDow
 import NameBar from "../NameBar/NameBar";
 import MobMenuButton from "../UIControls/MobMenuButton/MobMenuButton";
 import MobMenu from "../UIControls/MobMenu/MobMenu";
-import PageDimmer from "../UIControls/PageDimmer/PageDimmer";
+import Overlay from "..//Overlay/Overlay";
 import {
   PW_DESKTOP_HEADER_MIN,
   PW_TABLET_MAX,
@@ -63,9 +63,9 @@ const Header = function Header() {
 
     setDislpayMode();
 
-    if (headerRef.current) {
-      dispatch(setPageProps({headerHeight: headerRef.current.offsetHeight}))
-    }
+    // if (headerRef.current) {
+    //   dispatch(setPageProps({headerHeight: headerRef.current.offsetHeight}))
+    // }
 
     window.addEventListener("resize", setDislpayMode);
   }, []);
@@ -355,7 +355,7 @@ const Header = function Header() {
             onCloseButtonClick={toggleMobileMenuOpen}
             showAccountButtons={true}
           />
-          <PageDimmer handleClick={toggleMobileMenuOpen} />
+          <Overlay handleClick={toggleMobileMenuOpen} />
         </>
       )}
     </header>

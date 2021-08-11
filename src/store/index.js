@@ -3,7 +3,6 @@ import mobileHeaderViewReducer from './mobileHeaderViewSlice';
 import screenTypeReducer from './screenTypeSlice';
 import authButtonVisibilityReducer from './authButtonVisibilitySlice';
 import coverMenuVisibilityReducer from './coverMenuVisibilitySlice';
-import pagePropsReducer from './pagePropsSlice';
 import openBarIndexReducer from './openBarIndexSlice';
 
 export default configureStore({
@@ -13,6 +12,5 @@ export default configureStore({
     authButtonVisibility: authButtonVisibilityReducer,
     coverMenuVisibility: coverMenuVisibilityReducer,
     openBarIndex: openBarIndexReducer,
-    pageProps: pagePropsReducer,
   },
 });

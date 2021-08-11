@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Gallery.scss";
 import Headline from "../Headline/Headline";
-import PageDimmer from "../UIControls/PageDimmer/PageDimmer";
-import { useSelector } from "react-redux";
-import { selectPageProps } from "../../store/pagePropsSlice";
+import Overlay from "..//Overlay/Overlay";
 
 import Certificate01 from "../../images/certificates/certificate_01.jpeg";
 import Certificate02 from "../../images/certificates/certificate_02.jpeg";
@@ -33,30 +31,27 @@ const images = [Certificate01, Certificate02, Certificate03, Certificate04, Cert
 
 function Gallery() {
   const [zoomedImage, setZoomedImage] = useState(null)
-  const headerHeight = useSelector(selectPageProps).headerHeight;
 
   function zoomImage(event) {
     setZoomedImage(event.target.src)
   }
 
-  // useEffect(() => {
-
-  // }, [zoomedImage])
-
   return (
-    <section className="gallery-section">
-      <Headline level={2} color="white" >Дипломы и сертификаты</Headline>
-      <div className="gallery" >
-        {images.map((image, index) => (
-          <img className="gallery__image" key={"a" + index} src={image} onClick={zoomImage} alt="Сертификат" />
+    <>
+      <section className="gallery-section">
+        <Headline level={2} color="white" >Дипломы и сертификаты</Headline>
+        <div className="gallery" >
+          {images.map((image, index) => (
+            <img className="gallery__image" key={"a" + index} src={image} onClick={zoomImage} alt="Сертификат" />
           ))}
-      </div>
+        </div>
+      </section>
 
-      {zoomedImage && <div className="gallery__popup" style={{top: headerHeight}} >
+      {zoomedImage &&
+        <Overlay handleCloseClick={() => setZoomedImage(null)} >
           <img className="gallery__popup-image" src={zoomedImage} alt="Сертификат" />
-          {/* <PageDimmer /> */}
-      </div>}
-    </section>
+        </Overlay>}
+    </>
   );
 }
 
