@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/DrNatfullina/static/css/main.da8c081f.chunk.css",
-    "main.js": "/DrNatfullina/static/js/main.7aee4e95.chunk.js",
-    "main.js.map": "/DrNatfullina/static/js/main.7aee4e95.chunk.js.map",
+    "main.js": "/DrNatfullina/static/js/main.0ecbdf45.chunk.js",
+    "main.js.map": "/DrNatfullina/static/js/main.0ecbdf45.chunk.js.map",
     "runtime-main.js": "/DrNatfullina/static/js/runtime-main.bd1daf40.js",
     "runtime-main.js.map": "/DrNatfullina/static/js/runtime-main.bd1daf40.js.map",
     "static/js/2.1647ddea.chunk.js": "/DrNatfullina/static/js/2.1647ddea.chunk.js",
@@ -47,6 +47,6 @@
     "static/js/runtime-main.bd1daf40.js",
     "static/js/2.1647ddea.chunk.js",
     "static/css/main.da8c081f.chunk.css",
-    "static/js/main.7aee4e95.chunk.js"
+    "static/js/main.0ecbdf45.chunk.js"
   ]
 }
