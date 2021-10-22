@@ -30,3 +30,15 @@
   line-height: 14px;
   color: $PALE_BLUE;
 }
+
+.footer__link {
+  color: inherit;
+
+  &:hover {
+    color: $BRIGHT_BLUE_GREEN;
+  }
+
+  &:active {
+    color: $WHITE;
+  }
+}
