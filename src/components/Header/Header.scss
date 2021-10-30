@@ -215,6 +215,7 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
   .header__name-bar {
     @include headerBlueBar();
     justify-content: space-between;
+    min-height: 74px;
   }
 
   .header__name {

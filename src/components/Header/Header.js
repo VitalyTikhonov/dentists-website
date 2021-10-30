@@ -346,7 +346,7 @@ const Header = function Header() {
       </nav>
 
       <NameBar inHeader >
-        <MobMenuButton onClick={toggleMobileMenuOpen} />
+        <MobMenuButton onClick={toggleMobileMenuOpen} mobileMenuOpen={mobileMenuOpen} />
       </NameBar>
 
       {mobileHeaderView && mobileMenuOpen && (

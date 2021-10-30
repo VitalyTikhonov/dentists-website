@@ -111,15 +111,15 @@
 
 @media (max-width: $PW_MOBILE_MAX) {
   .cover {
-    margin-top: 53px;
+    margin-top: 74px;
   }
 }
 
-@media (max-width: $HEADER_NAMEBAR_BP) {
-  .cover {
-    margin-top: 60px;
-  }
-}
+// @media (max-width: $HEADER_NAMEBAR_BP) {
+//   .cover {
+//     margin-top: 60px;
+//   }
+// }
 
 @media (max-width: $PW_TABLET_MAX) {
   .cover__name-bar {

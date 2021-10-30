@@ -190,7 +190,7 @@ $ICON_SIZE_1240_ENLARGED: calc(min(5.65vw, 70px));
 @media (max-width: $PW_MOB_HEADER_MAX) {
   .mob-menu {
     position: fixed;
-    top: 0;
+    top: 74px;
     left: 0;
     z-index: 1;
     width: 100%;

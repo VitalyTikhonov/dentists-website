@@ -41,12 +41,12 @@ const FocusMenu = function (props) {
         Центральное меню на обложке сайта
       </h2>
 
-      <button
+      {/* <button
         className={`button ${menuType}-menu__close-button`}
         onClick={onCloseButtonClick}
       >
         <DoubleChevronLeft className={`${menuType}-menu__close-icon`} />
-      </button>
+      </button> */}
 
       <ul className={`${menuType}-menu__list list-unstyling`}>
         <HashRouter
