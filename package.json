@@ -1,7 +1,6 @@
 {
   "name": "dr-natfullina",
   "version": "0.1.0",
-  "homepage": "https://vitalytikhonov.github.io/DrNatfullina",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
