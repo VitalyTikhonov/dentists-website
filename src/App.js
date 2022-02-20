@@ -19,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+
       <main className="main">
         <Switch>
           <Route exact path='/'>
@@ -33,8 +34,6 @@ function App() {
             <Gallery />
             
             {/* <ContactsSection /> */}
-            
-            <Footer />
           </Route>
 
           {/* <Route path='/signup'>
@@ -46,6 +45,8 @@ function App() {
           </Route>
         </Switch>
       </main>
+
+      <Footer />
     </div>
   );
 }

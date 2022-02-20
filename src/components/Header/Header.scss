@@ -13,13 +13,9 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  // left: 0;
   width: 100vw;
   max-width: $PW_DESKTOP_MAX;
   margin: 0 auto;
-  z-index: 1;
   box-sizing: border-box;
 }
 
@@ -171,7 +167,10 @@ $itemSpacing: calc(#{$submenuOnePadding} * 1);
 }
 
 @media (min-width: $PW_TABLET_MIN) {
-  .header {
+  .header_animation {
+    position: fixed;
+    top: 0;
+    z-index: 1;
     transform: translateY(-100%);
     transition-property: transform;
     transition-duration: 200ms;

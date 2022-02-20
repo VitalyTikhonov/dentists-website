@@ -18,6 +18,8 @@ import {
   PW_TABLET_MIN,
 } from "../../css-variables-export-to-js.module.scss";
 import { screenType } from "../../constants";
+import { useLocation } from 'react-router-dom';
+import cn from "classnames";
 
 const { mobile, tablet, desktop } = screenType;
 const DESKTOP_HEADER_MIN_PW = parseInt(PW_DESKTOP_HEADER_MIN, 10);
@@ -37,11 +39,8 @@ const Header = function Header() {
 
   const headerRef = useRef(null)
   const topMenuRef = useRef(null)
-  const [translateOptions, setTranslateOptions] = useState({
-    // transform: `translateY(-100%)`,
-    // transitionDuration: "200ms",
-    // transitionTimingFunction: "ease-out",
-  });
+  const [translateOptions, setTranslateOptions] = useState({});
+  const location = useLocation();
 
   useEffect(() => {
     function setDislpayMode() {
@@ -71,7 +70,7 @@ const Header = function Header() {
   }, []);
 
   useEffect(() => {
-    if (!screenType) return;
+    if (!screenType || location.pathname !== '/') return;
 
     if (screenType !== mobile) {
       if (headerRef.current && !coverMenuVisibility) {
@@ -96,14 +95,14 @@ const Header = function Header() {
         transform: `translateY(0%)`,
       });
     }
-  }, [authButtonVisibility, coverMenuVisibility, screenType]);
+  }, [authButtonVisibility, coverMenuVisibility, location.pathname, screenType]);
 
   function toggleMobileMenuOpen() {
     setMobileMenuOpen(!mobileMenuOpen);
   }
 
   return (
-    <header className="header" style={translateOptions} ref={headerRef} >
+    <header className={cn("header", { header_animation: location.pathname === '/' })} style={translateOptions} ref={headerRef} >
       <nav className="header__menu" ref={topMenuRef} >
         <ul className="header__menu-list list-unstyling">
           <li className="header__menu-top-item">
