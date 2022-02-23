@@ -20,6 +20,7 @@ import {
 import { screenType } from "../../constants";
 import { useLocation } from 'react-router-dom';
 import cn from "classnames";
+import menu from '../../data/menu.json';
 
 const { mobile, tablet, desktop } = screenType;
 const DESKTOP_HEADER_MIN_PW = parseInt(PW_DESKTOP_HEADER_MIN, 10);
@@ -41,6 +42,10 @@ const Header = function Header() {
   const topMenuRef = useRef(null)
   const [translateOptions, setTranslateOptions] = useState({});
   const location = useLocation();
+
+  useEffect(() => {
+    console.log(menu);
+  }, []);
 
   useEffect(() => {
     function setDislpayMode() {
@@ -122,53 +127,53 @@ const Header = function Header() {
                 </NavLink>
 
                 <ul className="header__submenu-2 list-unstyling">
-                  <HashRouter hashType="noslash">
-                    <li className="header__menu-item-2">
-                      <NavLink
-                        className="header__menu-label link-unstyling"
-                        to="services"
-                        activeClassName=""
-                      >
-                        Услуги
-                      </NavLink>
-                    </li>
-                    <li className="header__menu-item-2">
-                      <NavLink
-                        className="header__menu-label link-unstyling"
-                        to="about_me"
-                        activeClassName=""
-                      >
-                        Обо мне
-                      </NavLink>
-                    </li>
-                    <li className="header__menu-item-2">
-                      <NavLink
-                        className="header__menu-label link-unstyling"
-                        to="my_education"
-                        activeClassName=""
-                      >
-                        Мое образование
-                      </NavLink>
-                    </li>
-                    <li className="header__menu-item-2">
-                      <NavLink
-                        className="header__menu-label link-unstyling"
-                        to="my_certificates"
-                        activeClassName=""
-                      >
-                        Дипломы и сертификаты
-                      </NavLink>
-                    </li>
-                    <li className="header__menu-item-2">
-                      <NavLink
-                        className="header__menu-label link-unstyling"
-                        to="book_appointment"
-                        activeClassName=""
-                      >
-                        Запись на прием
-                      </NavLink>
-                    </li>
-                  </HashRouter>
+                  {/* <HashRouter hashType="noslash"> */}
+                  <li className="header__menu-item-2">
+                    <NavLink
+                      className="header__menu-label link-unstyling"
+                      to="services"
+                      activeClassName=""
+                    >
+                      Услуги
+                    </NavLink>
+                  </li>
+                  <li className="header__menu-item-2">
+                    <NavLink
+                      className="header__menu-label link-unstyling"
+                      to="about_me"
+                      activeClassName=""
+                    >
+                      Обо мне
+                    </NavLink>
+                  </li>
+                  <li className="header__menu-item-2">
+                    <NavLink
+                      className="header__menu-label link-unstyling"
+                      to="my_education"
+                      activeClassName=""
+                    >
+                      Мое образование
+                    </NavLink>
+                  </li>
+                  <li className="header__menu-item-2">
+                    <NavLink
+                      className="header__menu-label link-unstyling"
+                      to="my_certificates"
+                      activeClassName=""
+                    >
+                      Дипломы и сертификаты
+                    </NavLink>
+                  </li>
+                  <li className="header__menu-item-2">
+                    <NavLink
+                      className="header__menu-label link-unstyling"
+                      to="book_appointment"
+                      activeClassName=""
+                    >
+                      Запись на прием
+                    </NavLink>
+                  </li>
+                  {/* </HashRouter> */}
                 </ul>
               </li>
 
@@ -200,44 +205,44 @@ const Header = function Header() {
                 </NavLink>
 
                 <ul className="header__submenu-2 list-unstyling">
-                  <HashRouter hashType="noslash">
-                    <li className="header__menu-item-2">
-                      <NavLink
-                        className="header__menu-label link-unstyling"
-                        to="recommendations"
-                        activeClassName=""
-                      >
-                        Персональные рекомендации
-                      </NavLink>
-                    </li>
-                    <li className="header__menu-item-2">
-                      <NavLink
-                        className="header__menu-label link-unstyling"
-                        to="medical_profile"
-                        activeClassName=""
-                      >
-                        Стоматологический профиль
-                      </NavLink>
-                    </li>
-                    <li className="header__menu-item-2">
-                      <NavLink
-                        className="header__menu-label link-unstyling"
-                        to="records"
-                        activeClassName=""
-                      >
-                        История лечения
-                      </NavLink>
-                    </li>
-                    <li className="header__menu-item-2">
-                      <NavLink
-                        className="header__menu-label link-unstyling"
-                        to="personal_data"
-                        activeClassName=""
-                      >
-                        Личные данные
-                      </NavLink>
-                    </li>
-                  </HashRouter>
+                  {/* <HashRouter hashType="noslash"> */}
+                  <li className="header__menu-item-2">
+                    <NavLink
+                      className="header__menu-label link-unstyling"
+                      to="recommendations"
+                      activeClassName=""
+                    >
+                      Персональные рекомендации
+                    </NavLink>
+                  </li>
+                  <li className="header__menu-item-2">
+                    <NavLink
+                      className="header__menu-label link-unstyling"
+                      to="medical_profile"
+                      activeClassName=""
+                    >
+                      Стоматологический профиль
+                    </NavLink>
+                  </li>
+                  <li className="header__menu-item-2">
+                    <NavLink
+                      className="header__menu-label link-unstyling"
+                      to="records"
+                      activeClassName=""
+                    >
+                      История лечения
+                    </NavLink>
+                  </li>
+                  <li className="header__menu-item-2">
+                    <NavLink
+                      className="header__menu-label link-unstyling"
+                      to="personal_data"
+                      activeClassName=""
+                    >
+                      Личные данные
+                    </NavLink>
+                  </li>
+                  {/* </HashRouter> */}
                 </ul>
               </li>
             </ul>
