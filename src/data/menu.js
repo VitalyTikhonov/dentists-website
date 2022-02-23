@@ -1,3 +1,7 @@
+/* route
+hashLink
+menu */
+
 const mainPage = {
   label: "Главная",
   type: "route",
