@@ -20,7 +20,7 @@ import {
 import { screenType } from "../../constants";
 import { useLocation } from 'react-router-dom';
 import cn from "classnames";
-import menu from '../../data/menu.json';
+import { headerMenu } from '../../data/menu';
 
 const { mobile, tablet, desktop } = screenType;
 const DESKTOP_HEADER_MIN_PW = parseInt(PW_DESKTOP_HEADER_MIN, 10);
@@ -44,7 +44,8 @@ const Header = function Header() {
   const location = useLocation();
 
   useEffect(() => {
-    console.log(menu);
+    console.clear();
+    console.log('headerMenu', headerMenu.filter((item) => item?.forLoggedOn !== true));
   }, []);
 
   useEffect(() => {

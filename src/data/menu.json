@@ -1,10 +1,10 @@
 [
   {
-    "type": "multiLevelItem",
+    "type": "menu",
     "label": "Меню",
     "items": [
       {
-        "type": "multiLevelItem",
+        "type": "route",
         "label": "Главная",
         "link": "",
         "items": [
@@ -28,7 +28,7 @@
         ]
       },
       {
-        "type": "multiLevelItem",
+        "type": "route",
         "label": "Блог",
         "link": "blog",
         "items": [
@@ -36,7 +36,7 @@
         ]
       },
       {
-        "type": "multiLevelItem",
+        "type": "route",
         "label": "Личный кабинет",
         "link": "account",
         "items": [
@@ -69,18 +69,13 @@
       }
     ]
   },
+  { "type": "hashLink", "label": "Услуги", "link": "services" },
   {
-    "type": "hashLinks",
-    "items": [
-      { "type": "hashLink", "label": "Услуги", "link": "services" },
-      {
-        "type": "hashLink",
-        "label": "Запись на прием",
-        "link": "book_appointment"
-      },
-      { "type": "hashLink", "label": "Обо мне", "link": "about_me" }
-    ]
+    "type": "hashLink",
+    "label": "Запись на прием",
+    "link": "book_appointment"
   },
+  { "type": "hashLink", "label": "Обо мне", "link": "about_me" },
   { "type": "route", "label": "Блог", "link": "blog" },
   { "type": "route", "label": "Коллегам", "link": "for_colleagues" },
   {

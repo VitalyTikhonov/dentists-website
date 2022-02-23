@@ -1,84 +1,124 @@
-const mainPageMap = {
-  type: "multiLevelItem",
+const mainPage = {
   label: "Главная",
-  link: "",
-  items: [
-    { type: "hashLink", label: "Услуги", link: "services" },
-    { type: "hashLink", label: "Обо мне", link: "about_me" },
-    { type: "hashLink", label: "Мое образование", link: "my_education" },
-    { type: "hashLink", label: "Дипломы и сертификаты", link: "my_certificates" },
-    { type: "hashLink", label: "Запись на прием", link: "book_appointment" },
-  ],
-};
-
-const blogMap = {
-  type: "multiLevelItem",
-  label: "Блог",
-  link: "blog",
-  items: [
-    { type: "route", label: "Коллегам", link: "for_colleagues" },
-  ],
-};
-
-const accountMap = {
-  type: "multiLevelItem",
-  label: "Личный кабинет",
-  link: "account",
+  type: "route",
+  link: "/",
   items: [
     {
-      type: "hashLinks",
-      items: [
-        {
-          type: "hashLink",
-          label: "Персональные рекомендации",
-          link: "recommendations",
-        },
-        {
-          type: "hashLink",
-          label: "Стоматологический профиль",
-          link: "medical_profile",
-        },
-        { type: "hashLink", label: "История лечения", link: "records" },
-        { type: "hashLink", label: "Личные данные", link: "personal_data" },
-      ],
+      label: "Услуги",
+      type: "hashLink",
+      link: "services"
+    },
+    {
+      label: "Обо мне",
+      type: "hashLink",
+      link: "about_me"
+    },
+    {
+      label: "Мое образование",
+      type: "hashLink",
+      link: "my_education"
+    },
+    {
+      label: "Дипломы и сертификаты",
+      type: "hashLink",
+      link: "my_certificates"
+    },
+    {
+      label: "Запись на прием",
+      type: "hashLink",
+      link: "book_appointment"
+    },
+  ],
+  get itemsForHeader() {
+    return [this.items[0], this.items[4], this.items[1]];
+  }
+};
+
+const blog = {
+  label: "Блог",
+  type: "route",
+  link: "blog",
+  items: [
+    {
+      label: "Коллегам",
+      type: "route",
+      link: "for_colleagues"
     },
   ],
 };
 
-export const menuMap = [
+const account = [
   {
-    type: "multiLevelTopItem",
-    label: "Меню",
-    items: [ mainPageMap, blogMap, accountMap ],
-  },
-  {
-    type: "hashLinks",
-    items: [
-      { type: "hashLink", label: "Услуги", link: "services" },
-      { type: "hashLink", label: "Запись на прием", link: "book_appointment" },
-      { type: "hashLink", label: "Обо мне", link: "about_me" },
-    ],
-  },
-  { type: "route", label: "Блог", link: "blog" },
-  { type: "route", label: "Коллегам", link: "for_colleagues" },
-  {
-    type: "multiLevelTopItem",
     label: "Личный кабинет",
+    type: "route",
+    forLoggedOn: true,
+    link: "account",
     items: [
       {
-        type: "hashLink",
         label: "Персональные рекомендации",
-        link: "reccomendations",
+        type: "hashLink",
+        link: "recommendations",
       },
       {
-        type: "hashLink",
         label: "Стоматологический профиль",
+        type: "hashLink",
         link: "medical_profile",
       },
-      { type: "hashLink", label: "История лечения", link: "records" },
-      { type: "hashLink", label: "Личные данные", link: "personal_data" },
+      {
+        label: "История лечения",
+        type: "hashLink",
+        link: "records"
+      },
+      {
+        label: "Личные данные",
+        type: "hashLink",
+        link: "personal_data"
+      },
+      {
+        label: "Выйти",
+        type: "route",
+        link: "logout"
+      },
     ],
+    get itemsForCover() {
+      return [{ label: this.label, type: this.type, link: this.link }, this.items[this.items.length - 1]];
+    }
   },
+  {
+    label: "Войти",
+    type: "route",
+    forLoggedOff: true,
+    link: "login",
+    items: [
+      {
+        label: "Регистрация",
+        type: "route",
+        link: "signup"
+      },
+    ]
+  },
+];
+
+export const headerMenu = [
+  {
+    label: "Меню",
+    type: "menu",
+    items: [mainPage, blog, ...account],
+  },
+  ...mainPage.itemsForHeader,
+  {
+    // Блог
+    label: blog.label,
+    type: blog.type,
+    link: blog.link
+  },
+  {
+    // Коллегам
+    label: blog.items[0].label,
+    type: blog.items[0].type,
+    link: blog.items[0].link
+  },
+  account[1],
 ];
 
 /* Меню
